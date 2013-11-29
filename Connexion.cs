@@ -14,6 +14,7 @@ namespace Projet3
         public frmConnection()
         {
             InitializeComponent();
+            MessageBox.Show("lala");
         }
 
         private void btnOk_Click(object sender, EventArgs e)

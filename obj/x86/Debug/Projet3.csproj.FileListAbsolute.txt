@@ -26,3 +26,15 @@ F:\Projet3\Projet3\bin\Debug\Projet3.exe.config
 F:\Projet3\Projet3\obj\x86\Debug\Projet3.pdb
 D:\Cegep\Projet3\Projet3\bin\Debug\Projet3.exe.config
 D:\Cegep\Projet3\Projet3\obj\x86\Debug\Projet3.pdb
+D:\Cegep\Projet3\Projet3\bin\Debug\Projet3.exe
+D:\Cegep\Projet3\Projet3\bin\Debug\Projet3.pdb
+D:\Cegep\Projet3\Projet3\obj\x86\Debug\Projet3.csprojResolveAssemblyReference.cache
+D:\Cegep\Projet3\Projet3\obj\x86\Debug\Projet3.frmConnection.resources
+D:\Cegep\Projet3\Projet3\obj\x86\Debug\Projet3.frmAbonnementPrincipal.resources
+D:\Cegep\Projet3\Projet3\obj\x86\Debug\Projet3.frmAjoutConjoint.resources
+D:\Cegep\Projet3\Projet3\obj\x86\Debug\Projet3.frmAjoutEmploye.resources
+D:\Cegep\Projet3\Projet3\obj\x86\Debug\Projet3.frmGestionEmployes.resources
+D:\Cegep\Projet3\Projet3\obj\x86\Debug\Projet3.frmModifierEmploye.resources
+D:\Cegep\Projet3\Projet3\obj\x86\Debug\Projet3.Properties.Resources.resources
+D:\Cegep\Projet3\Projet3\obj\x86\Debug\Projet3.csproj.GenerateResource.Cache
+D:\Cegep\Projet3\Projet3\obj\x86\Debug\Projet3.exe
