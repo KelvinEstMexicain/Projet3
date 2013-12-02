@@ -19,7 +19,6 @@ namespace Projet3
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("banane");
             this.Hide();
             frmMiseAJourAbonnes gestion = new frmMiseAJourAbonnes();
             gestion.ShowDialog();
@@ -29,26 +28,6 @@ namespace Projet3
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
             this.Close();
-			 MessageBox.Show("banane");
-			 MessageBox.Show("banane");
-			 MessageBox.Show("banane");
-			 MessageBox.Show("banane");
-			 MessageBox.Show("banane");
-			 MessageBox.Show("banane");
-			 MessageBox.Show("banane");
-			 MessageBox.Show("banane");
-			 MessageBox.Show("banane");
-			 MessageBox.Show("banane");
-			 MessageBox.Show("banane");
-			 MessageBox.Show("banane");
-			 MessageBox.Show("banane");
-			 MessageBox.Show("banane");
-            MessageBox.Show("perdu");
-            MessageBox.Show("perdu");
-            MessageBox.Show("perdu");
-            MessageBox.Show("perdu");
-            MessageBox.Show("perdu");
-            MessageBox.Show("perdu");
         }
     }
 }
