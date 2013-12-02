@@ -14,7 +14,7 @@ namespace Projet3
         public frmConnection()
         {
             InitializeComponent();
-			alert("Je suis un mexicain");
+			alert("on aime sa rof!");
         }
 
         private void btnOk_Click(object sender, EventArgs e)
