@@ -15,6 +15,14 @@ namespace Projet3
         public frmConnection()
         {
             InitializeComponent();
+            /* \/ A ENLEVER AVANT DE REMETTRE \/ */
+            DateTime remise = new DateTime(2013,12,9,12,0,0);
+            if(DateTime.Now < remise)
+            {
+                txtUsername.Text = "1";
+                txtPassword.Text = "Banane123";
+            }
+            /* /\ A ENLEVER AVANT DE REMETTRE /\ */
         }
 
         private void btnOk_Click(object sender, EventArgs e)
