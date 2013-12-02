@@ -19,21 +19,24 @@ namespace Projet3
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("perdu");
+            MessageBox.Show("banane");
             this.Hide();
             frmMiseAJourAbonnes gestion = new frmMiseAJourAbonnes();
             gestion.ShowDialog();
             this.Show();
             MessageBox.Show("perdu");
             MessageBox.Show("perdu");
-            MessageBox.Show("perdu");
-            MessageBox.Show("perdu");
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("perdu");
             this.Close();
+            MessageBox.Show("perdu");
+            MessageBox.Show("perdu");
+            MessageBox.Show("perdu");
+            MessageBox.Show("perdu");
+            MessageBox.Show("perdu");
+            MessageBox.Show("perdu");
         }
     }
 }
