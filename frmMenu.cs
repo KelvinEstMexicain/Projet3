@@ -11,16 +11,43 @@ namespace Projet3
 {
     public partial class frmMenu : Form
     {
-        public frmMenu()
+        public frmMenu(Employes employe)
         {
             InitializeComponent();
-
+            switch(employe.NotypeEmploye)
+            {
+                case (int)enumTypeEmploye.administrateur:
+                    break;
+                case (int)enumTypeEmploye.direction:
+                    btnAjoutAbonnement.Enabled = false;
+                    break;
+                case (int)enumTypeEmploye.proprioClub:
+                    btnGestionEmployes.Enabled = false;
+                    break;
+                case (int)enumTypeEmploye.employeClub:
+                    btnGestionEmployes.Enabled = false;
+                    break;
+                case (int)enumTypeEmploye.employeProShop:
+                    btnAjoutAbonnement.Enabled = false;
+                    btnGestionEmployes.Enabled = false;
+                    break;
+                case (int)enumTypeEmploye.employeResto:
+                    btnAjoutAbonnement.Enabled = false;
+                    btnGestionEmployes.Enabled = false;
+                    break;
+                case (int)enumTypeEmploye.profGolf:
+                    btnAjoutAbonnement.Enabled = false;
+                    btnGestionEmployes.Enabled = false;
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
         }
 
         private void btnAjoutAbonnement_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmAbonnementPrincipal abonnement = new frmAbonnementPrincipal();
+            var abonnement = new frmAbonnementPrincipal();
             abonnement.ShowDialog();
             this.Show();
         }
@@ -28,7 +55,7 @@ namespace Projet3
         private void btnReabonnement_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmReabonnement abonnement = new frmReabonnement();
+            var abonnement = new frmReabonnement();
             abonnement.ShowDialog();
             this.Show();
         }
@@ -36,7 +63,7 @@ namespace Projet3
         private void btnGestionEmployes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmGestionEmployes employe = new frmGestionEmployes();
+            var employe = new frmGestionEmployes();
             employe.ShowDialog();
             this.Show();
         }
@@ -44,7 +71,7 @@ namespace Projet3
         private void btnModifierEmploye_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmModifierEmploye employe = new frmModifierEmploye();
+            var employe = new frmModifierEmploye();
             employe.ShowDialog();
             this.Show();
         }
@@ -52,9 +79,20 @@ namespace Projet3
         private void btnAjoutDepenses_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmAjoutPrixDepenses depenses = new frmAjoutPrixDepenses();
+            var depenses = new frmAjoutPrixDepenses();
             depenses.ShowDialog();
             this.Show();
+        }
+
+        private enum enumTypeEmploye
+        {
+            administrateur = 1,
+            direction = 2,
+            proprioClub = 3,
+            employeClub = 4,
+            employeProShop = 5,
+            employeResto = 6,
+            profGolf = 7
         }
     }
 }

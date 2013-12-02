@@ -52,11 +52,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmConnexion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmConnexion.Designer.cs">
+      <DependentUpon>frmConnexion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
@@ -124,8 +124,8 @@
     <None Include="DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmConnexion.resx">
+      <DependentUpon>frmConnexion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAbonnementPrincipal.resx">
       <DependentUpon>frmAbonnementPrincipal.cs</DependentUpon>

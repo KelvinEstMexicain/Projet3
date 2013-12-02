@@ -15,5 +15,10 @@ namespace Projet3
         {
             InitializeComponent();
         }
+
+        private void frmAjoutEmploye_Load(object sender, EventArgs e)
+        {
+            Employes emp = new Employes();
+        }
     }
 }
