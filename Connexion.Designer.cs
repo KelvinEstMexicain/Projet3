@@ -88,6 +88,7 @@
             this.txtPassword.ForeColor = System.Drawing.SystemColors.Info;
             this.txtPassword.Location = new System.Drawing.Point(300, 119);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(127, 20);
             this.txtPassword.TabIndex = 4;
             // 
