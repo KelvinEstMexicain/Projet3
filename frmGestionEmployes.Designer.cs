@@ -100,7 +100,7 @@
             this.employesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.employesBindingNavigator.Name = "employesBindingNavigator";
             this.employesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.employesBindingNavigator.Size = new System.Drawing.Size(1427, 25);
+            this.employesBindingNavigator.Size = new System.Drawing.Size(784, 25);
             this.employesBindingNavigator.TabIndex = 0;
             this.employesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -204,6 +204,9 @@
             // 
             // employesDataGridView
             // 
+            this.employesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.employesDataGridView.AutoGenerateColumns = false;
             this.employesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -225,9 +228,9 @@
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17});
             this.employesDataGridView.DataSource = this.employesBindingSource;
-            this.employesDataGridView.Location = new System.Drawing.Point(-12, 125);
+            this.employesDataGridView.Location = new System.Drawing.Point(20, 125);
             this.employesDataGridView.Name = "employesDataGridView";
-            this.employesDataGridView.Size = new System.Drawing.Size(1582, 553);
+            this.employesDataGridView.Size = new System.Drawing.Size(752, 394);
             this.employesDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -235,6 +238,7 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "No";
             this.dataGridViewTextBoxColumn1.HeaderText = "No";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 35;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -260,12 +264,14 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Sexe";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn5.Width = 35;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Age";
             this.dataGridViewTextBoxColumn6.HeaderText = "Age";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 35;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -346,9 +352,10 @@
             // 
             // btnAjoutEmployer
             // 
+            this.btnAjoutEmployer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAjoutEmployer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAjoutEmployer.BackgroundImage")));
             this.btnAjoutEmployer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAjoutEmployer.Location = new System.Drawing.Point(449, 39);
+            this.btnAjoutEmployer.Location = new System.Drawing.Point(446, 39);
             this.btnAjoutEmployer.Name = "btnAjoutEmployer";
             this.btnAjoutEmployer.Size = new System.Drawing.Size(83, 80);
             this.btnAjoutEmployer.TabIndex = 3;
@@ -357,9 +364,10 @@
             // 
             // btnModifier
             // 
+            this.btnModifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModifier.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModifier.BackgroundImage")));
             this.btnModifier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnModifier.Location = new System.Drawing.Point(567, 39);
+            this.btnModifier.Location = new System.Drawing.Point(564, 39);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(83, 80);
             this.btnModifier.TabIndex = 4;
@@ -367,9 +375,10 @@
             // 
             // btnSupprimer
             // 
+            this.btnSupprimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSupprimer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSupprimer.BackgroundImage")));
             this.btnSupprimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSupprimer.Location = new System.Drawing.Point(694, 39);
+            this.btnSupprimer.Location = new System.Drawing.Point(691, 39);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(83, 80);
             this.btnSupprimer.TabIndex = 5;
@@ -383,13 +392,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1427, 718);
+            this.ClientSize = new System.Drawing.Size(784, 531);
             this.Controls.Add(this.btnSupprimer);
             this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.btnAjoutEmployer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.employesDataGridView);
             this.Controls.Add(this.employesBindingNavigator);
+            this.MinimumSize = new System.Drawing.Size(800, 400);
             this.Name = "frmGestionEmployes";
             this.Text = "Gestion des employés";
             this.Load += new System.EventHandler(this.frmGestionEmployes_Load);

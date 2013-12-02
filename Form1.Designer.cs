@@ -81,6 +81,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(127, 20);
             this.txtUsername.TabIndex = 3;
+            this.txtUsername.Text = "1";
             // 
             // txtPassword
             // 
@@ -88,8 +89,10 @@
             this.txtPassword.ForeColor = System.Drawing.SystemColors.Info;
             this.txtPassword.Location = new System.Drawing.Point(300, 119);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(127, 20);
             this.txtPassword.TabIndex = 4;
+            this.txtPassword.Text = "Banane123";
             // 
             // btnOk
             // 
