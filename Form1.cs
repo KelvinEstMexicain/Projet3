@@ -19,10 +19,32 @@ namespace Projet3
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmMiseAJourAbonnes gestion = new frmMiseAJourAbonnes();
-            gestion.ShowDialog();
-            this.Show();
+            int noEmploye = -1;
+            string motDePasse;
+            if (int.TryParse(txtUsername.Text, out noEmploye))
+            {
+                motDePasse = txtPassword.Text;
+                DataClasses1DataContext dataClasses = new DataClasses1DataContext();
+
+                IQueryable<int> present = from unEmploye in dataClasses.Employes
+                                          where unEmploye.No == noEmploye && unEmploye.MotDePasse == motDePasse
+                                          select unEmploye.No;
+                if(present.ToArray().Count() == 1)
+                {
+                    this.Hide();
+                    frmMiseAJourAbonnes gestion = new frmMiseAJourAbonnes();
+                    gestion.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show(Resources.UtilisateurOuMotDePasseNonValide, Resources.TitreErreur);
+                }
+            }
+            else
+            {
+                MessageBox.Show(Resources.NoEmployeInvalide, Resources.TitreErreur);
+            }
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
