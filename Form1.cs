@@ -21,6 +21,13 @@ namespace Projet3
         {
             MessageBox.Show(Resources.NoEmployeInvalide, Resources.TitreErreur);
             MessageBox.Show("Test");
+            MessageBox.Show(Resources.NoEmployeInvalide, Resources.TitreErreur);
+            MessageBox.Show(Resources.NoEmployeInvalide, Resources.TitreErreur);
+            MessageBox.Show(Resources.NoEmployeInvalide, Resources.TitreErreur);
+            MessageBox.Show("Test");
+            MessageBox.Show("Test");
+            MessageBox.Show("Test");
+            MessageBox.Show("Test");
 
             this.Hide();
             frmMiseAJourAbonnes gestion = new frmMiseAJourAbonnes();
