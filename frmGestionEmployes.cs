@@ -21,5 +21,10 @@ namespace Projet3
                                                orderby unEmploye.No
                                                select unEmploye;
         }
+
+        private void btnAjoutEmployer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
