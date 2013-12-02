@@ -16,7 +16,7 @@ namespace Projet3
         {
             InitializeComponent();
             /* \/ A ENLEVER AVANT DE REMETTRE \/ */
-            DateTime remise = new DateTime(2013,12,9,12,0,0);
+            var remise = new DateTime(2013,12,9,12,0,0);
             if(DateTime.Now < remise)
             {
                 txtUsername.Text = "1";
@@ -28,21 +28,20 @@ namespace Projet3
         private void btnOk_Click(object sender, EventArgs e)
         {
             int noEmploye = -1;
-            string motDePasse;
             if (int.TryParse(txtUsername.Text, out noEmploye))
             {
-                motDePasse = txtPassword.Text;
-                DataClasses1DataContext dataClasses = new DataClasses1DataContext();
+                string motDePasse = txtPassword.Text;
+                var dataClasses = new DataClasses1DataContext();
 
-                IQueryable<int> present = from unEmploye in dataClasses.Employes
+                var employe = from unEmploye in dataClasses.Employes
                                           where unEmploye.No == noEmploye && unEmploye.MotDePasse == motDePasse
-                                          select unEmploye.No;
-                if(present.ToArray().Count() == 1)
+                                          select unEmploye;
+                if(employe.Count() == 1)
                 {
-                    this.Hide();
-                    frmMenu gestion = new frmMenu();
+                    Hide();
+                    var gestion = new frmMenu();
                     gestion.ShowDialog();
-                    this.Show();
+                    Show();
                 }
                 else
                 {
