@@ -50,6 +50,7 @@ namespace Projet3
         private void btnAnnuler_Click(object sender, EventArgs e)
         {
             this.Close();
+            /*asdafa*/
         }
     }
 }
