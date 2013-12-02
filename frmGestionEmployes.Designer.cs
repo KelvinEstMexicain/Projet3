@@ -204,6 +204,8 @@
             // 
             // employesDataGridView
             // 
+            this.employesDataGridView.AllowUserToAddRows = false;
+            this.employesDataGridView.AllowUserToDeleteRows = false;
             this.employesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -230,6 +232,9 @@
             this.employesDataGridView.DataSource = this.employesBindingSource;
             this.employesDataGridView.Location = new System.Drawing.Point(20, 125);
             this.employesDataGridView.Name = "employesDataGridView";
+            this.employesDataGridView.ReadOnly = true;
+            this.employesDataGridView.RowHeadersVisible = false;
+            this.employesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.employesDataGridView.Size = new System.Drawing.Size(752, 394);
             this.employesDataGridView.TabIndex = 1;
             // 
