@@ -32,7 +32,7 @@ namespace Projet3
                 if(present.ToArray().Count() == 1)
                 {
                     this.Hide();
-                    frmMiseAJourAbonnes gestion = new frmMiseAJourAbonnes();
+                    frmMenu gestion = new frmMenu();
                     gestion.ShowDialog();
                     this.Show();
                 }
