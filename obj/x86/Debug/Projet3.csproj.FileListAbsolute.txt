@@ -50,3 +50,6 @@ F:\Cegep\Session5\BD3\Projet3\Projet3\obj\x86\Debug\Projet3.frmAjoutPrixDepenses
 D:\Cegep\Projet3\Projet3\bin\Debug\Projet3.exe.config
 D:\Cegep\Projet3\Projet3\obj\x86\Debug\Projet3.exe
 D:\Cegep\Projet3\Projet3\obj\x86\Debug\Projet3.pdb
+C:\Users\k.vargas-garcia\Desktop\Projet3\bin\Debug\Projet3.exe.config
+C:\Users\k.vargas-garcia\Desktop\Projet3\obj\x86\Debug\Projet3.exe
+C:\Users\k.vargas-garcia\Desktop\Projet3\obj\x86\Debug\Projet3.pdb

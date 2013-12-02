@@ -19,8 +19,12 @@ namespace Projet3
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
             MessageBox.Show(Resources.NoEmployeInvalide, Resources.TitreErreur);
+            MessageBox.Show("Test");
 
+>>>>>>> 66532c8d96c558ed53a5ef6c04bedfb60a215e10
             this.Hide();
             frmMiseAJourAbonnes gestion = new frmMiseAJourAbonnes();
             gestion.ShowDialog();
