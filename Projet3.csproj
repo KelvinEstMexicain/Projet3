@@ -142,6 +142,9 @@
     <EmbeddedResource Include="frmGestionEmployes.resx">
       <DependentUpon>frmGestionEmployes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMiseAJourAbonnes.resx">
       <DependentUpon>frmMiseAJourAbonnes.cs</DependentUpon>
     </EmbeddedResource>

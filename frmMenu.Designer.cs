@@ -31,7 +31,6 @@
             this.btnAjoutAbonnement = new System.Windows.Forms.Button();
             this.btnGestionEmployes = new System.Windows.Forms.Button();
             this.btnAjoutDepenses = new System.Windows.Forms.Button();
-            this.btnModifierEmploye = new System.Windows.Forms.Button();
             this.btnReabonnement = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -49,7 +48,7 @@
             // btnGestionEmployes
             // 
             this.btnGestionEmployes.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionEmployes.Location = new System.Drawing.Point(12, 132);
+            this.btnGestionEmployes.Location = new System.Drawing.Point(12, 130);
             this.btnGestionEmployes.Name = "btnGestionEmployes";
             this.btnGestionEmployes.Size = new System.Drawing.Size(122, 50);
             this.btnGestionEmployes.TabIndex = 2;
@@ -68,17 +67,6 @@
             this.btnAjoutDepenses.UseVisualStyleBackColor = true;
             this.btnAjoutDepenses.Click += new System.EventHandler(this.btnAjoutDepenses_Click);
             // 
-            // btnModifierEmploye
-            // 
-            this.btnModifierEmploye.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModifierEmploye.Location = new System.Drawing.Point(168, 132);
-            this.btnModifierEmploye.Name = "btnModifierEmploye";
-            this.btnModifierEmploye.Size = new System.Drawing.Size(113, 52);
-            this.btnModifierEmploye.TabIndex = 4;
-            this.btnModifierEmploye.Text = "Modifier des employées";
-            this.btnModifierEmploye.UseVisualStyleBackColor = true;
-            this.btnModifierEmploye.Click += new System.EventHandler(this.btnModifierEmploye_Click);
-            // 
             // btnReabonnement
             // 
             this.btnReabonnement.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,7 +84,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(352, 387);
             this.Controls.Add(this.btnReabonnement);
-            this.Controls.Add(this.btnModifierEmploye);
             this.Controls.Add(this.btnAjoutDepenses);
             this.Controls.Add(this.btnGestionEmployes);
             this.Controls.Add(this.btnAjoutAbonnement);
@@ -111,7 +98,6 @@
         private System.Windows.Forms.Button btnAjoutAbonnement;
         private System.Windows.Forms.Button btnGestionEmployes;
         private System.Windows.Forms.Button btnAjoutDepenses;
-        private System.Windows.Forms.Button btnModifierEmploye;
         private System.Windows.Forms.Button btnReabonnement;
     }
 }
