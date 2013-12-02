@@ -77,5 +77,14 @@ namespace Projet3.Properties {
                 return ResourceManager.GetString("TitreErreur", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to La combinaison nom d&apos;utilisateur/mot de passe ne correspond à aucun utilisateur enregistré.
+        /// </summary>
+        internal static string UtilisateurOuMotDePasseNonValide {
+            get {
+                return ResourceManager.GetString("UtilisateurOuMotDePasseNonValide", resourceCulture);
+            }
+        }
     }
 }

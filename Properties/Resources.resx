@@ -120,4 +120,7 @@
   <data name="TitreErreur">
     <value xml:space="preserve">Erreur</value>
   </data>
+  <data name="UtilisateurOuMotDePasseNonValide">
+    <value xml:space="preserve">La combinaison nom d'utilisateur/mot de passe ne correspond à aucun utilisateur enregistré</value>
+  </data>
 </root>
