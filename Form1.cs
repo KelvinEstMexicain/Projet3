@@ -20,6 +20,7 @@ namespace Projet3
         private void btnOk_Click(object sender, EventArgs e)
         {
             MessageBox.Show(Resources.NoEmployeInvalide, Resources.TitreErreur);
+            MessageBox.Show("Test");
 
             this.Hide();
             frmMiseAJourAbonnes gestion = new frmMiseAJourAbonnes();
