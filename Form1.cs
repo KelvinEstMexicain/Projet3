@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Projet3.Properties;
 
 namespace Projet3
 {
@@ -18,6 +19,8 @@ namespace Projet3
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(Resources.NoEmployeInvalide, Resources.TitreErreur);
+
             this.Hide();
             frmMiseAJourAbonnes gestion = new frmMiseAJourAbonnes();
             gestion.ShowDialog();
