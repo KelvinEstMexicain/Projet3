@@ -11,9 +11,17 @@ namespace Projet3
 {
     public partial class frmAjoutPrixDepenses : Form
     {
+        DataClasses1DataContext dataContexteProjet1 = new DataClasses1DataContext();
         public frmAjoutPrixDepenses()
         {
             InitializeComponent();
+        }
+
+        private void frmAjoutPrixDepenses_Load(object sender, EventArgs e)
+        {
+            prixDepensesAbonnementsBindingSource.DataSource = from unPrix in dataContexteProjet1.PrixDepensesAbonnements
+                                                              orderby unPrix.NoTypeAbonnement
+                                                              select unPrix;
         }
     }
 }
