@@ -365,6 +365,7 @@
             this.cmbSexe.Name = "cmbSexe";
             this.cmbSexe.Size = new System.Drawing.Size(100, 21);
             this.cmbSexe.TabIndex = 49;
+            this.cmbSexe.Validating += new System.ComponentModel.CancelEventHandler(this.cmbSexe_Validating);
             // 
             // label1
             // 
@@ -395,6 +396,7 @@
             this.btnAjout.Size = new System.Drawing.Size(78, 74);
             this.btnAjout.TabIndex = 52;
             this.btnAjout.UseVisualStyleBackColor = true;
+            this.btnAjout.Click += new System.EventHandler(this.btnAjout_Click);
             // 
             // btnAnnuler
             // 

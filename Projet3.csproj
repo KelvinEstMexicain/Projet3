@@ -147,6 +147,7 @@
     <Compile Include="noEtNomCompletAbonnement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validation.cs" />
     <EmbeddedResource Include="frmStatistique.resx">
       <DependentUpon>frmStatistique.cs</DependentUpon>
     </EmbeddedResource>

@@ -67,6 +67,16 @@ namespace Projet3
             Validation.TextBoxValideNonVide(sender, errMessage, Resources.MotDePasseNonValide);
         }
 
+        private void cmbSexe_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void btnAjout_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         
     }
 }
