@@ -61,6 +61,24 @@ namespace Projet3.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Le numéro de cellulaire entré n&apos;est pas valide.
+        /// </summary>
+        internal static string CelNonValide {
+            get {
+                return ResourceManager.GetString("CelNonValide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le code postal entré n&apos;est pas valide.
+        /// </summary>
+        internal static string CodePostalNonValide {
+            get {
+                return ResourceManager.GetString("CodePostalNonValide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to L&apos;adresse courriel entrée n&apos;est pas valide.
         /// </summary>
         internal static string CourrielNonValide {
@@ -75,6 +93,15 @@ namespace Projet3.Properties {
         internal static string MotDePasseNonValide {
             get {
                 return ResourceManager.GetString("MotDePasseNonValide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le numéro civique entré n&apos;est pas valide.
+        /// </summary>
+        internal static string NoCiviqueNonValide {
+            get {
+                return ResourceManager.GetString("NoCiviqueNonValide", resourceCulture);
             }
         }
         
@@ -106,6 +133,51 @@ namespace Projet3.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Veuillez selectionner la province de résidence de la personne.
+        /// </summary>
+        internal static string ProvinceNonSelectionne {
+            get {
+                return ResourceManager.GetString("ProvinceNonSelectionne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Veuillez entrer une remarque.
+        /// </summary>
+        internal static string RemarquesNonValide {
+            get {
+                return ResourceManager.GetString("RemarquesNonValide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Veuillez entrer le nom de la rue de résidence de la personne.
+        /// </summary>
+        internal static string RueNonValide {
+            get {
+                return ResourceManager.GetString("RueNonValide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Le salaire entré n&apos;est pas valide.
+        /// </summary>
+        internal static string SalaireNonValide {
+            get {
+                return ResourceManager.GetString("SalaireNonValide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Veuillez sélectionner le sexe de la personne.
+        /// </summary>
+        internal static string SexeNonSelectionne {
+            get {
+                return ResourceManager.GetString("SexeNonSelectionne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Le numéro de téléphone entré n&apos;est pas valide.
         /// </summary>
         internal static string TelNonValide {
@@ -129,6 +201,15 @@ namespace Projet3.Properties {
         internal static string UtilisateurOuMotDePasseNonValide {
             get {
                 return ResourceManager.GetString("UtilisateurOuMotDePasseNonValide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Veuillez entrer le nom de la ville de résidence de la personne.
+        /// </summary>
+        internal static string VilleNonValide {
+            get {
+                return ResourceManager.GetString("VilleNonValide", resourceCulture);
             }
         }
     }

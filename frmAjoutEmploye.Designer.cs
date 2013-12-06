@@ -200,9 +200,9 @@
             remarqueLabel.AutoSize = true;
             remarqueLabel.Location = new System.Drawing.Point(508, 235);
             remarqueLabel.Name = "remarqueLabel";
-            remarqueLabel.Size = new System.Drawing.Size(66, 13);
+            remarqueLabel.Size = new System.Drawing.Size(59, 13);
             remarqueLabel.TabIndex = 23;
-            remarqueLabel.Text = "* Remarque:";
+            remarqueLabel.Text = "Remarque:";
             // 
             // rueLabel
             // 
@@ -258,14 +258,15 @@
             this.codePostalTextBox.Location = new System.Drawing.Point(364, 286);
             this.codePostalTextBox.Name = "codePostalTextBox";
             this.codePostalTextBox.Size = new System.Drawing.Size(100, 20);
-            this.codePostalTextBox.TabIndex = 6;
+            this.codePostalTextBox.TabIndex = 11;
+            this.codePostalTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.codePostalTextBox_Validating);
             // 
             // courrielTextBox
             // 
             this.courrielTextBox.Location = new System.Drawing.Point(112, 301);
             this.courrielTextBox.Name = "courrielTextBox";
             this.courrielTextBox.Size = new System.Drawing.Size(100, 20);
-            this.courrielTextBox.TabIndex = 8;
+            this.courrielTextBox.TabIndex = 5;
             this.courrielTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.courrielTextBox_Validating);
             // 
             // motDePasseTextBox
@@ -273,7 +274,7 @@
             this.motDePasseTextBox.Location = new System.Drawing.Point(112, 232);
             this.motDePasseTextBox.Name = "motDePasseTextBox";
             this.motDePasseTextBox.Size = new System.Drawing.Size(100, 20);
-            this.motDePasseTextBox.TabIndex = 12;
+            this.motDePasseTextBox.TabIndex = 3;
             this.motDePasseTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.motDePasseTextBox_Validating);
             // 
             // noTextBox
@@ -284,21 +285,22 @@
             this.noTextBox.Name = "noTextBox";
             this.noTextBox.ReadOnly = true;
             this.noTextBox.Size = new System.Drawing.Size(100, 20);
-            this.noTextBox.TabIndex = 14;
+            this.noTextBox.TabIndex = 0;
             // 
             // noCiviqueTextBox
             // 
             this.noCiviqueTextBox.Location = new System.Drawing.Point(364, 338);
             this.noCiviqueTextBox.Name = "noCiviqueTextBox";
             this.noCiviqueTextBox.Size = new System.Drawing.Size(100, 20);
-            this.noCiviqueTextBox.TabIndex = 16;
+            this.noCiviqueTextBox.TabIndex = 12;
+            this.noCiviqueTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.noCiviqueTextBox_Validating);
             // 
             // nomTextBox
             // 
             this.nomTextBox.Location = new System.Drawing.Point(112, 177);
             this.nomTextBox.Name = "nomTextBox";
             this.nomTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nomTextBox.TabIndex = 18;
+            this.nomTextBox.TabIndex = 1;
             this.nomTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.nomTextBox_Validating);
             // 
             // prenomTextBox
@@ -306,7 +308,7 @@
             this.prenomTextBox.Location = new System.Drawing.Point(112, 149);
             this.prenomTextBox.Name = "prenomTextBox";
             this.prenomTextBox.Size = new System.Drawing.Size(100, 20);
-            this.prenomTextBox.TabIndex = 22;
+            this.prenomTextBox.TabIndex = 0;
             this.prenomTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.prenomTextBox_Validating);
             // 
             // remarqueTextBox
@@ -315,28 +317,32 @@
             this.remarqueTextBox.Multiline = true;
             this.remarqueTextBox.Name = "remarqueTextBox";
             this.remarqueTextBox.Size = new System.Drawing.Size(100, 74);
-            this.remarqueTextBox.TabIndex = 24;
+            this.remarqueTextBox.TabIndex = 15;
+            this.remarqueTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.remarqueTextBox_Validating);
             // 
             // rueTextBox
             // 
             this.rueTextBox.Location = new System.Drawing.Point(364, 173);
             this.rueTextBox.Name = "rueTextBox";
             this.rueTextBox.Size = new System.Drawing.Size(100, 20);
-            this.rueTextBox.TabIndex = 26;
+            this.rueTextBox.TabIndex = 9;
+            this.rueTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.rueTextBox_Validating);
             // 
             // salaireHoraireTextBox
             // 
             this.salaireHoraireTextBox.Location = new System.Drawing.Point(601, 173);
             this.salaireHoraireTextBox.Name = "salaireHoraireTextBox";
             this.salaireHoraireTextBox.Size = new System.Drawing.Size(100, 20);
-            this.salaireHoraireTextBox.TabIndex = 28;
+            this.salaireHoraireTextBox.TabIndex = 14;
+            this.salaireHoraireTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.salaireHoraireTextBox_Validating);
             // 
             // villeTextBox
             // 
             this.villeTextBox.Location = new System.Drawing.Point(364, 230);
             this.villeTextBox.Name = "villeTextBox";
             this.villeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.villeTextBox.TabIndex = 34;
+            this.villeTextBox.TabIndex = 10;
+            this.villeTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.villeTextBox_Validating);
             // 
             // cmbTypeEmploye
             // 
@@ -347,7 +353,7 @@
             this.cmbTypeEmploye.Location = new System.Drawing.Point(601, 123);
             this.cmbTypeEmploye.Name = "cmbTypeEmploye";
             this.cmbTypeEmploye.Size = new System.Drawing.Size(119, 21);
-            this.cmbTypeEmploye.TabIndex = 48;
+            this.cmbTypeEmploye.TabIndex = 13;
             this.cmbTypeEmploye.ValueMember = "No";
             // 
             // typesEmployeBindingSource
@@ -359,12 +365,12 @@
             this.cmbSexe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSexe.FormattingEnabled = true;
             this.cmbSexe.Items.AddRange(new object[] {
-            "H",
+            "M",
             "F"});
             this.cmbSexe.Location = new System.Drawing.Point(112, 263);
             this.cmbSexe.Name = "cmbSexe";
             this.cmbSexe.Size = new System.Drawing.Size(100, 21);
-            this.cmbSexe.TabIndex = 49;
+            this.cmbSexe.TabIndex = 4;
             this.cmbSexe.Validating += new System.ComponentModel.CancelEventHandler(this.cmbSexe_Validating);
             // 
             // label1
@@ -394,7 +400,7 @@
             this.btnAjout.Location = new System.Drawing.Point(503, 327);
             this.btnAjout.Name = "btnAjout";
             this.btnAjout.Size = new System.Drawing.Size(78, 74);
-            this.btnAjout.TabIndex = 52;
+            this.btnAjout.TabIndex = 16;
             this.btnAjout.UseVisualStyleBackColor = true;
             this.btnAjout.Click += new System.EventHandler(this.btnAjout_Click);
             // 
@@ -405,7 +411,7 @@
             this.btnAnnuler.Location = new System.Drawing.Point(623, 327);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(78, 74);
-            this.btnAnnuler.TabIndex = 53;
+            this.btnAnnuler.TabIndex = 17;
             this.btnAnnuler.UseVisualStyleBackColor = true;
             this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
@@ -418,8 +424,9 @@
             this.cbProvince.Location = new System.Drawing.Point(364, 123);
             this.cbProvince.Name = "cbProvince";
             this.cbProvince.Size = new System.Drawing.Size(117, 21);
-            this.cbProvince.TabIndex = 54;
+            this.cbProvince.TabIndex = 8;
             this.cbProvince.ValueMember = "Id";
+            this.cbProvince.Validating += new System.ComponentModel.CancelEventHandler(this.cbProvince_Validating);
             // 
             // provincesBindingSource
             // 
@@ -444,9 +451,9 @@
             0});
             this.ageNumeric.Name = "ageNumeric";
             this.ageNumeric.Size = new System.Drawing.Size(100, 20);
-            this.ageNumeric.TabIndex = 55;
+            this.ageNumeric.TabIndex = 2;
             this.ageNumeric.Value = new decimal(new int[] {
-            1,
+            18,
             0,
             0,
             0});
@@ -457,7 +464,7 @@
             this.telTextBox.Mask = "(999) 000-0000";
             this.telTextBox.Name = "telTextBox";
             this.telTextBox.Size = new System.Drawing.Size(100, 20);
-            this.telTextBox.TabIndex = 56;
+            this.telTextBox.TabIndex = 6;
             this.telTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.telTextBox_Validating);
             // 
             // celTextBox
@@ -466,7 +473,8 @@
             this.celTextBox.Mask = "(999) 000-0000";
             this.celTextBox.Name = "celTextBox";
             this.celTextBox.Size = new System.Drawing.Size(100, 20);
-            this.celTextBox.TabIndex = 57;
+            this.celTextBox.TabIndex = 7;
+            this.celTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.celTextBox_Validating);
             // 
             // frmAjoutEmploye
             // 

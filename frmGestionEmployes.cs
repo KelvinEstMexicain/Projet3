@@ -25,9 +25,17 @@ namespace Projet3
         private void btnAjoutEmployer_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var gestionEmploye = new frmAjoutEmploye();
-            gestionEmploye.ShowDialog();
+            var ajoutEmploye = new frmAjoutEmploye();
+            ajoutEmploye.ShowDialog();
             this.Show();
+            employesBindingSource.DataSource = from unEmploye in dataContexteProjet1.Employes
+                                               orderby unEmploye.No
+                                               select unEmploye;
+        }
+
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
