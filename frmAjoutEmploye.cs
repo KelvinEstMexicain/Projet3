@@ -24,11 +24,38 @@ namespace Projet3
                                                 select uneProvince;
             typesEmployeBindingSource.DataSource = from unType in dataContexteProjet1.TypesEmploye
                                                    select unType;
+            var employes = from unEmploye in dataContexteProjet1.Employes
+                            select unEmploye;
+            var max = employes.Max(x => x.No);
+            var resultat = employes.First(x => x.No == max);
+            noTextBox.Text = (resultat.No + 1).ToString();
         }
 
         private void cmbProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void prenomTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            Validation.TextBoxValideTextSeulement(sender, errMessage, "Le prénom entré n'est pas valide");
+        }
+
+        private void nomTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            Validation.TextBoxValideTextSeulement(sender, errMessage, "Le nom entré n'est pas valide");
+        }
+
+        private void courrielTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            Validation.TextBoxValideEmail(sender, errMessage, "L'adresse courriel entrée n'est pas valide");
+        }
+
+        
     }
 }

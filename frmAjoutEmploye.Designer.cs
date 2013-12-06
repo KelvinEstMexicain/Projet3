@@ -48,7 +48,6 @@
             System.Windows.Forms.Label villeLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAjoutEmploye));
             this.employesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ageTextBox = new System.Windows.Forms.TextBox();
             this.cellulaireTextBox = new System.Windows.Forms.TextBox();
             this.codePostalTextBox = new System.Windows.Forms.TextBox();
             this.courrielTextBox = new System.Windows.Forms.TextBox();
@@ -63,6 +62,7 @@
             this.telephoneTextBox = new System.Windows.Forms.TextBox();
             this.villeTextBox = new System.Windows.Forms.TextBox();
             this.cmbTypeEmploye = new System.Windows.Forms.ComboBox();
+            this.typesEmployeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbSexe = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -70,7 +70,8 @@
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.cbProvince = new System.Windows.Forms.ComboBox();
             this.provincesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.typesEmployeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.errMessage = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ageNumeric = new System.Windows.Forms.NumericUpDown();
             ageLabel = new System.Windows.Forms.Label();
             cellulaireLabel = new System.Windows.Forms.Label();
             codePostalLabel = new System.Windows.Forms.Label();
@@ -89,8 +90,10 @@
             telephoneLabel = new System.Windows.Forms.Label();
             villeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.employesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesEmployeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errMessage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ageNumeric)).BeginInit();
             this.SuspendLayout();
             // 
             // ageLabel
@@ -159,7 +162,7 @@
             // noCiviqueLabel
             // 
             noCiviqueLabel.AutoSize = true;
-            noCiviqueLabel.Location = new System.Drawing.Point(508, 119);
+            noCiviqueLabel.Location = new System.Drawing.Point(271, 341);
             noCiviqueLabel.Name = "noCiviqueLabel";
             noCiviqueLabel.Size = new System.Drawing.Size(62, 13);
             noCiviqueLabel.TabIndex = 15;
@@ -177,7 +180,7 @@
             // notypeEmployeLabel
             // 
             notypeEmployeLabel.AutoSize = true;
-            notypeEmployeLabel.Location = new System.Drawing.Point(497, 180);
+            notypeEmployeLabel.Location = new System.Drawing.Point(497, 123);
             notypeEmployeLabel.Name = "notypeEmployeLabel";
             notypeEmployeLabel.Size = new System.Drawing.Size(84, 13);
             notypeEmployeLabel.TabIndex = 19;
@@ -195,7 +198,7 @@
             // remarqueLabel
             // 
             remarqueLabel.AutoSize = true;
-            remarqueLabel.Location = new System.Drawing.Point(508, 285);
+            remarqueLabel.Location = new System.Drawing.Point(508, 235);
             remarqueLabel.Name = "remarqueLabel";
             remarqueLabel.Size = new System.Drawing.Size(66, 13);
             remarqueLabel.TabIndex = 23;
@@ -213,7 +216,7 @@
             // salaireHoraireLabel
             // 
             salaireHoraireLabel.AutoSize = true;
-            salaireHoraireLabel.Location = new System.Drawing.Point(498, 231);
+            salaireHoraireLabel.Location = new System.Drawing.Point(498, 176);
             salaireHoraireLabel.Name = "salaireHoraireLabel";
             salaireHoraireLabel.Size = new System.Drawing.Size(79, 13);
             salaireHoraireLabel.TabIndex = 27;
@@ -250,13 +253,6 @@
             // 
             this.employesBindingSource.DataSource = typeof(Projet3.Employes);
             // 
-            // ageTextBox
-            // 
-            this.ageTextBox.Location = new System.Drawing.Point(112, 203);
-            this.ageTextBox.Name = "ageTextBox";
-            this.ageTextBox.Size = new System.Drawing.Size(100, 20);
-            this.ageTextBox.TabIndex = 2;
-            // 
             // cellulaireTextBox
             // 
             this.cellulaireTextBox.Location = new System.Drawing.Point(112, 371);
@@ -277,6 +273,7 @@
             this.courrielTextBox.Name = "courrielTextBox";
             this.courrielTextBox.Size = new System.Drawing.Size(100, 20);
             this.courrielTextBox.TabIndex = 8;
+            this.courrielTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.courrielTextBox_Validating);
             // 
             // motDePasseTextBox
             // 
@@ -291,12 +288,13 @@
             this.noTextBox.Enabled = false;
             this.noTextBox.Location = new System.Drawing.Point(112, 120);
             this.noTextBox.Name = "noTextBox";
+            this.noTextBox.ReadOnly = true;
             this.noTextBox.Size = new System.Drawing.Size(100, 20);
             this.noTextBox.TabIndex = 14;
             // 
             // noCiviqueTextBox
             // 
-            this.noCiviqueTextBox.Location = new System.Drawing.Point(601, 116);
+            this.noCiviqueTextBox.Location = new System.Drawing.Point(364, 338);
             this.noCiviqueTextBox.Name = "noCiviqueTextBox";
             this.noCiviqueTextBox.Size = new System.Drawing.Size(100, 20);
             this.noCiviqueTextBox.TabIndex = 16;
@@ -307,6 +305,7 @@
             this.nomTextBox.Name = "nomTextBox";
             this.nomTextBox.Size = new System.Drawing.Size(100, 20);
             this.nomTextBox.TabIndex = 18;
+            this.nomTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.nomTextBox_Validating);
             // 
             // prenomTextBox
             // 
@@ -314,12 +313,14 @@
             this.prenomTextBox.Name = "prenomTextBox";
             this.prenomTextBox.Size = new System.Drawing.Size(100, 20);
             this.prenomTextBox.TabIndex = 22;
+            this.prenomTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.prenomTextBox_Validating);
             // 
             // remarqueTextBox
             // 
-            this.remarqueTextBox.Location = new System.Drawing.Point(601, 282);
+            this.remarqueTextBox.Location = new System.Drawing.Point(601, 232);
+            this.remarqueTextBox.Multiline = true;
             this.remarqueTextBox.Name = "remarqueTextBox";
-            this.remarqueTextBox.Size = new System.Drawing.Size(100, 20);
+            this.remarqueTextBox.Size = new System.Drawing.Size(100, 74);
             this.remarqueTextBox.TabIndex = 24;
             // 
             // rueTextBox
@@ -331,7 +332,7 @@
             // 
             // salaireHoraireTextBox
             // 
-            this.salaireHoraireTextBox.Location = new System.Drawing.Point(601, 228);
+            this.salaireHoraireTextBox.Location = new System.Drawing.Point(601, 173);
             this.salaireHoraireTextBox.Name = "salaireHoraireTextBox";
             this.salaireHoraireTextBox.Size = new System.Drawing.Size(100, 20);
             this.salaireHoraireTextBox.TabIndex = 28;
@@ -356,11 +357,15 @@
             this.cmbTypeEmploye.DisplayMember = "Description";
             this.cmbTypeEmploye.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTypeEmploye.FormattingEnabled = true;
-            this.cmbTypeEmploye.Location = new System.Drawing.Point(601, 180);
+            this.cmbTypeEmploye.Location = new System.Drawing.Point(601, 123);
             this.cmbTypeEmploye.Name = "cmbTypeEmploye";
             this.cmbTypeEmploye.Size = new System.Drawing.Size(119, 21);
             this.cmbTypeEmploye.TabIndex = 48;
             this.cmbTypeEmploye.ValueMember = "No";
+            // 
+            // typesEmployeBindingSource
+            // 
+            this.typesEmployeBindingSource.DataSource = typeof(Projet3.TypesEmploye);
             // 
             // cmbSexe
             // 
@@ -413,6 +418,7 @@
             this.btnAnnuler.Size = new System.Drawing.Size(78, 74);
             this.btnAnnuler.TabIndex = 53;
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // cbProvince
             // 
@@ -430,15 +436,38 @@
             // 
             this.provincesBindingSource.DataSource = typeof(Projet3.Provinces);
             // 
-            // typesEmployeBindingSource
+            // errMessage
             // 
-            this.typesEmployeBindingSource.DataSource = typeof(Projet3.TypesEmploye);
+            this.errMessage.ContainerControl = this;
+            // 
+            // ageNumeric
+            // 
+            this.ageNumeric.Location = new System.Drawing.Point(112, 204);
+            this.ageNumeric.Maximum = new decimal(new int[] {
+            130,
+            0,
+            0,
+            0});
+            this.ageNumeric.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.ageNumeric.Name = "ageNumeric";
+            this.ageNumeric.Size = new System.Drawing.Size(100, 20);
+            this.ageNumeric.TabIndex = 55;
+            this.ageNumeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // frmAjoutEmploye
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 445);
+            this.Controls.Add(this.ageNumeric);
             this.Controls.Add(this.cbProvince);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.btnAjout);
@@ -447,7 +476,6 @@
             this.Controls.Add(this.cmbSexe);
             this.Controls.Add(this.cmbTypeEmploye);
             this.Controls.Add(ageLabel);
-            this.Controls.Add(this.ageTextBox);
             this.Controls.Add(cellulaireLabel);
             this.Controls.Add(this.cellulaireTextBox);
             this.Controls.Add(codePostalLabel);
@@ -481,8 +509,10 @@
             this.Text = "Ajout des employés";
             this.Load += new System.EventHandler(this.frmAjoutEmploye_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesEmployeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errMessage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ageNumeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -491,7 +521,6 @@
         #endregion
 
         private System.Windows.Forms.BindingSource employesBindingSource;
-        private System.Windows.Forms.TextBox ageTextBox;
         private System.Windows.Forms.TextBox cellulaireTextBox;
         private System.Windows.Forms.TextBox codePostalTextBox;
         private System.Windows.Forms.TextBox courrielTextBox;
@@ -514,5 +543,7 @@
         private System.Windows.Forms.ComboBox cbProvince;
         private System.Windows.Forms.BindingSource provincesBindingSource;
         private System.Windows.Forms.BindingSource typesEmployeBindingSource;
+        private System.Windows.Forms.ErrorProvider errMessage;
+        private System.Windows.Forms.NumericUpDown ageNumeric;
     }
 }
