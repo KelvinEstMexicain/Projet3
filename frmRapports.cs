@@ -15,5 +15,13 @@ namespace Projet3
         {
             InitializeComponent();
         }
+
+        private void frmRapports_Load(object sender, EventArgs e)
+        {
+            // TODO: cette ligne de code charge les données dans la table 'BDClubDeGolfBDataSet.RapportDE'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+            this.RapportDETableAdapter.Fill(this.BDClubDeGolfBDataSet.RapportDE);
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

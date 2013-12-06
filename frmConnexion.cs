@@ -27,6 +27,10 @@ namespace Projet3
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+           /* frmRapports m = new frmRapports();
+            this.Hide();
+            m.ShowDialog();
+            this.Show();*/
             int noEmploye = -1;
             if (int.TryParse(txtUsername.Text, out noEmploye))
             {
