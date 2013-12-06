@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Projet3.Properties;
 
 namespace Projet3
 {
@@ -43,17 +44,27 @@ namespace Projet3
 
         private void prenomTextBox_Validating(object sender, CancelEventArgs e)
         {
-            Validation.TextBoxValideTextSeulement(sender, errMessage, "Le prénom entré n'est pas valide");
+            Validation.TextBoxValideTextSeulement(sender, errMessage, Resources.PrenomNonValide);
         }
 
         private void nomTextBox_Validating(object sender, CancelEventArgs e)
         {
-            Validation.TextBoxValideTextSeulement(sender, errMessage, "Le nom entré n'est pas valide");
+            Validation.TextBoxValideTextSeulement(sender, errMessage, Resources.NomNonValide);
         }
 
         private void courrielTextBox_Validating(object sender, CancelEventArgs e)
         {
-            Validation.TextBoxValideEmail(sender, errMessage, "L'adresse courriel entrée n'est pas valide");
+            Validation.TextBoxValideEmail(sender, errMessage, Resources.CourrielNonValide);
+        }
+
+        private void telTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            Validation.MaskedTextBoxValideTel(sender, errMessage, Resources.TelNonValide);
+        }
+
+        private void motDePasseTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            Validation.TextBoxValideNonVide(sender, errMessage, Resources.MotDePasseNonValide);
         }
 
         
