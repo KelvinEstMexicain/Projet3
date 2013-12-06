@@ -48,7 +48,6 @@
             System.Windows.Forms.Label villeLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAjoutEmploye));
             this.employesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cellulaireTextBox = new System.Windows.Forms.TextBox();
             this.codePostalTextBox = new System.Windows.Forms.TextBox();
             this.courrielTextBox = new System.Windows.Forms.TextBox();
             this.motDePasseTextBox = new System.Windows.Forms.TextBox();
@@ -59,7 +58,6 @@
             this.remarqueTextBox = new System.Windows.Forms.TextBox();
             this.rueTextBox = new System.Windows.Forms.TextBox();
             this.salaireHoraireTextBox = new System.Windows.Forms.TextBox();
-            this.telephoneTextBox = new System.Windows.Forms.TextBox();
             this.villeTextBox = new System.Windows.Forms.TextBox();
             this.cmbTypeEmploye = new System.Windows.Forms.ComboBox();
             this.typesEmployeBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -72,6 +70,8 @@
             this.provincesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.errMessage = new System.Windows.Forms.ErrorProvider(this.components);
             this.ageNumeric = new System.Windows.Forms.NumericUpDown();
+            this.telTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.celTextBox = new System.Windows.Forms.MaskedTextBox();
             ageLabel = new System.Windows.Forms.Label();
             cellulaireLabel = new System.Windows.Forms.Label();
             codePostalLabel = new System.Windows.Forms.Label();
@@ -253,13 +253,6 @@
             // 
             this.employesBindingSource.DataSource = typeof(Projet3.Employes);
             // 
-            // cellulaireTextBox
-            // 
-            this.cellulaireTextBox.Location = new System.Drawing.Point(112, 371);
-            this.cellulaireTextBox.Name = "cellulaireTextBox";
-            this.cellulaireTextBox.Size = new System.Drawing.Size(100, 20);
-            this.cellulaireTextBox.TabIndex = 4;
-            // 
             // codePostalTextBox
             // 
             this.codePostalTextBox.Location = new System.Drawing.Point(364, 286);
@@ -281,6 +274,7 @@
             this.motDePasseTextBox.Name = "motDePasseTextBox";
             this.motDePasseTextBox.Size = new System.Drawing.Size(100, 20);
             this.motDePasseTextBox.TabIndex = 12;
+            this.motDePasseTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.motDePasseTextBox_Validating);
             // 
             // noTextBox
             // 
@@ -336,13 +330,6 @@
             this.salaireHoraireTextBox.Name = "salaireHoraireTextBox";
             this.salaireHoraireTextBox.Size = new System.Drawing.Size(100, 20);
             this.salaireHoraireTextBox.TabIndex = 28;
-            // 
-            // telephoneTextBox
-            // 
-            this.telephoneTextBox.Location = new System.Drawing.Point(112, 334);
-            this.telephoneTextBox.Name = "telephoneTextBox";
-            this.telephoneTextBox.Size = new System.Drawing.Size(100, 20);
-            this.telephoneTextBox.TabIndex = 32;
             // 
             // villeTextBox
             // 
@@ -462,11 +449,30 @@
             0,
             0});
             // 
+            // telTextBox
+            // 
+            this.telTextBox.Location = new System.Drawing.Point(112, 334);
+            this.telTextBox.Mask = "(999) 000-0000";
+            this.telTextBox.Name = "telTextBox";
+            this.telTextBox.Size = new System.Drawing.Size(100, 20);
+            this.telTextBox.TabIndex = 56;
+            this.telTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.telTextBox_Validating);
+            // 
+            // celTextBox
+            // 
+            this.celTextBox.Location = new System.Drawing.Point(112, 371);
+            this.celTextBox.Mask = "(999) 000-0000";
+            this.celTextBox.Name = "celTextBox";
+            this.celTextBox.Size = new System.Drawing.Size(100, 20);
+            this.celTextBox.TabIndex = 57;
+            // 
             // frmAjoutEmploye
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 445);
+            this.Controls.Add(this.celTextBox);
+            this.Controls.Add(this.telTextBox);
             this.Controls.Add(this.ageNumeric);
             this.Controls.Add(this.cbProvince);
             this.Controls.Add(this.btnAnnuler);
@@ -477,7 +483,6 @@
             this.Controls.Add(this.cmbTypeEmploye);
             this.Controls.Add(ageLabel);
             this.Controls.Add(cellulaireLabel);
-            this.Controls.Add(this.cellulaireTextBox);
             this.Controls.Add(codePostalLabel);
             this.Controls.Add(this.codePostalTextBox);
             this.Controls.Add(courrielLabel);
@@ -502,7 +507,6 @@
             this.Controls.Add(this.salaireHoraireTextBox);
             this.Controls.Add(sexeLabel);
             this.Controls.Add(telephoneLabel);
-            this.Controls.Add(this.telephoneTextBox);
             this.Controls.Add(villeLabel);
             this.Controls.Add(this.villeTextBox);
             this.Name = "frmAjoutEmploye";
@@ -521,7 +525,6 @@
         #endregion
 
         private System.Windows.Forms.BindingSource employesBindingSource;
-        private System.Windows.Forms.TextBox cellulaireTextBox;
         private System.Windows.Forms.TextBox codePostalTextBox;
         private System.Windows.Forms.TextBox courrielTextBox;
         private System.Windows.Forms.TextBox motDePasseTextBox;
@@ -532,7 +535,6 @@
         private System.Windows.Forms.TextBox remarqueTextBox;
         private System.Windows.Forms.TextBox rueTextBox;
         private System.Windows.Forms.TextBox salaireHoraireTextBox;
-        private System.Windows.Forms.TextBox telephoneTextBox;
         private System.Windows.Forms.TextBox villeTextBox;
         private System.Windows.Forms.ComboBox cmbTypeEmploye;
         private System.Windows.Forms.ComboBox cmbSexe;
@@ -545,5 +547,7 @@
         private System.Windows.Forms.BindingSource typesEmployeBindingSource;
         private System.Windows.Forms.ErrorProvider errMessage;
         private System.Windows.Forms.NumericUpDown ageNumeric;
+        private System.Windows.Forms.MaskedTextBox telTextBox;
+        private System.Windows.Forms.MaskedTextBox celTextBox;
     }
 }
