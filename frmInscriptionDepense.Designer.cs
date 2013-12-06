@@ -42,11 +42,12 @@
             this.noTextBox = new System.Windows.Forms.TextBox();
             this.remarqueTextBox = new System.Windows.Forms.TextBox();
             this.cbAbonnement = new System.Windows.Forms.ComboBox();
+            this.abonnementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.txtService = new System.Windows.Forms.TextBox();
             this.btnAjout = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
-            this.abonnementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.noEtNomCompletAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             dateDepenseLabel = new System.Windows.Forms.Label();
             idAbonnementLabel = new System.Windows.Forms.Label();
             montantLabel = new System.Windows.Forms.Label();
@@ -55,6 +56,7 @@
             remarqueLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.depensesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noEtNomCompletAbonnementBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dateDepenseLabel
@@ -149,14 +151,19 @@
             // 
             // cbAbonnement
             // 
-            this.cbAbonnement.DataSource = this.abonnementsBindingSource;
+            this.cbAbonnement.DataSource = this.noEtNomCompletAbonnementBindingSource;
+            this.cbAbonnement.DisplayMember = "nomCompletAbonnement";
             this.cbAbonnement.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAbonnement.FormattingEnabled = true;
             this.cbAbonnement.Location = new System.Drawing.Point(175, 94);
             this.cbAbonnement.Name = "cbAbonnement";
             this.cbAbonnement.Size = new System.Drawing.Size(200, 21);
             this.cbAbonnement.TabIndex = 13;
-            this.cbAbonnement.ValueMember = "Id";
+            this.cbAbonnement.ValueMember = "noAbonnement";
+            // 
+            // abonnementsBindingSource
+            // 
+            this.abonnementsBindingSource.DataSource = typeof(Projet3.Abonnements);
             // 
             // label1
             // 
@@ -197,9 +204,9 @@
             this.btnAnnuler.TabIndex = 58;
             this.btnAnnuler.UseVisualStyleBackColor = true;
             // 
-            // abonnementsBindingSource
+            // noEtNomCompletAbonnementBindingSource
             // 
-            this.abonnementsBindingSource.DataSource = typeof(Projet3.Abonnements);
+            this.noEtNomCompletAbonnementBindingSource.DataSource = typeof(Projet3.noEtNomCompletAbonnement);
             // 
             // frmInscriptionDepense
             // 
@@ -227,6 +234,7 @@
             this.Load += new System.EventHandler(this.frmInscriptionDepense_Load);
             ((System.ComponentModel.ISupportInitialize)(this.depensesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noEtNomCompletAbonnementBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,6 +253,7 @@
         private System.Windows.Forms.Button btnAjout;
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.BindingSource abonnementsBindingSource;
+        private System.Windows.Forms.BindingSource noEtNomCompletAbonnementBindingSource;
 
     }
 }

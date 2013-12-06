@@ -15,10 +15,15 @@ namespace Projet3
         {
             InitializeComponent();
         }
-
+        DataClasses1DataContext dataContexteProjet1 = new DataClasses1DataContext();
         private void frmInscriptionDepense_Load(object sender, EventArgs e)
         {
-
+            noEtNomCompletAbonnementBindingSource.DataSource = from unAbonnement in dataContexteProjet1.Abonnements
+                                                               select new
+                                                               {
+                                                                   noAbonnement = unAbonnement.Id,
+                                                                   nomCompletAbonnement = unAbonnement.Prenom + " " + unAbonnement.Nom
+                                                               };
         }
     }
 }

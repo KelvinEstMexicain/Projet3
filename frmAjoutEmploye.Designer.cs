@@ -62,15 +62,15 @@
             this.salaireHoraireTextBox = new System.Windows.Forms.TextBox();
             this.telephoneTextBox = new System.Windows.Forms.TextBox();
             this.villeTextBox = new System.Windows.Forms.TextBox();
-            this.cmbProvince = new System.Windows.Forms.ComboBox();
-            this.provincesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbTypeEmploye = new System.Windows.Forms.ComboBox();
-            this.typesEmployeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbSexe = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAjout = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
+            this.cbProvince = new System.Windows.Forms.ComboBox();
+            this.provincesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.typesEmployeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ageLabel = new System.Windows.Forms.Label();
             cellulaireLabel = new System.Windows.Forms.Label();
             codePostalLabel = new System.Windows.Forms.Label();
@@ -350,38 +350,21 @@
             this.villeTextBox.Size = new System.Drawing.Size(100, 20);
             this.villeTextBox.TabIndex = 34;
             // 
-            // cmbProvince
-            // 
-            this.cmbProvince.DataSource = this.provincesBindingSource;
-            this.cmbProvince.DisplayMember = "Nom";
-            this.cmbProvince.FormattingEnabled = true;
-            this.cmbProvince.Location = new System.Drawing.Point(364, 119);
-            this.cmbProvince.Name = "cmbProvince";
-            this.cmbProvince.Size = new System.Drawing.Size(100, 21);
-            this.cmbProvince.TabIndex = 47;
-            this.cmbProvince.ValueMember = "Id";
-            // 
-            // provincesBindingSource
-            // 
-            this.provincesBindingSource.DataSource = typeof(Projet3.Provinces);
-            // 
             // cmbTypeEmploye
             // 
             this.cmbTypeEmploye.DataSource = this.typesEmployeBindingSource;
             this.cmbTypeEmploye.DisplayMember = "Description";
+            this.cmbTypeEmploye.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTypeEmploye.FormattingEnabled = true;
             this.cmbTypeEmploye.Location = new System.Drawing.Point(601, 180);
             this.cmbTypeEmploye.Name = "cmbTypeEmploye";
-            this.cmbTypeEmploye.Size = new System.Drawing.Size(100, 21);
+            this.cmbTypeEmploye.Size = new System.Drawing.Size(119, 21);
             this.cmbTypeEmploye.TabIndex = 48;
             this.cmbTypeEmploye.ValueMember = "No";
             // 
-            // typesEmployeBindingSource
-            // 
-            this.typesEmployeBindingSource.DataSource = typeof(Projet3.TypesEmploye);
-            // 
             // cmbSexe
             // 
+            this.cmbSexe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSexe.FormattingEnabled = true;
             this.cmbSexe.Items.AddRange(new object[] {
             "H",
@@ -431,18 +414,38 @@
             this.btnAnnuler.TabIndex = 53;
             this.btnAnnuler.UseVisualStyleBackColor = true;
             // 
+            // cbProvince
+            // 
+            this.cbProvince.DataSource = this.provincesBindingSource;
+            this.cbProvince.DisplayMember = "Nom";
+            this.cbProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbProvince.FormattingEnabled = true;
+            this.cbProvince.Location = new System.Drawing.Point(364, 123);
+            this.cbProvince.Name = "cbProvince";
+            this.cbProvince.Size = new System.Drawing.Size(117, 21);
+            this.cbProvince.TabIndex = 54;
+            this.cbProvince.ValueMember = "Id";
+            // 
+            // provincesBindingSource
+            // 
+            this.provincesBindingSource.DataSource = typeof(Projet3.Provinces);
+            // 
+            // typesEmployeBindingSource
+            // 
+            this.typesEmployeBindingSource.DataSource = typeof(Projet3.TypesEmploye);
+            // 
             // frmAjoutEmploye
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 445);
+            this.ClientSize = new System.Drawing.Size(747, 445);
+            this.Controls.Add(this.cbProvince);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.btnAjout);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbSexe);
             this.Controls.Add(this.cmbTypeEmploye);
-            this.Controls.Add(this.cmbProvince);
             this.Controls.Add(ageLabel);
             this.Controls.Add(this.ageTextBox);
             this.Controls.Add(cellulaireLabel);
@@ -502,14 +505,14 @@
         private System.Windows.Forms.TextBox salaireHoraireTextBox;
         private System.Windows.Forms.TextBox telephoneTextBox;
         private System.Windows.Forms.TextBox villeTextBox;
-        private System.Windows.Forms.ComboBox cmbProvince;
-        private System.Windows.Forms.BindingSource provincesBindingSource;
         private System.Windows.Forms.ComboBox cmbTypeEmploye;
-        private System.Windows.Forms.BindingSource typesEmployeBindingSource;
         private System.Windows.Forms.ComboBox cmbSexe;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAjout;
         private System.Windows.Forms.Button btnAnnuler;
+        private System.Windows.Forms.ComboBox cbProvince;
+        private System.Windows.Forms.BindingSource provincesBindingSource;
+        private System.Windows.Forms.BindingSource typesEmployeBindingSource;
     }
 }
