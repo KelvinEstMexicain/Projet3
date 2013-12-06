@@ -15,5 +15,10 @@ namespace Projet3
         {
             InitializeComponent();
         }
+
+        private void frmInscriptionDepense_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
