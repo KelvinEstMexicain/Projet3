@@ -48,7 +48,6 @@
             System.Windows.Forms.Label villeLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAjoutEmploye));
             this.employesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ageTextBox = new System.Windows.Forms.TextBox();
             this.cellulaireTextBox = new System.Windows.Forms.TextBox();
             this.codePostalTextBox = new System.Windows.Forms.TextBox();
             this.courrielTextBox = new System.Windows.Forms.TextBox();
@@ -71,6 +70,8 @@
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.cbProvince = new System.Windows.Forms.ComboBox();
             this.provincesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.errMessage = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ageNumeric = new System.Windows.Forms.NumericUpDown();
             ageLabel = new System.Windows.Forms.Label();
             cellulaireLabel = new System.Windows.Forms.Label();
             codePostalLabel = new System.Windows.Forms.Label();
@@ -91,6 +92,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.employesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesEmployeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errMessage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ageNumeric)).BeginInit();
             this.SuspendLayout();
             // 
             // ageLabel
@@ -250,13 +253,6 @@
             // 
             this.employesBindingSource.DataSource = typeof(Projet3.Employes);
             // 
-            // ageTextBox
-            // 
-            this.ageTextBox.Location = new System.Drawing.Point(112, 203);
-            this.ageTextBox.Name = "ageTextBox";
-            this.ageTextBox.Size = new System.Drawing.Size(100, 20);
-            this.ageTextBox.TabIndex = 2;
-            // 
             // cellulaireTextBox
             // 
             this.cellulaireTextBox.Location = new System.Drawing.Point(112, 371);
@@ -277,6 +273,7 @@
             this.courrielTextBox.Name = "courrielTextBox";
             this.courrielTextBox.Size = new System.Drawing.Size(100, 20);
             this.courrielTextBox.TabIndex = 8;
+            this.courrielTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.courrielTextBox_Validating);
             // 
             // motDePasseTextBox
             // 
@@ -291,6 +288,7 @@
             this.noTextBox.Enabled = false;
             this.noTextBox.Location = new System.Drawing.Point(112, 120);
             this.noTextBox.Name = "noTextBox";
+            this.noTextBox.ReadOnly = true;
             this.noTextBox.Size = new System.Drawing.Size(100, 20);
             this.noTextBox.TabIndex = 14;
             // 
@@ -307,6 +305,7 @@
             this.nomTextBox.Name = "nomTextBox";
             this.nomTextBox.Size = new System.Drawing.Size(100, 20);
             this.nomTextBox.TabIndex = 18;
+            this.nomTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.nomTextBox_Validating);
             // 
             // prenomTextBox
             // 
@@ -314,6 +313,7 @@
             this.prenomTextBox.Name = "prenomTextBox";
             this.prenomTextBox.Size = new System.Drawing.Size(100, 20);
             this.prenomTextBox.TabIndex = 22;
+            this.prenomTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.prenomTextBox_Validating);
             // 
             // remarqueTextBox
             // 
@@ -418,6 +418,7 @@
             this.btnAnnuler.Size = new System.Drawing.Size(78, 74);
             this.btnAnnuler.TabIndex = 53;
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // cbProvince
             // 
@@ -435,11 +436,38 @@
             // 
             this.provincesBindingSource.DataSource = typeof(Projet3.Provinces);
             // 
+            // errMessage
+            // 
+            this.errMessage.ContainerControl = this;
+            // 
+            // ageNumeric
+            // 
+            this.ageNumeric.Location = new System.Drawing.Point(112, 204);
+            this.ageNumeric.Maximum = new decimal(new int[] {
+            130,
+            0,
+            0,
+            0});
+            this.ageNumeric.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.ageNumeric.Name = "ageNumeric";
+            this.ageNumeric.Size = new System.Drawing.Size(100, 20);
+            this.ageNumeric.TabIndex = 55;
+            this.ageNumeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // frmAjoutEmploye
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 445);
+            this.Controls.Add(this.ageNumeric);
             this.Controls.Add(this.cbProvince);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.btnAjout);
@@ -448,7 +476,6 @@
             this.Controls.Add(this.cmbSexe);
             this.Controls.Add(this.cmbTypeEmploye);
             this.Controls.Add(ageLabel);
-            this.Controls.Add(this.ageTextBox);
             this.Controls.Add(cellulaireLabel);
             this.Controls.Add(this.cellulaireTextBox);
             this.Controls.Add(codePostalLabel);
@@ -484,6 +511,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.employesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesEmployeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errMessage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ageNumeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -492,7 +521,6 @@
         #endregion
 
         private System.Windows.Forms.BindingSource employesBindingSource;
-        private System.Windows.Forms.TextBox ageTextBox;
         private System.Windows.Forms.TextBox cellulaireTextBox;
         private System.Windows.Forms.TextBox codePostalTextBox;
         private System.Windows.Forms.TextBox courrielTextBox;
@@ -515,5 +543,7 @@
         private System.Windows.Forms.ComboBox cbProvince;
         private System.Windows.Forms.BindingSource provincesBindingSource;
         private System.Windows.Forms.BindingSource typesEmployeBindingSource;
+        private System.Windows.Forms.ErrorProvider errMessage;
+        private System.Windows.Forms.NumericUpDown ageNumeric;
     }
 }
