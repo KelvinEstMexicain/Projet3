@@ -50,6 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BDClubDeGolfBDataSet.cs">
+      <DependentUpon>BDClubDeGolfBDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BDClubDeGolfBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -60,7 +64,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Email.cs" />
     <Compile Include="frmConnexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,7 +155,11 @@
     <EmbeddedResource Include="frmStatistique.resx">
       <DependentUpon>frmStatistique.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="rapportDepenseAnnee.rdlc" />
     <EmbeddedResource Include="rapportDepensesEmploye.rdlc" />
+    <EmbeddedResource Include="rapportPartieJoueeAbonnement.rdlc" />
+    <EmbeddedResource Include="rapportPartieJoueeAnnee.rdlc" />
+    <EmbeddedResource Include="rapportPartieJoueeTerrain1.rdlc" />
     <None Include="app.config" />
     <None Include="BDClubDeGolfBDataSet.xsc">
       <DependentUpon>BDClubDeGolfBDataSet.xsd</DependentUpon>

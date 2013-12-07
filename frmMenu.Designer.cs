@@ -111,6 +111,7 @@
             this.btnRapport.TabIndex = 8;
             this.btnRapport.Text = "Visualiser les rapports";
             this.btnRapport.UseVisualStyleBackColor = true;
+            this.btnRapport.Click += new System.EventHandler(this.btnRapport_Click);
             // 
             // btnStatistiques
             // 

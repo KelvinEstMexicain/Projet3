@@ -88,5 +88,13 @@ namespace Projet3
             employeResto = 6,
             profGolf = 7
         }
+
+        private void btnRapport_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var rapport = new frmRapports();
+            rapport.ShowDialog();
+            this.Show();
+        }
     }
 }
