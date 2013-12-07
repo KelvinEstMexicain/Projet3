@@ -309,7 +309,7 @@
             this.cmbSexe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSexe.FormattingEnabled = true;
             this.cmbSexe.Items.AddRange(new object[] {
-            "M",
+            "H",
             "F"});
             this.cmbSexe.Location = new System.Drawing.Point(102, 238);
             this.cmbSexe.Name = "cmbSexe";
@@ -508,7 +508,7 @@
             this.typesEmployeComboBox.FormattingEnabled = true;
             this.typesEmployeComboBox.Location = new System.Drawing.Point(591, 95);
             this.typesEmployeComboBox.Name = "typesEmployeComboBox";
-            this.typesEmployeComboBox.Size = new System.Drawing.Size(121, 21);
+            this.typesEmployeComboBox.Size = new System.Drawing.Size(179, 21);
             this.typesEmployeComboBox.TabIndex = 13;
             this.typesEmployeComboBox.ValueMember = "No";
             // 
@@ -529,7 +529,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 408);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ClientSize = new System.Drawing.Size(801, 408);
             this.Controls.Add(this.typesEmployeComboBox);
             this.Controls.Add(this.cellulaireMaskedTextBox);
             this.Controls.Add(this.telephoneMaskedTextBox);

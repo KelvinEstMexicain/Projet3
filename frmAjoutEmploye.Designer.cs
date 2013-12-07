@@ -352,7 +352,7 @@
             this.cmbTypeEmploye.FormattingEnabled = true;
             this.cmbTypeEmploye.Location = new System.Drawing.Point(601, 98);
             this.cmbTypeEmploye.Name = "cmbTypeEmploye";
-            this.cmbTypeEmploye.Size = new System.Drawing.Size(119, 21);
+            this.cmbTypeEmploye.Size = new System.Drawing.Size(148, 21);
             this.cmbTypeEmploye.TabIndex = 13;
             this.cmbTypeEmploye.ValueMember = "No";
             // 
@@ -365,7 +365,7 @@
             this.cmbSexe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSexe.FormattingEnabled = true;
             this.cmbSexe.Items.AddRange(new object[] {
-            "M",
+            "H",
             "F"});
             this.cmbSexe.Location = new System.Drawing.Point(112, 238);
             this.cmbSexe.Name = "cmbSexe";
@@ -480,7 +480,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 391);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ClientSize = new System.Drawing.Size(780, 391);
             this.Controls.Add(this.celTextBox);
             this.Controls.Add(this.telTextBox);
             this.Controls.Add(this.ageNumeric);

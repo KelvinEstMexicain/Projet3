@@ -15,5 +15,16 @@ namespace Projet3
         {
             InitializeComponent();
         }
+
+        private void frmAbonnementPrincipal_Load(object sender, EventArgs e)
+        {
+            this.typesAbonnementTableAdapter.Fill(this.bDClubDeGolfBDataSet.TypesAbonnement);
+            this.provincesTableAdapter.Fill(this.bDClubDeGolfBDataSet.Provinces);
+        }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
