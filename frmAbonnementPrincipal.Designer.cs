@@ -47,6 +47,7 @@ namespace Projet3
             System.Windows.Forms.Label telephoneLabel;
             System.Windows.Forms.Label villeLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbonnementPrincipal));
+            //System.Windows.Forms.Label nbEnfantsLabel;
             this.abonnementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.codePostalTextBox = new System.Windows.Forms.TextBox();
             this.courrielTextBox = new System.Windows.Forms.TextBox();
@@ -74,6 +75,7 @@ namespace Projet3
             this.errProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.telephoneMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.cellulaireMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.nbEnfantsNumericUpDown = new System.Windows.Forms.NumericUpDown();
             cellulaireLabel = new System.Windows.Forms.Label();
             codePostalLabel = new System.Windows.Forms.Label();
             courrielLabel = new System.Windows.Forms.Label();
@@ -90,11 +92,13 @@ namespace Projet3
             sexeLabel = new System.Windows.Forms.Label();
             telephoneLabel = new System.Windows.Forms.Label();
             villeLabel = new System.Windows.Forms.Label();
+            nbEnfantsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDClubDeGolfBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesAbonnementBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nbEnfantsNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // cellulaireLabel
@@ -290,7 +294,7 @@ namespace Projet3
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
             this.idTextBox.Size = new System.Drawing.Size(147, 20);
-            this.idTextBox.TabIndex = 12;
+            this.idTextBox.TabIndex = 5;
             // 
             // noCiviqueTextBox
             // 
@@ -425,6 +429,7 @@ namespace Projet3
             this.typesAbonnementComboBox.Size = new System.Drawing.Size(198, 21);
             this.typesAbonnementComboBox.TabIndex = 9;
             this.typesAbonnementComboBox.ValueMember = "No";
+            this.typesAbonnementComboBox.SelectedIndexChanged += new System.EventHandler(this.typesAbonnementComboBox_SelectedIndexChanged);
             this.typesAbonnementComboBox.Validating += new System.ComponentModel.CancelEventHandler(this.typesAbonnementComboBox_Validating);
             // 
             // typesAbonnementBindingSource
@@ -478,12 +483,45 @@ namespace Projet3
             this.cellulaireMaskedTextBox.TabIndex = 4;
             this.cellulaireMaskedTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.cellulaireMaskedTextBox_Validating);
             // 
+            // nbEnfantsNumericUpDown
+            // 
+            this.nbEnfantsNumericUpDown.Location = new System.Drawing.Point(429, 116);
+            this.nbEnfantsNumericUpDown.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.nbEnfantsNumericUpDown.Minimum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.nbEnfantsNumericUpDown.Name = "nbEnfantsNumericUpDown";
+            this.nbEnfantsNumericUpDown.Size = new System.Drawing.Size(200, 20);
+            this.nbEnfantsNumericUpDown.TabIndex = 55;
+            this.nbEnfantsNumericUpDown.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // nbEnfantsLabel
+            // 
+            nbEnfantsLabel.AutoSize = true;
+            nbEnfantsLabel.Location = new System.Drawing.Point(309, 118);
+            nbEnfantsLabel.Name = "nbEnfantsLabel";
+            nbEnfantsLabel.Size = new System.Drawing.Size(93, 13);
+            nbEnfantsLabel.TabIndex = 54;
+            nbEnfantsLabel.Text = "Nombre d\'enfants:";
+            // 
             // frmAbonnementPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(674, 486);
+            this.Controls.Add(this.nbEnfantsNumericUpDown);
+            this.Controls.Add(nbEnfantsLabel);
             this.Controls.Add(this.cellulaireMaskedTextBox);
             this.Controls.Add(this.telephoneMaskedTextBox);
             this.Controls.Add(this.provincesComboBox);
@@ -528,6 +566,7 @@ namespace Projet3
             ((System.ComponentModel.ISupportInitialize)(this.bDClubDeGolfBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typesAbonnementBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nbEnfantsNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -562,5 +601,7 @@ namespace Projet3
         private System.Windows.Forms.ErrorProvider errProvider;
         private System.Windows.Forms.MaskedTextBox telephoneMaskedTextBox;
         private System.Windows.Forms.MaskedTextBox cellulaireMaskedTextBox;
+        private System.Windows.Forms.NumericUpDown nbEnfantsNumericUpDown;
+        private System.Windows.Forms.Label nbEnfantsLabel;
     }
 }

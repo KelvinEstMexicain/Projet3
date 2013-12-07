@@ -61,6 +61,24 @@ namespace Projet3.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to KelvinEstMexicain@gmail.com.
+        /// </summary>
+        internal static string AdresseGMail {
+            get {
+                return ResourceManager.GetString("AdresseGMail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to smtp.gmail.com.
+        /// </summary>
+        internal static string AdresseSmtpGMail {
+            get {
+                return ResourceManager.GetString("AdresseSmtpGMail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Le numéro de cellulaire entré n&apos;est pas valide.
         /// </summary>
         internal static string CelNonValide {
@@ -97,11 +115,47 @@ namespace Projet3.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Echec de l&apos;envoi du courriel:.
+        /// </summary>
+        internal static string EchecEnvoisCourriel {
+            get {
+                return ResourceManager.GetString("EchecEnvoisCourriel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to L&apos;enregistrement a réussi. Un courriel a été envoyé à l&apos;abonné..
+        /// </summary>
+        internal static string EnregistrementReussi {
+            get {
+                return ResourceManager.GetString("EnregistrementReussi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Il y a eu une erreur lors de la connexion à la base de donnée.
         /// </summary>
         internal static string ErreurBD {
             get {
                 return ResourceManager.GetString("ErreurBD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Il y a eu une erreur lors de l&apos;enregistrement.
+        /// </summary>
+        internal static string ErreurEnregistrement {
+            get {
+                return ResourceManager.GetString("ErreurEnregistrement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DavidEstPasMexicain.
+        /// </summary>
+        internal static string MotDePasseGMail {
+            get {
+                return ResourceManager.GetString("MotDePasseGMail", resourceCulture);
             }
         }
         
@@ -205,6 +259,15 @@ namespace Projet3.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Voici les informations de votre abonnement.
+        /// </summary>
+        internal static string SujetMailAbonnement {
+            get {
+                return ResourceManager.GetString("SujetMailAbonnement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Vous ne pouvez supprimer l&apos;administrateur.
         /// </summary>
         internal static string SupprimerAdmin {
@@ -241,11 +304,38 @@ namespace Projet3.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Abonnement du conjoint(e).
+        /// </summary>
+        internal static string TitreAbonnementConjoint {
+            get {
+                return ResourceManager.GetString("TitreAbonnementConjoint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Abonnement d&apos;un enfant.
+        /// </summary>
+        internal static string TitreAbonnementEnfant {
+            get {
+                return ResourceManager.GetString("TitreAbonnementEnfant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Erreur.
         /// </summary>
         internal static string TitreErreur {
             get {
                 return ResourceManager.GetString("TitreErreur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Réussi.
+        /// </summary>
+        internal static string TitreReussi {
+            get {
+                return ResourceManager.GetString("TitreReussi", resourceCulture);
             }
         }
         
