@@ -99,7 +99,7 @@
             // ageLabel
             // 
             ageLabel.AutoSize = true;
-            ageLabel.Location = new System.Drawing.Point(19, 206);
+            ageLabel.Location = new System.Drawing.Point(19, 181);
             ageLabel.Name = "ageLabel";
             ageLabel.Size = new System.Drawing.Size(29, 13);
             ageLabel.TabIndex = 1;
@@ -108,7 +108,7 @@
             // cellulaireLabel
             // 
             cellulaireLabel.AutoSize = true;
-            cellulaireLabel.Location = new System.Drawing.Point(19, 374);
+            cellulaireLabel.Location = new System.Drawing.Point(19, 349);
             cellulaireLabel.Name = "cellulaireLabel";
             cellulaireLabel.Size = new System.Drawing.Size(56, 13);
             cellulaireLabel.TabIndex = 3;
@@ -117,7 +117,7 @@
             // codePostalLabel
             // 
             codePostalLabel.AutoSize = true;
-            codePostalLabel.Location = new System.Drawing.Point(271, 289);
+            codePostalLabel.Location = new System.Drawing.Point(271, 264);
             codePostalLabel.Name = "codePostalLabel";
             codePostalLabel.Size = new System.Drawing.Size(67, 13);
             codePostalLabel.TabIndex = 5;
@@ -126,7 +126,7 @@
             // courrielLabel
             // 
             courrielLabel.AutoSize = true;
-            courrielLabel.Location = new System.Drawing.Point(19, 304);
+            courrielLabel.Location = new System.Drawing.Point(19, 279);
             courrielLabel.Name = "courrielLabel";
             courrielLabel.Size = new System.Drawing.Size(45, 13);
             courrielLabel.TabIndex = 7;
@@ -135,7 +135,7 @@
             // idProvinceLabel
             // 
             idProvinceLabel.AutoSize = true;
-            idProvinceLabel.Location = new System.Drawing.Point(271, 123);
+            idProvinceLabel.Location = new System.Drawing.Point(271, 98);
             idProvinceLabel.Name = "idProvinceLabel";
             idProvinceLabel.Size = new System.Drawing.Size(52, 13);
             idProvinceLabel.TabIndex = 9;
@@ -144,7 +144,7 @@
             // motDePasseLabel
             // 
             motDePasseLabel.AutoSize = true;
-            motDePasseLabel.Location = new System.Drawing.Point(19, 235);
+            motDePasseLabel.Location = new System.Drawing.Point(19, 210);
             motDePasseLabel.Name = "motDePasseLabel";
             motDePasseLabel.Size = new System.Drawing.Size(77, 13);
             motDePasseLabel.TabIndex = 11;
@@ -153,7 +153,7 @@
             // noLabel
             // 
             noLabel.AutoSize = true;
-            noLabel.Location = new System.Drawing.Point(19, 123);
+            noLabel.Location = new System.Drawing.Point(19, 98);
             noLabel.Name = "noLabel";
             noLabel.Size = new System.Drawing.Size(24, 13);
             noLabel.TabIndex = 13;
@@ -162,7 +162,7 @@
             // noCiviqueLabel
             // 
             noCiviqueLabel.AutoSize = true;
-            noCiviqueLabel.Location = new System.Drawing.Point(271, 341);
+            noCiviqueLabel.Location = new System.Drawing.Point(271, 316);
             noCiviqueLabel.Name = "noCiviqueLabel";
             noCiviqueLabel.Size = new System.Drawing.Size(62, 13);
             noCiviqueLabel.TabIndex = 15;
@@ -171,7 +171,7 @@
             // nomLabel
             // 
             nomLabel.AutoSize = true;
-            nomLabel.Location = new System.Drawing.Point(19, 180);
+            nomLabel.Location = new System.Drawing.Point(19, 155);
             nomLabel.Name = "nomLabel";
             nomLabel.Size = new System.Drawing.Size(32, 13);
             nomLabel.TabIndex = 17;
@@ -180,7 +180,7 @@
             // notypeEmployeLabel
             // 
             notypeEmployeLabel.AutoSize = true;
-            notypeEmployeLabel.Location = new System.Drawing.Point(497, 123);
+            notypeEmployeLabel.Location = new System.Drawing.Point(497, 98);
             notypeEmployeLabel.Name = "notypeEmployeLabel";
             notypeEmployeLabel.Size = new System.Drawing.Size(84, 13);
             notypeEmployeLabel.TabIndex = 19;
@@ -189,7 +189,7 @@
             // prenomLabel
             // 
             prenomLabel.AutoSize = true;
-            prenomLabel.Location = new System.Drawing.Point(19, 152);
+            prenomLabel.Location = new System.Drawing.Point(19, 127);
             prenomLabel.Name = "prenomLabel";
             prenomLabel.Size = new System.Drawing.Size(46, 13);
             prenomLabel.TabIndex = 21;
@@ -198,7 +198,7 @@
             // remarqueLabel
             // 
             remarqueLabel.AutoSize = true;
-            remarqueLabel.Location = new System.Drawing.Point(508, 235);
+            remarqueLabel.Location = new System.Drawing.Point(508, 210);
             remarqueLabel.Name = "remarqueLabel";
             remarqueLabel.Size = new System.Drawing.Size(59, 13);
             remarqueLabel.TabIndex = 23;
@@ -207,7 +207,7 @@
             // rueLabel
             // 
             rueLabel.AutoSize = true;
-            rueLabel.Location = new System.Drawing.Point(271, 176);
+            rueLabel.Location = new System.Drawing.Point(271, 151);
             rueLabel.Name = "rueLabel";
             rueLabel.Size = new System.Drawing.Size(30, 13);
             rueLabel.TabIndex = 25;
@@ -216,7 +216,7 @@
             // salaireHoraireLabel
             // 
             salaireHoraireLabel.AutoSize = true;
-            salaireHoraireLabel.Location = new System.Drawing.Point(498, 176);
+            salaireHoraireLabel.Location = new System.Drawing.Point(498, 151);
             salaireHoraireLabel.Name = "salaireHoraireLabel";
             salaireHoraireLabel.Size = new System.Drawing.Size(79, 13);
             salaireHoraireLabel.TabIndex = 27;
@@ -225,7 +225,7 @@
             // sexeLabel
             // 
             sexeLabel.AutoSize = true;
-            sexeLabel.Location = new System.Drawing.Point(19, 266);
+            sexeLabel.Location = new System.Drawing.Point(19, 241);
             sexeLabel.Name = "sexeLabel";
             sexeLabel.Size = new System.Drawing.Size(34, 13);
             sexeLabel.TabIndex = 29;
@@ -234,7 +234,7 @@
             // telephoneLabel
             // 
             telephoneLabel.AutoSize = true;
-            telephoneLabel.Location = new System.Drawing.Point(19, 337);
+            telephoneLabel.Location = new System.Drawing.Point(19, 312);
             telephoneLabel.Name = "telephoneLabel";
             telephoneLabel.Size = new System.Drawing.Size(61, 13);
             telephoneLabel.TabIndex = 31;
@@ -243,7 +243,7 @@
             // villeLabel
             // 
             villeLabel.AutoSize = true;
-            villeLabel.Location = new System.Drawing.Point(271, 233);
+            villeLabel.Location = new System.Drawing.Point(271, 208);
             villeLabel.Name = "villeLabel";
             villeLabel.Size = new System.Drawing.Size(29, 13);
             villeLabel.TabIndex = 33;
@@ -255,7 +255,7 @@
             // 
             // codePostalTextBox
             // 
-            this.codePostalTextBox.Location = new System.Drawing.Point(364, 286);
+            this.codePostalTextBox.Location = new System.Drawing.Point(364, 261);
             this.codePostalTextBox.Name = "codePostalTextBox";
             this.codePostalTextBox.Size = new System.Drawing.Size(100, 20);
             this.codePostalTextBox.TabIndex = 11;
@@ -263,7 +263,7 @@
             // 
             // courrielTextBox
             // 
-            this.courrielTextBox.Location = new System.Drawing.Point(112, 301);
+            this.courrielTextBox.Location = new System.Drawing.Point(112, 276);
             this.courrielTextBox.Name = "courrielTextBox";
             this.courrielTextBox.Size = new System.Drawing.Size(100, 20);
             this.courrielTextBox.TabIndex = 5;
@@ -271,7 +271,7 @@
             // 
             // motDePasseTextBox
             // 
-            this.motDePasseTextBox.Location = new System.Drawing.Point(112, 232);
+            this.motDePasseTextBox.Location = new System.Drawing.Point(112, 207);
             this.motDePasseTextBox.Name = "motDePasseTextBox";
             this.motDePasseTextBox.Size = new System.Drawing.Size(100, 20);
             this.motDePasseTextBox.TabIndex = 3;
@@ -281,7 +281,7 @@
             // 
             this.noTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.employesBindingSource, "No", true));
             this.noTextBox.Enabled = false;
-            this.noTextBox.Location = new System.Drawing.Point(112, 120);
+            this.noTextBox.Location = new System.Drawing.Point(112, 95);
             this.noTextBox.Name = "noTextBox";
             this.noTextBox.ReadOnly = true;
             this.noTextBox.Size = new System.Drawing.Size(100, 20);
@@ -289,7 +289,7 @@
             // 
             // noCiviqueTextBox
             // 
-            this.noCiviqueTextBox.Location = new System.Drawing.Point(364, 338);
+            this.noCiviqueTextBox.Location = new System.Drawing.Point(364, 313);
             this.noCiviqueTextBox.Name = "noCiviqueTextBox";
             this.noCiviqueTextBox.Size = new System.Drawing.Size(100, 20);
             this.noCiviqueTextBox.TabIndex = 12;
@@ -297,7 +297,7 @@
             // 
             // nomTextBox
             // 
-            this.nomTextBox.Location = new System.Drawing.Point(112, 177);
+            this.nomTextBox.Location = new System.Drawing.Point(112, 152);
             this.nomTextBox.Name = "nomTextBox";
             this.nomTextBox.Size = new System.Drawing.Size(100, 20);
             this.nomTextBox.TabIndex = 1;
@@ -305,7 +305,7 @@
             // 
             // prenomTextBox
             // 
-            this.prenomTextBox.Location = new System.Drawing.Point(112, 149);
+            this.prenomTextBox.Location = new System.Drawing.Point(112, 124);
             this.prenomTextBox.Name = "prenomTextBox";
             this.prenomTextBox.Size = new System.Drawing.Size(100, 20);
             this.prenomTextBox.TabIndex = 0;
@@ -313,7 +313,7 @@
             // 
             // remarqueTextBox
             // 
-            this.remarqueTextBox.Location = new System.Drawing.Point(601, 232);
+            this.remarqueTextBox.Location = new System.Drawing.Point(601, 207);
             this.remarqueTextBox.Multiline = true;
             this.remarqueTextBox.Name = "remarqueTextBox";
             this.remarqueTextBox.Size = new System.Drawing.Size(100, 74);
@@ -322,7 +322,7 @@
             // 
             // rueTextBox
             // 
-            this.rueTextBox.Location = new System.Drawing.Point(364, 173);
+            this.rueTextBox.Location = new System.Drawing.Point(364, 148);
             this.rueTextBox.Name = "rueTextBox";
             this.rueTextBox.Size = new System.Drawing.Size(100, 20);
             this.rueTextBox.TabIndex = 9;
@@ -330,7 +330,7 @@
             // 
             // salaireHoraireTextBox
             // 
-            this.salaireHoraireTextBox.Location = new System.Drawing.Point(601, 173);
+            this.salaireHoraireTextBox.Location = new System.Drawing.Point(601, 148);
             this.salaireHoraireTextBox.Name = "salaireHoraireTextBox";
             this.salaireHoraireTextBox.Size = new System.Drawing.Size(100, 20);
             this.salaireHoraireTextBox.TabIndex = 14;
@@ -338,7 +338,7 @@
             // 
             // villeTextBox
             // 
-            this.villeTextBox.Location = new System.Drawing.Point(364, 230);
+            this.villeTextBox.Location = new System.Drawing.Point(364, 205);
             this.villeTextBox.Name = "villeTextBox";
             this.villeTextBox.Size = new System.Drawing.Size(100, 20);
             this.villeTextBox.TabIndex = 10;
@@ -350,7 +350,7 @@
             this.cmbTypeEmploye.DisplayMember = "Description";
             this.cmbTypeEmploye.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTypeEmploye.FormattingEnabled = true;
-            this.cmbTypeEmploye.Location = new System.Drawing.Point(601, 123);
+            this.cmbTypeEmploye.Location = new System.Drawing.Point(601, 98);
             this.cmbTypeEmploye.Name = "cmbTypeEmploye";
             this.cmbTypeEmploye.Size = new System.Drawing.Size(119, 21);
             this.cmbTypeEmploye.TabIndex = 13;
@@ -367,7 +367,7 @@
             this.cmbSexe.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.cmbSexe.Location = new System.Drawing.Point(112, 263);
+            this.cmbSexe.Location = new System.Drawing.Point(112, 238);
             this.cmbSexe.Name = "cmbSexe";
             this.cmbSexe.Size = new System.Drawing.Size(100, 21);
             this.cmbSexe.TabIndex = 4;
@@ -377,7 +377,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 34);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(286, 43);
             this.label1.TabIndex = 50;
@@ -387,7 +387,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(56, 77);
+            this.label2.Location = new System.Drawing.Point(56, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(185, 13);
             this.label2.TabIndex = 51;
@@ -397,7 +397,7 @@
             // 
             this.btnAjout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAjout.BackgroundImage")));
             this.btnAjout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAjout.Location = new System.Drawing.Point(503, 327);
+            this.btnAjout.Location = new System.Drawing.Point(503, 302);
             this.btnAjout.Name = "btnAjout";
             this.btnAjout.Size = new System.Drawing.Size(78, 74);
             this.btnAjout.TabIndex = 16;
@@ -408,7 +408,7 @@
             // 
             this.btnAnnuler.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAnnuler.BackgroundImage")));
             this.btnAnnuler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAnnuler.Location = new System.Drawing.Point(623, 327);
+            this.btnAnnuler.Location = new System.Drawing.Point(623, 302);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(78, 74);
             this.btnAnnuler.TabIndex = 17;
@@ -421,7 +421,7 @@
             this.cbProvince.DisplayMember = "Nom";
             this.cbProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProvince.FormattingEnabled = true;
-            this.cbProvince.Location = new System.Drawing.Point(364, 123);
+            this.cbProvince.Location = new System.Drawing.Point(364, 98);
             this.cbProvince.Name = "cbProvince";
             this.cbProvince.Size = new System.Drawing.Size(117, 21);
             this.cbProvince.TabIndex = 8;
@@ -438,7 +438,7 @@
             // 
             // ageNumeric
             // 
-            this.ageNumeric.Location = new System.Drawing.Point(112, 204);
+            this.ageNumeric.Location = new System.Drawing.Point(112, 179);
             this.ageNumeric.Maximum = new decimal(new int[] {
             130,
             0,
@@ -460,7 +460,7 @@
             // 
             // telTextBox
             // 
-            this.telTextBox.Location = new System.Drawing.Point(112, 334);
+            this.telTextBox.Location = new System.Drawing.Point(112, 309);
             this.telTextBox.Mask = "(999) 000-0000";
             this.telTextBox.Name = "telTextBox";
             this.telTextBox.Size = new System.Drawing.Size(100, 20);
@@ -469,7 +469,7 @@
             // 
             // celTextBox
             // 
-            this.celTextBox.Location = new System.Drawing.Point(112, 371);
+            this.celTextBox.Location = new System.Drawing.Point(112, 346);
             this.celTextBox.Mask = "(999) 000-0000";
             this.celTextBox.Name = "celTextBox";
             this.celTextBox.Size = new System.Drawing.Size(100, 20);
@@ -480,7 +480,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 445);
+            this.ClientSize = new System.Drawing.Size(748, 391);
             this.Controls.Add(this.celTextBox);
             this.Controls.Add(this.telTextBox);
             this.Controls.Add(this.ageNumeric);

@@ -123,8 +123,14 @@
   <data name="CodePostalNonValide" xml:space="preserve">
     <value>Le code postal entré n'est pas valide</value>
   </data>
+  <data name="ConflitAccesConcurrentiel" xml:space="preserve">
+    <value>Il y a eu un conflit d'accès concurrentiel, les modifications ne seront pas sauvegardées</value>
+  </data>
   <data name="CourrielNonValide" xml:space="preserve">
     <value>L'adresse courriel entrée n'est pas valide</value>
+  </data>
+  <data name="ErreurBD" xml:space="preserve">
+    <value>Il y a eu une erreur lors de la connexion à la base de donnée</value>
   </data>
   <data name="MotDePasseNonValide" xml:space="preserve">
     <value>Le mot de passe doit composer au moins 1 caractère</value>
@@ -155,6 +161,15 @@
   </data>
   <data name="SexeNonSelectionne" xml:space="preserve">
     <value>Veuillez sélectionner le sexe de la personne</value>
+  </data>
+  <data name="SupprimerAdmin" xml:space="preserve">
+    <value>Vous ne pouvez supprimer l'administrateur</value>
+  </data>
+  <data name="SupprimerAdminAvecService" xml:space="preserve">
+    <value>Vous ne pouvez supprimer un utilisateur qui offre des services</value>
+  </data>
+  <data name="SupprimerSoisMeme" xml:space="preserve">
+    <value>Vous ne pouvez vous supprimer vous même</value>
   </data>
   <data name="TelNonValide" xml:space="preserve">
     <value>Le numéro de téléphone entré n'est pas valide</value>

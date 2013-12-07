@@ -136,8 +136,19 @@ namespace Projet3
                 emp.Telephone = telTextBox.Text;
                 emp.Ville = villeTextBox.Text;
                 dataContexteProjet1.Employes.InsertOnSubmit(emp);
-                dataContexteProjet1.SubmitChanges();
-                this.Close();
+                try
+                {
+                    dataContexteProjet1.SubmitChanges();
+                    this.Close();
+                }
+                catch (DBConcurrencyException erreur)
+                {
+                    MessageBox.Show(Resources.ConflitAccesConcurrentiel, Resources.TitreErreur);
+                }
+                catch
+                {
+                    MessageBox.Show(Resources.ErreurBD, Resources.TitreErreur);
+                }
             }
         }
         

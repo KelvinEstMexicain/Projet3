@@ -79,11 +79,29 @@ namespace Projet3.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Il y a eu un conflit d&apos;accès concurrentiel, les modifications ne seront pas sauvegardées.
+        /// </summary>
+        internal static string ConflitAccesConcurrentiel {
+            get {
+                return ResourceManager.GetString("ConflitAccesConcurrentiel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to L&apos;adresse courriel entrée n&apos;est pas valide.
         /// </summary>
         internal static string CourrielNonValide {
             get {
                 return ResourceManager.GetString("CourrielNonValide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Il y a eu une erreur lors de la connexion à la base de donnée.
+        /// </summary>
+        internal static string ErreurBD {
+            get {
+                return ResourceManager.GetString("ErreurBD", resourceCulture);
             }
         }
         
@@ -174,6 +192,33 @@ namespace Projet3.Properties {
         internal static string SexeNonSelectionne {
             get {
                 return ResourceManager.GetString("SexeNonSelectionne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vous ne pouvez supprimer l&apos;administrateur.
+        /// </summary>
+        internal static string SupprimerAdmin {
+            get {
+                return ResourceManager.GetString("SupprimerAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vous ne pouvez supprimer un utilisateur qui offre des services.
+        /// </summary>
+        internal static string SupprimerAdminAvecService {
+            get {
+                return ResourceManager.GetString("SupprimerAdminAvecService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vous ne pouvez vous supprimer vous même.
+        /// </summary>
+        internal static string SupprimerSoisMeme {
+            get {
+                return ResourceManager.GetString("SupprimerSoisMeme", resourceCulture);
             }
         }
         

@@ -11,9 +11,11 @@ namespace Projet3
 {
     public partial class frmMenu : Form
     {
+        private Employes employe;
         public frmMenu(Employes employe)
         {
             InitializeComponent();
+            this.employe = employe;
             switch(employe.NotypeEmploye)
             {
                 case (int)enumTypeEmploye.administrateur:
@@ -63,16 +65,8 @@ namespace Projet3
         private void btnGestionEmployes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var employe = new frmGestionEmployes();
-            employe.ShowDialog();
-            this.Show();
-        }
-
-        private void btnModifierEmploye_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var employe = new frmModifierEmploye();
-            employe.ShowDialog();
+            var gestion = new frmGestionEmployes(employe);
+            gestion.ShowDialog();
             this.Show();
         }
 

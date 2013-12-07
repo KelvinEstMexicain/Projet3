@@ -97,7 +97,7 @@ namespace Projet3
         public static void TextBoxValideCodePostal(object sender, ErrorProvider errProvider, String errMessage, CancelEventArgs e)
         {
             var textbox = (TextBoxBase)sender;
-            if (textbox.Text == "")
+            if (!ValideCodePostal(textbox.Text))
             {
                 errProvider.SetError(textbox, errMessage);
                 e.Cancel = true;

@@ -267,6 +267,7 @@
             this.btnSupprimer.Size = new System.Drawing.Size(83, 80);
             this.btnSupprimer.TabIndex = 5;
             this.btnSupprimer.UseVisualStyleBackColor = true;
+            this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
             // 
             // provincesBindingSource
             // 
