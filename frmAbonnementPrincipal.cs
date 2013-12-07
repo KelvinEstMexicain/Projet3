@@ -15,9 +15,11 @@ namespace Projet3
     {
         DataClasses1DataContext dataContexteProjet1 = new DataClasses1DataContext();
         string suffixeId = "";
-        public frmAbonnementPrincipal()
+        Employes emp;
+        public frmAbonnementPrincipal(Employes emp)
         {
             InitializeComponent();
+            this.emp = emp;
         }
 
         private void frmAbonnementPrincipal_Load(object sender, EventArgs e)
@@ -149,9 +151,10 @@ namespace Projet3
                 abonnement.Telephone = telephoneMaskedTextBox.Text;
                 abonnement.Ville = villeTextBox.Text;
                 dataContexteProjet1.Abonnements.InsertOnSubmit(abonnement);
+                List<Dependants> enfantList = new List<Dependants>();
+                var conjoint = new Dependants();
                 if (abonnement.NoTypeAbonnement >= 3)
                 {
-                    var conjoint = new Dependants();
                     var ajoutConjoint = new frmAjoutDependant(out conjoint, 3, abonnement.Id);
                     ajoutConjoint.ShowDialog();
                     dataContexteProjet1.Dependants.InsertOnSubmit(conjoint);
@@ -162,11 +165,11 @@ namespace Projet3
                         {
                             typeAbonnement = 3 + (int)nbEnfantsNumericUpDown.Value;
                         }
-                        Dependants[] enfantArray = new Dependants[3];
                         for (int i = 4; i <= typeAbonnement; i++)
                         {
                             var enfant = new Dependants();
                             var ajoutEnfant = new frmAjoutDependant(out enfant, i, abonnement.Id);
+                            enfantList.Add(enfant);
                             ajoutEnfant.ShowDialog();
                             dataContexteProjet1.Dependants.InsertOnSubmit(enfant);
                         }
@@ -175,7 +178,40 @@ namespace Projet3
                 try
                 {
                     dataContexteProjet1.SubmitChanges();
-                    //Email.SendGMail(Resources.SujetMailAbonnement, 
+                    String mail = "";
+                    mail += "-------Abonnement-------\r\n";
+                    mail += "Type d'abonnement: " + abonnement.TypesAbonnement.Description + "\r\n";
+                    mail += "Coût annuel: " + abonnement.TypesAbonnement.PrixDepensesAbonnements.First().Prix + "\r\n";
+                    mail += "Dépenses obligatoires annuelles: " + abonnement.TypesAbonnement.PrixDepensesAbonnements.First().Prix + "\r\n";
+                    mail += "Date d'abonnement/du dernier réabonnement: " + abonnement.DateAbonnement + "\r\n";
+                    mail += "-------Abonné Principal-------\r\n";
+                    mail += "Nom: " + abonnement.Prenom + " " + abonnement.Nom + "\r\n";
+                    mail += "No d'abonnement: " + abonnement.Id + "\r\n";
+                    if (abonnement.NoTypeAbonnement >= 3)
+                    {
+                        if (conjoint.Sexe == "H")
+                        {
+                            mail += "-------Conjoint-------\r\n";
+                        }
+                        else
+                        {
+                            mail += "-------Conjointe-------\r\n";
+                        }
+                        mail += "Nom: " + conjoint.Prenom + " " + conjoint.Nom + "\r\n";
+                        mail += "No du conjoint: " + conjoint.Id + "\r\n";
+                    }
+                    if (abonnement.NoTypeAbonnement >= 4)
+                    {
+                        int compteur = 1;
+                        foreach (Dependants enfant in enfantList)
+                        {
+                            mail += "-------Enfant #" + compteur + "-------\r\n";
+                            mail += "Nom: " + enfant.Prenom + " " + enfant.Nom + "\r\n";
+                            mail += "No de l'enfant: " + enfant.Id + "\r\n";
+                            compteur++;
+                        }
+                    }
+                    Email.SendGMail(Resources.SujetMailAbonnement, mail, emp.Prenom + " " + emp.Nom, abonnement.Courriel, abonnement.Prenom + " " + abonnement.Nom);
                     MessageBox.Show(Resources.EnregistrementReussi, Resources.TitreReussi);
                     this.Close();
                 }

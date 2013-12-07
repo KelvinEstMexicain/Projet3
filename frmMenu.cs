@@ -49,7 +49,7 @@ namespace Projet3
         private void btnAjoutAbonnement_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var abonnement = new frmAbonnementPrincipal();
+            var abonnement = new frmAbonnementPrincipal(employe);
             abonnement.ShowDialog();
             this.Show();
         }
