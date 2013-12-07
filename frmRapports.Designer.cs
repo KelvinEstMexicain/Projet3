@@ -30,22 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.RapportDEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BDClubDeGolfBDataSet = new Projet3.BDClubDeGolfBDataSet();
-            this.RapportDepenseAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RapportAnneeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RapportPartieJoueeTerrainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RapportPartieJoueesAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PartieJoueeParAnneeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.RapportDepenseAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabDepenseEmploye = new System.Windows.Forms.TabPage();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -60,14 +61,13 @@
             this.RapportPartieJoueeTerrainTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.RapportPartieJoueeTerrainTableAdapter();
             this.RapportPartieJoueesAbonnementTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.RapportPartieJoueesAbonnementTableAdapter();
             this.PartieJoueeParAnneeTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.PartieJoueeParAnneeTableAdapter();
-            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.RapportDEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BDClubDeGolfBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RapportDepenseAbonnementBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RapportAnneeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RapportPartieJoueeTerrainBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RapportPartieJoueesAbonnementBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PartieJoueeParAnneeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RapportDepenseAbonnementBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabDepenseEmploye.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -86,11 +86,6 @@
             // 
             this.BDClubDeGolfBDataSet.DataSetName = "BDClubDeGolfBDataSet";
             this.BDClubDeGolfBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // RapportDepenseAbonnementBindingSource
-            // 
-            this.RapportDepenseAbonnementBindingSource.DataMember = "RapportDepenseAbonnement";
-            this.RapportDepenseAbonnementBindingSource.DataSource = this.BDClubDeGolfBDataSet;
             // 
             // RapportAnneeBindingSource
             // 
@@ -112,6 +107,11 @@
             this.PartieJoueeParAnneeBindingSource.DataMember = "PartieJoueeParAnnee";
             this.PartieJoueeParAnneeBindingSource.DataSource = this.BDClubDeGolfBDataSet;
             // 
+            // RapportDepenseAbonnementBindingSource
+            // 
+            this.RapportDepenseAbonnementBindingSource.DataMember = "RapportDepenseAbonnement";
+            this.RapportDepenseAbonnementBindingSource.DataSource = this.BDClubDeGolfBDataSet;
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabDepenseEmploye);
@@ -121,18 +121,20 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(13, 51);
+            this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(803, 413);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabDepenseEmploye
             // 
             this.tabDepenseEmploye.Controls.Add(this.reportViewer1);
-            this.tabDepenseEmploye.Location = new System.Drawing.Point(4, 22);
+            this.tabDepenseEmploye.Location = new System.Drawing.Point(4, 40);
             this.tabDepenseEmploye.Name = "tabDepenseEmploye";
             this.tabDepenseEmploye.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDepenseEmploye.Size = new System.Drawing.Size(795, 387);
+            this.tabDepenseEmploye.Size = new System.Drawing.Size(795, 369);
             this.tabDepenseEmploye.TabIndex = 0;
             this.tabDepenseEmploye.Text = "Dépenses par employé";
             this.tabDepenseEmploye.UseVisualStyleBackColor = true;
@@ -151,21 +153,32 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.reportViewer2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 40);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(795, 387);
+            this.tabPage2.Size = new System.Drawing.Size(795, 369);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Dépenses par abonnement";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // reportViewer2
+            // 
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.RapportDepenseAbonnementBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "Projet3.raportDepenseAbonnement.rdlc";
+            this.reportViewer2.Location = new System.Drawing.Point(0, 4);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.Size = new System.Drawing.Size(795, 383);
+            this.reportViewer2.TabIndex = 0;
+            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.reportViewer3);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 40);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(795, 387);
+            this.tabPage1.Size = new System.Drawing.Size(795, 369);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Dépense par année";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -184,10 +197,10 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.reportViewer4);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 40);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(795, 387);
+            this.tabPage3.Size = new System.Drawing.Size(795, 369);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Rapport des parties jouées par terrain";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -198,7 +211,7 @@
             reportDataSource4.Value = this.RapportPartieJoueeTerrainBindingSource;
             this.reportViewer4.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer4.LocalReport.ReportEmbeddedResource = "Projet3.rapportPartieJoueeTerrain1.rdlc";
-            this.reportViewer4.Location = new System.Drawing.Point(4, 4);
+            this.reportViewer4.Location = new System.Drawing.Point(0, 4);
             this.reportViewer4.Name = "reportViewer4";
             this.reportViewer4.Size = new System.Drawing.Size(795, 387);
             this.reportViewer4.TabIndex = 0;
@@ -206,10 +219,10 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.reportViewer5);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 40);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(795, 387);
+            this.tabPage4.Size = new System.Drawing.Size(795, 369);
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "Rapport des parties jouées par abonnement";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -220,7 +233,7 @@
             reportDataSource5.Value = this.RapportPartieJoueesAbonnementBindingSource;
             this.reportViewer5.LocalReport.DataSources.Add(reportDataSource5);
             this.reportViewer5.LocalReport.ReportEmbeddedResource = "Projet3.rapportPartieJoueeAbonnement.rdlc";
-            this.reportViewer5.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer5.Location = new System.Drawing.Point(0, 4);
             this.reportViewer5.Name = "reportViewer5";
             this.reportViewer5.Size = new System.Drawing.Size(795, 391);
             this.reportViewer5.TabIndex = 0;
@@ -228,10 +241,10 @@
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.reportViewer6);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Location = new System.Drawing.Point(4, 40);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(795, 387);
+            this.tabPage5.Size = new System.Drawing.Size(795, 369);
             this.tabPage5.TabIndex = 5;
             this.tabPage5.Text = "Rapport des parties jouées par année";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -242,7 +255,7 @@
             reportDataSource6.Value = this.PartieJoueeParAnneeBindingSource;
             this.reportViewer6.LocalReport.DataSources.Add(reportDataSource6);
             this.reportViewer6.LocalReport.ReportEmbeddedResource = "Projet3.rapportPartieJoueeAnnee.rdlc";
-            this.reportViewer6.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer6.Location = new System.Drawing.Point(0, 4);
             this.reportViewer6.Name = "reportViewer6";
             this.reportViewer6.Size = new System.Drawing.Size(795, 387);
             this.reportViewer6.TabIndex = 0;
@@ -271,17 +284,6 @@
             // 
             this.PartieJoueeParAnneeTableAdapter.ClearBeforeFill = true;
             // 
-            // reportViewer2
-            // 
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.RapportDepenseAbonnementBindingSource;
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer2.LocalReport.ReportEmbeddedResource = "Projet3.raportDepenseAbonnement.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(0, 4);
-            this.reportViewer2.Name = "reportViewer2";
-            this.reportViewer2.Size = new System.Drawing.Size(795, 383);
-            this.reportViewer2.TabIndex = 0;
-            // 
             // frmRapports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,11 +295,11 @@
             this.Load += new System.EventHandler(this.frmRapports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RapportDEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BDClubDeGolfBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RapportDepenseAbonnementBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RapportAnneeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RapportPartieJoueeTerrainBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RapportPartieJoueesAbonnementBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PartieJoueeParAnneeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RapportDepenseAbonnementBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabDepenseEmploye.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);

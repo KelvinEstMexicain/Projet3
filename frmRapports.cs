@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
 
 namespace Projet3
 {
@@ -31,13 +32,53 @@ namespace Projet3
             // TODO: cette ligne de code charge les données dans la table 'BDClubDeGolfBDataSet.RapportDE'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
             this.RapportDETableAdapter.Fill(this.BDClubDeGolfBDataSet.RapportDE);
 
+            tabControl1.Enabled = false;
             this.reportViewer1.RefreshReport();
-            this.reportViewer2.RefreshReport();
-            this.reportViewer3.RefreshReport();
-            this.reportViewer4.RefreshReport();
-            this.reportViewer5.RefreshReport();
-            this.reportViewer6.RefreshReport();
-            this.reportViewer2.RefreshReport();
+            tabControl1.Enabled = true;
+            //this.reportViewer2.RefreshReport();
+            //this.reportViewer3.RefreshReport();
+            //this.reportViewer4.RefreshReport();
+            //this.reportViewer5.RefreshReport();
+            //this.reportViewer6.RefreshReport();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var tabcontrol = (TabControl)sender;
+            int selectedIndex = tabcontrol.SelectedIndex;
+            switch (selectedIndex)
+            {
+                case 0:
+                    tabcontrol.Enabled = false;
+                    this.reportViewer1.RefreshReport();
+                    tabcontrol.Enabled = true;
+                    break;
+                case 1:
+                    tabcontrol.Enabled = false;
+                    this.reportViewer2.RefreshReport();
+                    tabcontrol.Enabled = true;
+                    break;
+                case 2:
+                    tabcontrol.Enabled = false;
+                    this.reportViewer3.RefreshReport();
+                    tabcontrol.Enabled = true;
+                    break;
+                case 3:
+                    tabcontrol.Enabled = false;
+                    this.reportViewer4.RefreshReport();
+                    tabcontrol.Enabled = true;
+                    break;
+                case 4:
+                    tabcontrol.Enabled = false;
+                    this.reportViewer5.RefreshReport();
+                    tabcontrol.Enabled = true;
+                    break;
+                case 5:
+                    tabcontrol.Enabled = false;
+                    this.reportViewer6.RefreshReport();
+                    tabcontrol.Enabled = true;
+                    break;
+            }
         }
     }
 }
