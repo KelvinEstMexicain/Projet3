@@ -874,6 +874,99 @@ FROM            Abonnements INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RapportAnneeTableAdapter" GeneratorDataComponentClassName="RapportAnneeTableAdapter" Name="RapportAnnee" UserDataComponentName="RapportAnneeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BDClubDeGolfBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        YEAR(Depenses.DateDepense) AS annee, Depenses.Montant, Abonnements.Prenom + ' ' + Abonnements.Nom AS nomCompletAbonnement, 
+                         Employes.Prenom + ' ' + Employes.Nom AS nomEmploye, Services.TypeService
+FROM            Depenses INNER JOIN
+                         Services ON Depenses.NoService = Services.No INNER JOIN
+                         Employes ON Services.NoEmploye = Employes.No INNER JOIN
+                         Abonnements ON Depenses.IdAbonnement = Abonnements.Id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="annee" DataSetColumn="annee" />
+              <Mapping SourceColumn="Montant" DataSetColumn="Montant" />
+              <Mapping SourceColumn="nomCompletAbonnement" DataSetColumn="nomCompletAbonnement" />
+              <Mapping SourceColumn="nomEmploye" DataSetColumn="nomEmploye" />
+              <Mapping SourceColumn="TypeService" DataSetColumn="TypeService" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RapportPartieJoueeTerrainTableAdapter" GeneratorDataComponentClassName="RapportPartieJoueeTerrainTableAdapter" Name="RapportPartieJoueeTerrain" UserDataComponentName="RapportPartieJoueeTerrainTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BDClubDeGolfBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Terrains.Nom, PartiesJouees.DatePartie, PartiesJouees.Pointage, Abonnements.Prenom + ' ' + Abonnements.Nom AS nomComplet
+FROM            Terrains INNER JOIN
+                         PartiesJouees ON Terrains.No = PartiesJouees.NoTerrain INNER JOIN
+                         Abonnements ON PartiesJouees.IdAbonnement = Abonnements.Id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nom" DataSetColumn="Nom" />
+              <Mapping SourceColumn="DatePartie" DataSetColumn="DatePartie" />
+              <Mapping SourceColumn="Pointage" DataSetColumn="Pointage" />
+              <Mapping SourceColumn="nomComplet" DataSetColumn="nomComplet" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RapportPartieJoueesAbonnementTableAdapter" GeneratorDataComponentClassName="RapportPartieJoueesAbonnementTableAdapter" Name="RapportPartieJoueesAbonnement" UserDataComponentName="RapportPartieJoueesAbonnementTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BDClubDeGolfBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Abonnements.Prenom+' '+Abonnements.Nom as nomComplet, PartiesJouees.DatePartie, PartiesJouees.Pointage, Terrains.Nom AS nomTerrain
+FROM            Abonnements INNER JOIN
+                         PartiesJouees ON Abonnements.Id = PartiesJouees.IdAbonnement INNER JOIN
+                         Terrains ON PartiesJouees.NoTerrain = Terrains.No</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nomComplet" DataSetColumn="nomComplet" />
+              <Mapping SourceColumn="DatePartie" DataSetColumn="DatePartie" />
+              <Mapping SourceColumn="Pointage" DataSetColumn="Pointage" />
+              <Mapping SourceColumn="nomTerrain" DataSetColumn="nomTerrain" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PartieJoueeParAnneeTableAdapter" GeneratorDataComponentClassName="PartieJoueeParAnneeTableAdapter" Name="PartieJoueeParAnnee" UserDataComponentName="PartieJoueeParAnneeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BDClubDeGolfBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        YEAR(PartiesJouees.DatePartie) AS annee, PartiesJouees.DatePartie, Abonnements.Prenom + ' ' + Abonnements.Nom AS nomComplet, Terrains.Nom AS nomTerrain, 
+                         PartiesJouees.Pointage
+FROM            PartiesJouees INNER JOIN
+                         Abonnements ON PartiesJouees.IdAbonnement = Abonnements.Id INNER JOIN
+                         Terrains ON PartiesJouees.NoTerrain = Terrains.No</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="annee" DataSetColumn="annee" />
+              <Mapping SourceColumn="DatePartie" DataSetColumn="DatePartie" />
+              <Mapping SourceColumn="nomComplet" DataSetColumn="nomComplet" />
+              <Mapping SourceColumn="nomTerrain" DataSetColumn="nomTerrain" />
+              <Mapping SourceColumn="Pointage" DataSetColumn="Pointage" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1395,6 +1488,102 @@ FROM            Abonnements INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="RapportAnnee" msprop:Generator_TableClassName="RapportAnneeDataTable" msprop:Generator_TableVarName="tableRapportAnnee" msprop:Generator_TablePropName="RapportAnnee" msprop:Generator_RowDeletingName="RapportAnneeRowDeleting" msprop:Generator_UserTableName="RapportAnnee" msprop:Generator_RowChangingName="RapportAnneeRowChanging" msprop:Generator_RowEvHandlerName="RapportAnneeRowChangeEventHandler" msprop:Generator_RowDeletedName="RapportAnneeRowDeleted" msprop:Generator_RowEvArgName="RapportAnneeRowChangeEvent" msprop:Generator_RowChangedName="RapportAnneeRowChanged" msprop:Generator_RowClassName="RapportAnneeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="annee" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnannee" msprop:Generator_ColumnPropNameInRow="annee" msprop:Generator_ColumnPropNameInTable="anneeColumn" msprop:Generator_UserColumnName="annee" type="xs:int" minOccurs="0" />
+              <xs:element name="Montant" msprop:Generator_ColumnVarNameInTable="columnMontant" msprop:Generator_ColumnPropNameInRow="Montant" msprop:Generator_ColumnPropNameInTable="MontantColumn" msprop:Generator_UserColumnName="Montant" type="xs:decimal" />
+              <xs:element name="nomCompletAbonnement" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnnomCompletAbonnement" msprop:Generator_ColumnPropNameInRow="nomCompletAbonnement" msprop:Generator_ColumnPropNameInTable="nomCompletAbonnementColumn" msprop:Generator_UserColumnName="nomCompletAbonnement" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="51" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nomEmploye" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnnomEmploye" msprop:Generator_ColumnPropNameInRow="nomEmploye" msprop:Generator_ColumnPropNameInTable="nomEmployeColumn" msprop:Generator_UserColumnName="nomEmploye" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="51" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TypeService" msprop:Generator_ColumnVarNameInTable="columnTypeService" msprop:Generator_ColumnPropNameInRow="TypeService" msprop:Generator_ColumnPropNameInTable="TypeServiceColumn" msprop:Generator_UserColumnName="TypeService">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RapportPartieJoueeTerrain" msprop:Generator_TableClassName="RapportPartieJoueeTerrainDataTable" msprop:Generator_TableVarName="tableRapportPartieJoueeTerrain" msprop:Generator_TablePropName="RapportPartieJoueeTerrain" msprop:Generator_RowDeletingName="RapportPartieJoueeTerrainRowDeleting" msprop:Generator_UserTableName="RapportPartieJoueeTerrain" msprop:Generator_RowChangingName="RapportPartieJoueeTerrainRowChanging" msprop:Generator_RowEvHandlerName="RapportPartieJoueeTerrainRowChangeEventHandler" msprop:Generator_RowDeletedName="RapportPartieJoueeTerrainRowDeleted" msprop:Generator_RowEvArgName="RapportPartieJoueeTerrainRowChangeEvent" msprop:Generator_RowChangedName="RapportPartieJoueeTerrainRowChanged" msprop:Generator_RowClassName="RapportPartieJoueeTerrainRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nom" msprop:Generator_ColumnVarNameInTable="columnNom" msprop:Generator_ColumnPropNameInRow="Nom" msprop:Generator_ColumnPropNameInTable="NomColumn" msprop:Generator_UserColumnName="Nom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DatePartie" msprop:Generator_ColumnVarNameInTable="columnDatePartie" msprop:Generator_ColumnPropNameInRow="DatePartie" msprop:Generator_ColumnPropNameInTable="DatePartieColumn" msprop:Generator_UserColumnName="DatePartie" type="xs:dateTime" />
+              <xs:element name="Pointage" msprop:Generator_ColumnVarNameInTable="columnPointage" msprop:Generator_ColumnPropNameInRow="Pointage" msprop:Generator_ColumnPropNameInTable="PointageColumn" msprop:Generator_UserColumnName="Pointage" type="xs:int" />
+              <xs:element name="nomComplet" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnnomComplet" msprop:Generator_ColumnPropNameInRow="nomComplet" msprop:Generator_ColumnPropNameInTable="nomCompletColumn" msprop:Generator_UserColumnName="nomComplet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="51" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RapportPartieJoueesAbonnement" msprop:Generator_TableClassName="RapportPartieJoueesAbonnementDataTable" msprop:Generator_TableVarName="tableRapportPartieJoueesAbonnement" msprop:Generator_TablePropName="RapportPartieJoueesAbonnement" msprop:Generator_RowDeletingName="RapportPartieJoueesAbonnementRowDeleting" msprop:Generator_UserTableName="RapportPartieJoueesAbonnement" msprop:Generator_RowChangingName="RapportPartieJoueesAbonnementRowChanging" msprop:Generator_RowEvHandlerName="RapportPartieJoueesAbonnementRowChangeEventHandler" msprop:Generator_RowDeletedName="RapportPartieJoueesAbonnementRowDeleted" msprop:Generator_RowEvArgName="RapportPartieJoueesAbonnementRowChangeEvent" msprop:Generator_RowChangedName="RapportPartieJoueesAbonnementRowChanged" msprop:Generator_RowClassName="RapportPartieJoueesAbonnementRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nomComplet" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnnomComplet" msprop:Generator_ColumnPropNameInRow="nomComplet" msprop:Generator_ColumnPropNameInTable="nomCompletColumn" msprop:Generator_UserColumnName="nomComplet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="51" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DatePartie" msprop:Generator_ColumnVarNameInTable="columnDatePartie" msprop:Generator_ColumnPropNameInRow="DatePartie" msprop:Generator_ColumnPropNameInTable="DatePartieColumn" msprop:Generator_UserColumnName="DatePartie" type="xs:dateTime" />
+              <xs:element name="Pointage" msprop:Generator_ColumnVarNameInTable="columnPointage" msprop:Generator_ColumnPropNameInRow="Pointage" msprop:Generator_ColumnPropNameInTable="PointageColumn" msprop:Generator_UserColumnName="Pointage" type="xs:int" />
+              <xs:element name="nomTerrain" msprop:Generator_ColumnVarNameInTable="columnnomTerrain" msprop:Generator_ColumnPropNameInRow="nomTerrain" msprop:Generator_ColumnPropNameInTable="nomTerrainColumn" msprop:Generator_UserColumnName="nomTerrain" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PartieJoueeParAnnee" msprop:Generator_TableClassName="PartieJoueeParAnneeDataTable" msprop:Generator_TableVarName="tablePartieJoueeParAnnee" msprop:Generator_TablePropName="PartieJoueeParAnnee" msprop:Generator_RowDeletingName="PartieJoueeParAnneeRowDeleting" msprop:Generator_UserTableName="PartieJoueeParAnnee" msprop:Generator_RowChangingName="PartieJoueeParAnneeRowChanging" msprop:Generator_RowEvHandlerName="PartieJoueeParAnneeRowChangeEventHandler" msprop:Generator_RowDeletedName="PartieJoueeParAnneeRowDeleted" msprop:Generator_RowEvArgName="PartieJoueeParAnneeRowChangeEvent" msprop:Generator_RowChangedName="PartieJoueeParAnneeRowChanged" msprop:Generator_RowClassName="PartieJoueeParAnneeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="annee" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnannee" msprop:Generator_ColumnPropNameInRow="annee" msprop:Generator_ColumnPropNameInTable="anneeColumn" msprop:Generator_UserColumnName="annee" type="xs:int" minOccurs="0" />
+              <xs:element name="DatePartie" msprop:Generator_ColumnVarNameInTable="columnDatePartie" msprop:Generator_ColumnPropNameInRow="DatePartie" msprop:Generator_ColumnPropNameInTable="DatePartieColumn" msprop:Generator_UserColumnName="DatePartie" type="xs:dateTime" />
+              <xs:element name="nomComplet" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnnomComplet" msprop:Generator_ColumnPropNameInRow="nomComplet" msprop:Generator_ColumnPropNameInTable="nomCompletColumn" msprop:Generator_UserColumnName="nomComplet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="51" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nomTerrain" msprop:Generator_ColumnVarNameInTable="columnnomTerrain" msprop:Generator_ColumnPropNameInRow="nomTerrain" msprop:Generator_ColumnPropNameInTable="nomTerrainColumn" msprop:Generator_UserColumnName="nomTerrain" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pointage" msprop:Generator_ColumnVarNameInTable="columnPointage" msprop:Generator_ColumnPropNameInRow="Pointage" msprop:Generator_ColumnPropNameInTable="PointageColumn" msprop:Generator_UserColumnName="Pointage" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1452,18 +1641,18 @@ FROM            Abonnements INNER JOIN
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Abonnements_Provinces" msdata:parent="Provinces" msdata:child="Abonnements" msdata:parentkey="Id" msdata:childkey="IdProvince" msprop:Generator_UserChildTable="Abonnements" msprop:Generator_ChildPropName="GetAbonnementsRows" msprop:Generator_ParentPropName="ProvincesRow" msprop:Generator_UserRelationName="FK_Abonnements_Provinces" msprop:Generator_RelationVarName="relationFK_Abonnements_Provinces" msprop:Generator_UserParentTable="Provinces" />
-      <msdata:Relationship name="FK_Abonnements_TypesAbonnement" msdata:parent="TypesAbonnement" msdata:child="Abonnements" msdata:parentkey="No" msdata:childkey="NoTypeAbonnement" msprop:Generator_UserChildTable="Abonnements" msprop:Generator_ChildPropName="GetAbonnementsRows" msprop:Generator_ParentPropName="TypesAbonnementRow" msprop:Generator_UserRelationName="FK_Abonnements_TypesAbonnement" msprop:Generator_RelationVarName="relationFK_Abonnements_TypesAbonnement" msprop:Generator_UserParentTable="TypesAbonnement" />
-      <msdata:Relationship name="FK_Dependants_Abonnements" msdata:parent="Abonnements" msdata:child="Dependants" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Dependants" msprop:Generator_ChildPropName="GetDependantsRows" msprop:Generator_ParentPropName="AbonnementsRow" msprop:Generator_UserRelationName="FK_Dependants_Abonnements" msprop:Generator_RelationVarName="relationFK_Dependants_Abonnements" msprop:Generator_UserParentTable="Abonnements" />
-      <msdata:Relationship name="FK_Depenses_Abonnements" msdata:parent="Abonnements" msdata:child="Depenses" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Depenses" msprop:Generator_ChildPropName="GetDepensesRows" msprop:Generator_ParentPropName="AbonnementsRow" msprop:Generator_UserRelationName="FK_Depenses_Abonnements" msprop:Generator_RelationVarName="relationFK_Depenses_Abonnements" msprop:Generator_UserParentTable="Abonnements" />
-      <msdata:Relationship name="FK_Depenses_Services" msdata:parent="Services" msdata:child="Depenses" msdata:parentkey="No" msdata:childkey="NoService" msprop:Generator_UserChildTable="Depenses" msprop:Generator_ChildPropName="GetDepensesRows" msprop:Generator_ParentPropName="ServicesRow" msprop:Generator_UserRelationName="FK_Depenses_Services" msprop:Generator_RelationVarName="relationFK_Depenses_Services" msprop:Generator_UserParentTable="Services" />
-      <msdata:Relationship name="FK_Employes_Provinces" msdata:parent="Provinces" msdata:child="Employes" msdata:parentkey="Id" msdata:childkey="IdProvince" msprop:Generator_UserChildTable="Employes" msprop:Generator_ChildPropName="GetEmployesRows" msprop:Generator_ParentPropName="ProvincesRow" msprop:Generator_UserRelationName="FK_Employes_Provinces" msprop:Generator_RelationVarName="relationFK_Employes_Provinces" msprop:Generator_UserParentTable="Provinces" />
-      <msdata:Relationship name="FK_Employes_TypesEmploye" msdata:parent="TypesEmploye" msdata:child="Employes" msdata:parentkey="No" msdata:childkey="NoTypeEmploye" msprop:Generator_UserChildTable="Employes" msprop:Generator_ChildPropName="GetEmployesRows" msprop:Generator_ParentPropName="TypesEmployeRow" msprop:Generator_UserRelationName="FK_Employes_TypesEmploye" msprop:Generator_RelationVarName="relationFK_Employes_TypesEmploye" msprop:Generator_UserParentTable="TypesEmploye" />
-      <msdata:Relationship name="FK_PartiesJouees_Abonnements" msdata:parent="Abonnements" msdata:child="PartiesJouees" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="PartiesJouees" msprop:Generator_ChildPropName="GetPartiesJoueesRows" msprop:Generator_ParentPropName="AbonnementsRow" msprop:Generator_UserRelationName="FK_PartiesJouees_Abonnements" msprop:Generator_RelationVarName="relationFK_PartiesJouees_Abonnements" msprop:Generator_UserParentTable="Abonnements" />
-      <msdata:Relationship name="FK_PartiesJouees_Terrains" msdata:parent="Terrains" msdata:child="PartiesJouees" msdata:parentkey="No" msdata:childkey="NoTerrain" msprop:Generator_UserChildTable="PartiesJouees" msprop:Generator_ChildPropName="GetPartiesJoueesRows" msprop:Generator_ParentPropName="TerrainsRow" msprop:Generator_UserRelationName="FK_PartiesJouees_Terrains" msprop:Generator_RelationVarName="relationFK_PartiesJouees_Terrains" msprop:Generator_UserParentTable="Terrains" />
-      <msdata:Relationship name="FK_PrixDepensesAbonnements_TypesAbonnement" msdata:parent="TypesAbonnement" msdata:child="PrixDepensesAbonnements" msdata:parentkey="No" msdata:childkey="NoTypeAbonnement" msprop:Generator_UserChildTable="PrixDepensesAbonnements" msprop:Generator_ChildPropName="GetPrixDepensesAbonnementsRows" msprop:Generator_ParentPropName="TypesAbonnementRow" msprop:Generator_UserRelationName="FK_PrixDepensesAbonnements_TypesAbonnement" msprop:Generator_RelationVarName="relationFK_PrixDepensesAbonnements_TypesAbonnement" msprop:Generator_UserParentTable="TypesAbonnement" />
-      <msdata:Relationship name="FK_Reabonnements_Abonnements" msdata:parent="Abonnements" msdata:child="Reabonnements" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Reabonnements" msprop:Generator_ChildPropName="GetReabonnementsRows" msprop:Generator_ParentPropName="AbonnementsRow" msprop:Generator_UserRelationName="FK_Reabonnements_Abonnements" msprop:Generator_RelationVarName="relationFK_Reabonnements_Abonnements" msprop:Generator_UserParentTable="Abonnements" />
-      <msdata:Relationship name="FK_Services_Employes" msdata:parent="Employes" msdata:child="Services" msdata:parentkey="No" msdata:childkey="NoEmploye" msprop:Generator_UserChildTable="Services" msprop:Generator_ChildPropName="GetServicesRows" msprop:Generator_ParentPropName="EmployesRow" msprop:Generator_UserRelationName="FK_Services_Employes" msprop:Generator_RelationVarName="relationFK_Services_Employes" msprop:Generator_UserParentTable="Employes" />
+      <msdata:Relationship name="FK_Abonnements_Provinces" msdata:parent="Provinces" msdata:child="Abonnements" msdata:parentkey="Id" msdata:childkey="IdProvince" msprop:Generator_UserChildTable="Abonnements" msprop:Generator_ChildPropName="GetAbonnementsRows" msprop:Generator_UserParentTable="Provinces" msprop:Generator_UserRelationName="FK_Abonnements_Provinces" msprop:Generator_RelationVarName="relationFK_Abonnements_Provinces" msprop:Generator_ParentPropName="ProvincesRow" />
+      <msdata:Relationship name="FK_Abonnements_TypesAbonnement" msdata:parent="TypesAbonnement" msdata:child="Abonnements" msdata:parentkey="No" msdata:childkey="NoTypeAbonnement" msprop:Generator_UserChildTable="Abonnements" msprop:Generator_ChildPropName="GetAbonnementsRows" msprop:Generator_UserParentTable="TypesAbonnement" msprop:Generator_UserRelationName="FK_Abonnements_TypesAbonnement" msprop:Generator_RelationVarName="relationFK_Abonnements_TypesAbonnement" msprop:Generator_ParentPropName="TypesAbonnementRow" />
+      <msdata:Relationship name="FK_Dependants_Abonnements" msdata:parent="Abonnements" msdata:child="Dependants" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Dependants" msprop:Generator_ChildPropName="GetDependantsRows" msprop:Generator_UserParentTable="Abonnements" msprop:Generator_UserRelationName="FK_Dependants_Abonnements" msprop:Generator_RelationVarName="relationFK_Dependants_Abonnements" msprop:Generator_ParentPropName="AbonnementsRow" />
+      <msdata:Relationship name="FK_Depenses_Abonnements" msdata:parent="Abonnements" msdata:child="Depenses" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Depenses" msprop:Generator_ChildPropName="GetDepensesRows" msprop:Generator_UserParentTable="Abonnements" msprop:Generator_UserRelationName="FK_Depenses_Abonnements" msprop:Generator_RelationVarName="relationFK_Depenses_Abonnements" msprop:Generator_ParentPropName="AbonnementsRow" />
+      <msdata:Relationship name="FK_Depenses_Services" msdata:parent="Services" msdata:child="Depenses" msdata:parentkey="No" msdata:childkey="NoService" msprop:Generator_UserChildTable="Depenses" msprop:Generator_ChildPropName="GetDepensesRows" msprop:Generator_UserParentTable="Services" msprop:Generator_UserRelationName="FK_Depenses_Services" msprop:Generator_RelationVarName="relationFK_Depenses_Services" msprop:Generator_ParentPropName="ServicesRow" />
+      <msdata:Relationship name="FK_Employes_Provinces" msdata:parent="Provinces" msdata:child="Employes" msdata:parentkey="Id" msdata:childkey="IdProvince" msprop:Generator_UserChildTable="Employes" msprop:Generator_ChildPropName="GetEmployesRows" msprop:Generator_UserParentTable="Provinces" msprop:Generator_UserRelationName="FK_Employes_Provinces" msprop:Generator_RelationVarName="relationFK_Employes_Provinces" msprop:Generator_ParentPropName="ProvincesRow" />
+      <msdata:Relationship name="FK_Employes_TypesEmploye" msdata:parent="TypesEmploye" msdata:child="Employes" msdata:parentkey="No" msdata:childkey="NoTypeEmploye" msprop:Generator_UserChildTable="Employes" msprop:Generator_ChildPropName="GetEmployesRows" msprop:Generator_UserParentTable="TypesEmploye" msprop:Generator_UserRelationName="FK_Employes_TypesEmploye" msprop:Generator_RelationVarName="relationFK_Employes_TypesEmploye" msprop:Generator_ParentPropName="TypesEmployeRow" />
+      <msdata:Relationship name="FK_PartiesJouees_Abonnements" msdata:parent="Abonnements" msdata:child="PartiesJouees" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="PartiesJouees" msprop:Generator_ChildPropName="GetPartiesJoueesRows" msprop:Generator_UserParentTable="Abonnements" msprop:Generator_UserRelationName="FK_PartiesJouees_Abonnements" msprop:Generator_RelationVarName="relationFK_PartiesJouees_Abonnements" msprop:Generator_ParentPropName="AbonnementsRow" />
+      <msdata:Relationship name="FK_PartiesJouees_Terrains" msdata:parent="Terrains" msdata:child="PartiesJouees" msdata:parentkey="No" msdata:childkey="NoTerrain" msprop:Generator_UserChildTable="PartiesJouees" msprop:Generator_ChildPropName="GetPartiesJoueesRows" msprop:Generator_UserParentTable="Terrains" msprop:Generator_UserRelationName="FK_PartiesJouees_Terrains" msprop:Generator_RelationVarName="relationFK_PartiesJouees_Terrains" msprop:Generator_ParentPropName="TerrainsRow" />
+      <msdata:Relationship name="FK_PrixDepensesAbonnements_TypesAbonnement" msdata:parent="TypesAbonnement" msdata:child="PrixDepensesAbonnements" msdata:parentkey="No" msdata:childkey="NoTypeAbonnement" msprop:Generator_UserChildTable="PrixDepensesAbonnements" msprop:Generator_ChildPropName="GetPrixDepensesAbonnementsRows" msprop:Generator_UserParentTable="TypesAbonnement" msprop:Generator_UserRelationName="FK_PrixDepensesAbonnements_TypesAbonnement" msprop:Generator_RelationVarName="relationFK_PrixDepensesAbonnements_TypesAbonnement" msprop:Generator_ParentPropName="TypesAbonnementRow" />
+      <msdata:Relationship name="FK_Reabonnements_Abonnements" msdata:parent="Abonnements" msdata:child="Reabonnements" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Reabonnements" msprop:Generator_ChildPropName="GetReabonnementsRows" msprop:Generator_UserParentTable="Abonnements" msprop:Generator_UserRelationName="FK_Reabonnements_Abonnements" msprop:Generator_RelationVarName="relationFK_Reabonnements_Abonnements" msprop:Generator_ParentPropName="AbonnementsRow" />
+      <msdata:Relationship name="FK_Services_Employes" msdata:parent="Employes" msdata:child="Services" msdata:parentkey="No" msdata:childkey="NoEmploye" msprop:Generator_UserChildTable="Services" msprop:Generator_ChildPropName="GetServicesRows" msprop:Generator_UserParentTable="Employes" msprop:Generator_UserRelationName="FK_Services_Employes" msprop:Generator_RelationVarName="relationFK_Services_Employes" msprop:Generator_ParentPropName="EmployesRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
