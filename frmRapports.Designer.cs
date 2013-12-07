@@ -30,41 +30,44 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.RapportDEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BDClubDeGolfBDataSet = new Projet3.BDClubDeGolfBDataSet();
             this.RapportDepenseAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RapportAnneeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.RapportPartieJoueeTerrainBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.RapportPartieJoueesAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.PartieJoueeParAnneeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabDepenseEmploye = new System.Windows.Forms.TabPage();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.reportViewer4 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.reportViewer5 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.reportViewer6 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.RapportDETableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.RapportDETableAdapter();
             this.RapportDepenseAbonnementTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.RapportDepenseAbonnementTableAdapter();
             this.RapportAnneeTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.RapportAnneeTableAdapter();
-            this.reportViewer4 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.RapportPartieJoueeTerrainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RapportPartieJoueeTerrainTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.RapportPartieJoueeTerrainTableAdapter();
-            this.reportViewer5 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.RapportPartieJoueesAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RapportPartieJoueesAbonnementTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.RapportPartieJoueesAbonnementTableAdapter();
-            this.reportViewer6 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.PartieJoueeParAnneeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PartieJoueeParAnneeTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.PartieJoueeParAnneeTableAdapter();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.RapportDEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BDClubDeGolfBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RapportDepenseAbonnementBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RapportAnneeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RapportPartieJoueeTerrainBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RapportPartieJoueesAbonnementBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PartieJoueeParAnneeBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabDepenseEmploye.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -72,9 +75,6 @@
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RapportPartieJoueeTerrainBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RapportPartieJoueesAbonnementBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PartieJoueeParAnneeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // RapportDEBindingSource
@@ -96,6 +96,21 @@
             // 
             this.RapportAnneeBindingSource.DataMember = "RapportAnnee";
             this.RapportAnneeBindingSource.DataSource = this.BDClubDeGolfBDataSet;
+            // 
+            // RapportPartieJoueeTerrainBindingSource
+            // 
+            this.RapportPartieJoueeTerrainBindingSource.DataMember = "RapportPartieJoueeTerrain";
+            this.RapportPartieJoueeTerrainBindingSource.DataSource = this.BDClubDeGolfBDataSet;
+            // 
+            // RapportPartieJoueesAbonnementBindingSource
+            // 
+            this.RapportPartieJoueesAbonnementBindingSource.DataMember = "RapportPartieJoueesAbonnement";
+            this.RapportPartieJoueesAbonnementBindingSource.DataSource = this.BDClubDeGolfBDataSet;
+            // 
+            // PartieJoueeParAnneeBindingSource
+            // 
+            this.PartieJoueeParAnneeBindingSource.DataMember = "PartieJoueeParAnnee";
+            this.PartieJoueeParAnneeBindingSource.DataSource = this.BDClubDeGolfBDataSet;
             // 
             // tabControl1
             // 
@@ -144,17 +159,6 @@
             this.tabPage2.Text = "Dépenses par abonnement";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // reportViewer2
-            // 
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.RapportDepenseAbonnementBindingSource;
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer2.LocalReport.ReportEmbeddedResource = "Projet3.rapportDepenseAbonnement.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(3, -2);
-            this.reportViewer2.Name = "reportViewer2";
-            this.reportViewer2.Size = new System.Drawing.Size(792, 383);
-            this.reportViewer2.TabIndex = 0;
-            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.reportViewer3);
@@ -188,6 +192,17 @@
             this.tabPage3.Text = "Rapport des parties jouées par terrain";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // reportViewer4
+            // 
+            reportDataSource4.Name = "DataSet1";
+            reportDataSource4.Value = this.RapportPartieJoueeTerrainBindingSource;
+            this.reportViewer4.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer4.LocalReport.ReportEmbeddedResource = "Projet3.rapportPartieJoueeTerrain1.rdlc";
+            this.reportViewer4.Location = new System.Drawing.Point(4, 4);
+            this.reportViewer4.Name = "reportViewer4";
+            this.reportViewer4.Size = new System.Drawing.Size(795, 387);
+            this.reportViewer4.TabIndex = 0;
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.reportViewer5);
@@ -199,6 +214,17 @@
             this.tabPage4.Text = "Rapport des parties jouées par abonnement";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // reportViewer5
+            // 
+            reportDataSource5.Name = "DataSet1";
+            reportDataSource5.Value = this.RapportPartieJoueesAbonnementBindingSource;
+            this.reportViewer5.LocalReport.DataSources.Add(reportDataSource5);
+            this.reportViewer5.LocalReport.ReportEmbeddedResource = "Projet3.rapportPartieJoueeAbonnement.rdlc";
+            this.reportViewer5.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer5.Name = "reportViewer5";
+            this.reportViewer5.Size = new System.Drawing.Size(795, 391);
+            this.reportViewer5.TabIndex = 0;
+            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.reportViewer6);
@@ -209,6 +235,17 @@
             this.tabPage5.TabIndex = 5;
             this.tabPage5.Text = "Rapport des parties jouées par année";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // reportViewer6
+            // 
+            reportDataSource6.Name = "DataSet1";
+            reportDataSource6.Value = this.PartieJoueeParAnneeBindingSource;
+            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource6);
+            this.reportViewer6.LocalReport.ReportEmbeddedResource = "Projet3.rapportPartieJoueeAnnee.rdlc";
+            this.reportViewer6.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer6.Name = "reportViewer6";
+            this.reportViewer6.Size = new System.Drawing.Size(795, 387);
+            this.reportViewer6.TabIndex = 0;
             // 
             // RapportDETableAdapter
             // 
@@ -222,65 +259,28 @@
             // 
             this.RapportAnneeTableAdapter.ClearBeforeFill = true;
             // 
-            // reportViewer4
-            // 
-            reportDataSource4.Name = "DataSet1";
-            reportDataSource4.Value = this.RapportPartieJoueeTerrainBindingSource;
-            this.reportViewer4.LocalReport.DataSources.Add(reportDataSource4);
-            this.reportViewer4.LocalReport.ReportEmbeddedResource = "Projet3.rapportPartieJoueeTerrain1.rdlc";
-            this.reportViewer4.Location = new System.Drawing.Point(4, 4);
-            this.reportViewer4.Name = "reportViewer4";
-            this.reportViewer4.Size = new System.Drawing.Size(795, 387);
-            this.reportViewer4.TabIndex = 0;
-            // 
-            // RapportPartieJoueeTerrainBindingSource
-            // 
-            this.RapportPartieJoueeTerrainBindingSource.DataMember = "RapportPartieJoueeTerrain";
-            this.RapportPartieJoueeTerrainBindingSource.DataSource = this.BDClubDeGolfBDataSet;
-            // 
             // RapportPartieJoueeTerrainTableAdapter
             // 
             this.RapportPartieJoueeTerrainTableAdapter.ClearBeforeFill = true;
-            // 
-            // reportViewer5
-            // 
-            reportDataSource5.Name = "DataSet1";
-            reportDataSource5.Value = this.RapportPartieJoueesAbonnementBindingSource;
-            this.reportViewer5.LocalReport.DataSources.Add(reportDataSource5);
-            this.reportViewer5.LocalReport.ReportEmbeddedResource = "Projet3.rapportPartieJoueeAbonnement.rdlc";
-            this.reportViewer5.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer5.Name = "reportViewer5";
-            this.reportViewer5.Size = new System.Drawing.Size(795, 391);
-            this.reportViewer5.TabIndex = 0;
-            // 
-            // RapportPartieJoueesAbonnementBindingSource
-            // 
-            this.RapportPartieJoueesAbonnementBindingSource.DataMember = "RapportPartieJoueesAbonnement";
-            this.RapportPartieJoueesAbonnementBindingSource.DataSource = this.BDClubDeGolfBDataSet;
             // 
             // RapportPartieJoueesAbonnementTableAdapter
             // 
             this.RapportPartieJoueesAbonnementTableAdapter.ClearBeforeFill = true;
             // 
-            // reportViewer6
-            // 
-            reportDataSource6.Name = "DataSet1";
-            reportDataSource6.Value = this.PartieJoueeParAnneeBindingSource;
-            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource6);
-            this.reportViewer6.LocalReport.ReportEmbeddedResource = "Projet3.rapportPartieJoueeAnnee.rdlc";
-            this.reportViewer6.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer6.Name = "reportViewer6";
-            this.reportViewer6.Size = new System.Drawing.Size(795, 387);
-            this.reportViewer6.TabIndex = 0;
-            // 
-            // PartieJoueeParAnneeBindingSource
-            // 
-            this.PartieJoueeParAnneeBindingSource.DataMember = "PartieJoueeParAnnee";
-            this.PartieJoueeParAnneeBindingSource.DataSource = this.BDClubDeGolfBDataSet;
-            // 
             // PartieJoueeParAnneeTableAdapter
             // 
             this.PartieJoueeParAnneeTableAdapter.ClearBeforeFill = true;
+            // 
+            // reportViewer2
+            // 
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.RapportDepenseAbonnementBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "Projet3.raportDepenseAbonnement.rdlc";
+            this.reportViewer2.Location = new System.Drawing.Point(0, 4);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.Size = new System.Drawing.Size(795, 383);
+            this.reportViewer2.TabIndex = 0;
             // 
             // frmRapports
             // 
@@ -295,6 +295,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.BDClubDeGolfBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RapportDepenseAbonnementBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RapportAnneeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RapportPartieJoueeTerrainBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RapportPartieJoueesAbonnementBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PartieJoueeParAnneeBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabDepenseEmploye.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -302,9 +305,6 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.RapportPartieJoueeTerrainBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RapportPartieJoueesAbonnementBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PartieJoueeParAnneeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -322,7 +322,6 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
         private System.Windows.Forms.BindingSource RapportDepenseAbonnementBindingSource;
         private BDClubDeGolfBDataSetTableAdapters.RapportDepenseAbonnementTableAdapter RapportDepenseAbonnementTableAdapter;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
@@ -337,5 +336,6 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer6;
         private System.Windows.Forms.BindingSource PartieJoueeParAnneeBindingSource;
         private BDClubDeGolfBDataSetTableAdapters.PartieJoueeParAnneeTableAdapter PartieJoueeParAnneeTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
     }
 }

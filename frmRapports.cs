@@ -37,6 +37,7 @@ namespace Projet3
             this.reportViewer4.RefreshReport();
             this.reportViewer5.RefreshReport();
             this.reportViewer6.RefreshReport();
+            this.reportViewer2.RefreshReport();
         }
     }
 }
