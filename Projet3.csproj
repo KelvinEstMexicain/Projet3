@@ -161,6 +161,7 @@
     <EmbeddedResource Include="rapportPartieJoueeAbonnement.rdlc" />
     <EmbeddedResource Include="rapportPartieJoueeAnnee.rdlc" />
     <EmbeddedResource Include="rapportPartieJoueeTerrain1.rdlc" />
+    <EmbeddedResource Include="statsAbonnementAnneesType.rdlc" />
     <None Include="app.config" />
     <None Include="BDClubDeGolfBDataSet.xsc">
       <DependentUpon>BDClubDeGolfBDataSet.xsd</DependentUpon>

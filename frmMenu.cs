@@ -96,5 +96,13 @@ namespace Projet3
             rapport.ShowDialog();
             this.Show();
         }
+
+        private void btnStatistiques_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var stats = new frmStatistique();
+            stats.ShowDialog();
+            this.Show();
+        }
     }
 }
