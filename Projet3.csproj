@@ -155,6 +155,7 @@
     <EmbeddedResource Include="frmStatistique.resx">
       <DependentUpon>frmStatistique.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="raportDepenseAbonnement.rdlc" />
     <EmbeddedResource Include="rapportDepenseAnnee.rdlc" />
     <EmbeddedResource Include="rapportDepensesEmploye.rdlc" />
     <EmbeddedResource Include="rapportPartieJoueeAbonnement.rdlc" />
