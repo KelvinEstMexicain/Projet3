@@ -84,11 +84,11 @@
     <Compile Include="frmAbonnementPrincipal.Designer.cs">
       <DependentUpon>frmAbonnementPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAjoutConjoint.cs">
+    <Compile Include="frmAjoutDependant.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAjoutConjoint.Designer.cs">
-      <DependentUpon>frmAjoutConjoint.cs</DependentUpon>
+    <Compile Include="frmAjoutDependant.Designer.cs">
+      <DependentUpon>frmAjoutDependant.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAjoutEmploye.cs">
       <SubType>Form</SubType>
@@ -173,8 +173,8 @@
     <EmbeddedResource Include="frmAbonnementPrincipal.resx">
       <DependentUpon>frmAbonnementPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAjoutConjoint.resx">
-      <DependentUpon>frmAjoutConjoint.cs</DependentUpon>
+    <EmbeddedResource Include="frmAjoutDependant.resx">
+      <DependentUpon>frmAjoutDependant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAjoutEmploye.resx">
       <DependentUpon>frmAjoutEmploye.cs</DependentUpon>

@@ -114,27 +114,9 @@ namespace Projet3
 
         private void btnAjout_Click(object sender, EventArgs e)
         {
-
+            Employes emp = genereEmploye();
             if (this.ValidateChildren())
             {
-                Employes emp = new Employes();
-                emp.Age = (int)ageNumeric.Value;
-                emp.Cellulaire = celTextBox.Text == "(   )    -" ? "" : celTextBox.Text;           
-                emp.CodePostal = codePostalTextBox.Text;
-                emp.Courriel = courrielTextBox.Text;
-                emp.IdProvince = cbProvince.SelectedValue.ToString();
-                emp.MotDePasse = motDePasseTextBox.Text;
-                emp.No = int.Parse(noTextBox.Text);
-                emp.NoCivique = noCiviqueTextBox.Text;
-                emp.Nom = nomTextBox.Text;
-                emp.NotypeEmploye = (int)cmbTypeEmploye.SelectedValue;
-                emp.Prenom = prenomTextBox.Text;
-                emp.Remarque = remarqueTextBox.Text;
-                emp.Rue = rueTextBox.Text;
-                emp.SalaireHoraire = decimal.Parse(salaireHoraireTextBox.Text);
-                emp.Sexe = cmbSexe.SelectedItem.ToString();
-                emp.Telephone = telTextBox.Text;
-                emp.Ville = villeTextBox.Text;
                 dataContexteProjet1.Employes.InsertOnSubmit(emp);
                 try
                 {
@@ -150,6 +132,29 @@ namespace Projet3
                     MessageBox.Show(Resources.ErreurBD, Resources.TitreErreur);
                 }
             }
+        }
+
+        private Employes genereEmploye()
+        {
+            Employes emp = new Employes();
+            emp.Age = (int)ageNumeric.Value;
+            emp.Cellulaire = celTextBox.Text == "(   )    -" ? "" : celTextBox.Text;
+            emp.CodePostal = codePostalTextBox.Text;
+            emp.Courriel = courrielTextBox.Text;
+            emp.IdProvince = cbProvince.SelectedValue.ToString();
+            emp.MotDePasse = motDePasseTextBox.Text;
+            emp.No = int.Parse(noTextBox.Text);
+            emp.NoCivique = noCiviqueTextBox.Text;
+            emp.Nom = nomTextBox.Text;
+            emp.NotypeEmploye = (int)cmbTypeEmploye.SelectedValue;
+            emp.Prenom = prenomTextBox.Text;
+            emp.Remarque = remarqueTextBox.Text;
+            emp.Rue = rueTextBox.Text;
+            emp.SalaireHoraire = decimal.Parse(salaireHoraireTextBox.Text);
+            emp.Sexe = cmbSexe.SelectedItem.ToString();
+            emp.Telephone = telTextBox.Text;
+            emp.Ville = villeTextBox.Text;
+            return emp;
         }
         
     }

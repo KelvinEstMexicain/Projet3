@@ -146,6 +146,27 @@ namespace Projet3
                 abonnement.Sexe = cmbSexe.SelectedItem.ToString();
                 abonnement.Telephone = telephoneMaskedTextBox.Text;
                 abonnement.Ville = villeTextBox.Text;
+                dataContexteProjet1.Abonnements.InsertOnSubmit(abonnement);
+                if (abonnement.NoTypeAbonnement >= 3)
+                {
+                    var conjoint = new Dependants();
+                    var ajoutConjoint = new frmAjoutDependant(conjoint);
+                    ajoutConjoint.ShowDialog();
+                    
+                }
+                try
+                {
+                    dataContexteProjet1.SubmitChanges();
+                    this.Close();
+                }
+                catch (DBConcurrencyException erreur)
+                {
+                    MessageBox.Show(Resources.ConflitAccesConcurrentiel, Resources.TitreErreur);
+                }
+                catch
+                {
+                    MessageBox.Show(Resources.ErreurBD, Resources.TitreErreur);
+                }
             }
         }
     }
