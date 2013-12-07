@@ -45,6 +45,8 @@ namespace Projet3
                     Hide();
                     var menuPrincipal = new frmMenu(employe.First());
                     menuPrincipal.ShowDialog();
+                    txtPassword.Text = "";
+                    txtUsername.Text = "";
                     Show();
                 }
                 else

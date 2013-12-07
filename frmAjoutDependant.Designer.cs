@@ -1,4 +1,5 @@
-﻿namespace Projet3
+﻿using System;
+namespace Projet3
 {
     partial class frmAjoutDependant
     {
@@ -47,8 +48,8 @@
             this.cmbSexe = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAnnuler = new System.Windows.Forms.Button();
             this.btnAjout = new System.Windows.Forms.Button();
+            this.errProvider = new System.Windows.Forms.ErrorProvider(this.components);
             dateNaissanceLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             idAbonnementLabel = new System.Windows.Forms.Label();
@@ -57,6 +58,7 @@
             remarqueLabel = new System.Windows.Forms.Label();
             sexeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dependantsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // dateNaissanceLabel
@@ -72,7 +74,7 @@
             // 
             idLabel.AutoSize = true;
             idLabel.Enabled = false;
-            idLabel.Location = new System.Drawing.Point(40, 226);
+            idLabel.Location = new System.Drawing.Point(40, 288);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(19, 13);
             idLabel.TabIndex = 3;
@@ -82,7 +84,7 @@
             // 
             idAbonnementLabel.AutoSize = true;
             idAbonnementLabel.Enabled = false;
-            idAbonnementLabel.Location = new System.Drawing.Point(40, 255);
+            idAbonnementLabel.Location = new System.Drawing.Point(40, 260);
             idAbonnementLabel.Name = "idAbonnementLabel";
             idAbonnementLabel.Size = new System.Drawing.Size(82, 13);
             idAbonnementLabel.TabIndex = 5;
@@ -111,9 +113,9 @@
             remarqueLabel.AutoSize = true;
             remarqueLabel.Location = new System.Drawing.Point(30, 190);
             remarqueLabel.Name = "remarqueLabel";
-            remarqueLabel.Size = new System.Drawing.Size(63, 13);
+            remarqueLabel.Size = new System.Drawing.Size(59, 13);
             remarqueLabel.TabIndex = 11;
-            remarqueLabel.Text = "*Remarque:";
+            remarqueLabel.Text = "Remarque:";
             // 
             // sexeLabel
             // 
@@ -132,26 +134,28 @@
             // 
             this.dateNaissanceDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.dependantsBindingSource, "DateNaissance", true));
             this.dateNaissanceDateTimePicker.Location = new System.Drawing.Point(122, 161);
+            this.dateNaissanceDateTimePicker.MaxDate = new System.DateTime(2013, 12, 7, 12, 34, 32, 852);
             this.dateNaissanceDateTimePicker.Name = "dateNaissanceDateTimePicker";
             this.dateNaissanceDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.dateNaissanceDateTimePicker.TabIndex = 2;
+            this.dateNaissanceDateTimePicker.TabIndex = 3;
+            this.dateNaissanceDateTimePicker.Value = new System.DateTime(2013, 12, 7, 12, 34, 32, 852);
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dependantsBindingSource, "Id", true));
             this.idTextBox.Enabled = false;
-            this.idTextBox.Location = new System.Drawing.Point(132, 226);
+            this.idTextBox.Location = new System.Drawing.Point(132, 285);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(56, 20);
+            this.idTextBox.Size = new System.Drawing.Size(150, 20);
             this.idTextBox.TabIndex = 4;
             // 
             // idAbonnementTextBox
             // 
             this.idAbonnementTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dependantsBindingSource, "IdAbonnement", true));
             this.idAbonnementTextBox.Enabled = false;
-            this.idAbonnementTextBox.Location = new System.Drawing.Point(132, 252);
+            this.idAbonnementTextBox.Location = new System.Drawing.Point(132, 257);
             this.idAbonnementTextBox.Name = "idAbonnementTextBox";
-            this.idAbonnementTextBox.Size = new System.Drawing.Size(56, 20);
+            this.idAbonnementTextBox.Size = new System.Drawing.Size(150, 20);
             this.idAbonnementTextBox.TabIndex = 6;
             // 
             // nomTextBox
@@ -160,7 +164,8 @@
             this.nomTextBox.Location = new System.Drawing.Point(122, 109);
             this.nomTextBox.Name = "nomTextBox";
             this.nomTextBox.Size = new System.Drawing.Size(160, 20);
-            this.nomTextBox.TabIndex = 8;
+            this.nomTextBox.TabIndex = 1;
+            this.nomTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.nomTextBox_Validating);
             // 
             // prenomTextBox
             // 
@@ -168,18 +173,22 @@
             this.prenomTextBox.Location = new System.Drawing.Point(122, 86);
             this.prenomTextBox.Name = "prenomTextBox";
             this.prenomTextBox.Size = new System.Drawing.Size(160, 20);
-            this.prenomTextBox.TabIndex = 10;
+            this.prenomTextBox.TabIndex = 0;
+            this.prenomTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.prenomTextBox_Validating);
             // 
             // remarqueTextBox
             // 
             this.remarqueTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dependantsBindingSource, "Remarque", true));
             this.remarqueTextBox.Location = new System.Drawing.Point(122, 187);
+            this.remarqueTextBox.Multiline = true;
             this.remarqueTextBox.Name = "remarqueTextBox";
-            this.remarqueTextBox.Size = new System.Drawing.Size(200, 20);
-            this.remarqueTextBox.TabIndex = 12;
+            this.remarqueTextBox.Size = new System.Drawing.Size(200, 58);
+            this.remarqueTextBox.TabIndex = 4;
+            this.remarqueTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.remarqueTextBox_Validating);
             // 
             // cmbSexe
             // 
+            this.cmbSexe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSexe.FormattingEnabled = true;
             this.cmbSexe.Items.AddRange(new object[] {
             "H",
@@ -187,7 +196,9 @@
             this.cmbSexe.Location = new System.Drawing.Point(122, 134);
             this.cmbSexe.Name = "cmbSexe";
             this.cmbSexe.Size = new System.Drawing.Size(56, 21);
-            this.cmbSexe.TabIndex = 51;
+            this.cmbSexe.TabIndex = 2;
+            this.cmbSexe.SelectedIndexChanged += new System.EventHandler(this.cmbSexe_SelectedIndexChanged);
+            this.cmbSexe.Validating += new System.ComponentModel.CancelEventHandler(this.cmbSexe_Validating);
             // 
             // label2
             // 
@@ -209,32 +220,27 @@
             this.label1.TabIndex = 54;
             this.label1.Text = "Abonnement du conjoint(e)";
             // 
-            // btnAnnuler
-            // 
-            this.btnAnnuler.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAnnuler.BackgroundImage")));
-            this.btnAnnuler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAnnuler.Location = new System.Drawing.Point(398, 224);
-            this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(78, 74);
-            this.btnAnnuler.TabIndex = 57;
-            this.btnAnnuler.UseVisualStyleBackColor = true;
-            // 
             // btnAjout
             // 
             this.btnAjout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAjout.BackgroundImage")));
             this.btnAjout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAjout.Location = new System.Drawing.Point(278, 224);
+            this.btnAjout.Location = new System.Drawing.Point(347, 257);
             this.btnAjout.Name = "btnAjout";
             this.btnAjout.Size = new System.Drawing.Size(78, 74);
-            this.btnAjout.TabIndex = 56;
+            this.btnAjout.TabIndex = 5;
             this.btnAjout.UseVisualStyleBackColor = true;
+            this.btnAjout.Click += new System.EventHandler(this.btnAjout_Click);
+            // 
+            // errProvider
+            // 
+            this.errProvider.ContainerControl = this;
             // 
             // frmAjoutDependant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 310);
-            this.Controls.Add(this.btnAnnuler);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ClientSize = new System.Drawing.Size(454, 358);
             this.Controls.Add(this.btnAjout);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -254,7 +260,10 @@
             this.Controls.Add(sexeLabel);
             this.Name = "frmAjoutDependant";
             this.Text = "Ajout d\'un conjoint(e)";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAjoutDependant_FormClosing);
+            this.Load += new System.EventHandler(this.frmAjoutDependant_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dependantsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,7 +281,7 @@
         private System.Windows.Forms.ComboBox cmbSexe;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.Button btnAjout;
+        private System.Windows.Forms.ErrorProvider errProvider;
     }
 }

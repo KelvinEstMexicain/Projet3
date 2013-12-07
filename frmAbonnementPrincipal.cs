@@ -40,6 +40,8 @@ namespace Projet3
             }
             suffixeId = indexMax + "P";
             idTextBox.Text = suffixeId;
+            nbEnfantsLabel.Visible = false;
+            nbEnfantsNumericUpDown.Visible = false;
         }
 
         private void btnAnnuler_Click(object sender, EventArgs e)
@@ -150,13 +152,31 @@ namespace Projet3
                 if (abonnement.NoTypeAbonnement >= 3)
                 {
                     var conjoint = new Dependants();
-                    var ajoutConjoint = new frmAjoutDependant(conjoint);
+                    var ajoutConjoint = new frmAjoutDependant(out conjoint, 3, abonnement.Id);
                     ajoutConjoint.ShowDialog();
-                    
+                    dataContexteProjet1.Dependants.InsertOnSubmit(conjoint);
+                    if (abonnement.NoTypeAbonnement >= 4)
+                    {
+                        int typeAbonnement = abonnement.NoTypeAbonnement;
+                        if (typeAbonnement == 6)
+                        {
+                            typeAbonnement = 3 + (int)nbEnfantsNumericUpDown.Value;
+                        }
+                        Dependants[] enfantArray = new Dependants[3];
+                        for (int i = 4; i <= typeAbonnement; i++)
+                        {
+                            var enfant = new Dependants();
+                            var ajoutEnfant = new frmAjoutDependant(out enfant, i, abonnement.Id);
+                            ajoutEnfant.ShowDialog();
+                            dataContexteProjet1.Dependants.InsertOnSubmit(enfant);
+                        }
+                    }
                 }
                 try
                 {
                     dataContexteProjet1.SubmitChanges();
+                    //Email.SendGMail(Resources.SujetMailAbonnement, 
+                    MessageBox.Show(Resources.EnregistrementReussi, Resources.TitreReussi);
                     this.Close();
                 }
                 catch (DBConcurrencyException erreur)
@@ -165,8 +185,23 @@ namespace Projet3
                 }
                 catch
                 {
-                    MessageBox.Show(Resources.ErreurBD, Resources.TitreErreur);
+                    MessageBox.Show(Resources.ErreurEnregistrement, Resources.TitreErreur);
                 }
+            }
+        }
+
+        private void typesAbonnementComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var combobox = (ComboBox)sender;
+            if ((int)combobox.SelectedValue == 6)
+            {
+                nbEnfantsLabel.Visible = true;
+                nbEnfantsNumericUpDown.Visible = true;
+            }
+            else
+            {
+                nbEnfantsLabel.Visible = false;
+                nbEnfantsNumericUpDown.Visible = false;
             }
         }
     }

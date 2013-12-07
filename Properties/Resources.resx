@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AdresseGMail" xml:space="preserve">
+    <value>KelvinEstMexicain@gmail.com</value>
+  </data>
+  <data name="AdresseSmtpGMail" xml:space="preserve">
+    <value>smtp.gmail.com</value>
+  </data>
   <data name="CelNonValide" xml:space="preserve">
     <value>Le numéro de cellulaire entré n'est pas valide</value>
   </data>
@@ -129,8 +135,20 @@
   <data name="CourrielNonValide" xml:space="preserve">
     <value>L'adresse courriel entrée n'est pas valide</value>
   </data>
+  <data name="EchecEnvoisCourriel" xml:space="preserve">
+    <value>Echec de l'envoi du courriel:</value>
+  </data>
+  <data name="EnregistrementReussi" xml:space="preserve">
+    <value>L'enregistrement a réussi. Un courriel a été envoyé à l'abonné.</value>
+  </data>
   <data name="ErreurBD" xml:space="preserve">
     <value>Il y a eu une erreur lors de la connexion à la base de donnée</value>
+  </data>
+  <data name="ErreurEnregistrement" xml:space="preserve">
+    <value>Il y a eu une erreur lors de l'enregistrement</value>
+  </data>
+  <data name="MotDePasseGMail" xml:space="preserve">
+    <value>DavidEstPasMexicain</value>
   </data>
   <data name="MotDePasseNonValide" xml:space="preserve">
     <value>Le mot de passe doit composer au moins 1 caractère</value>
@@ -165,6 +183,9 @@
   <data name="SexeNonSelectionne" xml:space="preserve">
     <value>Veuillez sélectionner le sexe de la personne</value>
   </data>
+  <data name="SujetMailAbonnement" xml:space="preserve">
+    <value>Voici les informations de votre abonnement</value>
+  </data>
   <data name="SupprimerAdmin" xml:space="preserve">
     <value>Vous ne pouvez supprimer l'administrateur</value>
   </data>
@@ -177,8 +198,17 @@
   <data name="TelNonValide" xml:space="preserve">
     <value>Le numéro de téléphone entré n'est pas valide</value>
   </data>
+  <data name="TitreAbonnementConjoint" xml:space="preserve">
+    <value>Abonnement du conjoint(e)</value>
+  </data>
+  <data name="TitreAbonnementEnfant" xml:space="preserve">
+    <value>Abonnement d'un enfant</value>
+  </data>
   <data name="TitreErreur" xml:space="preserve">
     <value>Erreur</value>
+  </data>
+  <data name="TitreReussi" xml:space="preserve">
+    <value>Réussi</value>
   </data>
   <data name="TypeAbonnementNonValide" xml:space="preserve">
     <value>Veuillez selectionner un type d'abonnement</value>
