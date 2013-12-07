@@ -144,6 +144,9 @@
   <data name="NomNonValide" xml:space="preserve">
     <value>Le nom entré n'est pas valide</value>
   </data>
+  <data name="PasAgeDor" xml:space="preserve">
+    <value>Pour être de l'âge d'or, la personne doit être agée de 60 ans ou plus</value>
+  </data>
   <data name="PrenomNonValide" xml:space="preserve">
     <value>Le prénom entré n'est pas valide</value>
   </data>
@@ -176,6 +179,9 @@
   </data>
   <data name="TitreErreur" xml:space="preserve">
     <value>Erreur</value>
+  </data>
+  <data name="TypeAbonnementNonValide" xml:space="preserve">
+    <value>Veuillez selectionner un type d'abonnement</value>
   </data>
   <data name="UtilisateurOuMotDePasseNonValide" xml:space="preserve">
     <value>La combinaison nom d'utilisateur/mot de passe ne correspond à aucun utilisateur enregistré</value>

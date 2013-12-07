@@ -136,6 +136,21 @@ namespace Projet3
             }
         }
 
+        public static void DateTimePickerValideAgeDor(object sender, ErrorProvider errProvider, String errMessage, CancelEventArgs e)
+        {
+            TimeSpan age = DateTime.Now - ((DateTimePicker)sender).Value;
+            int ageAnnee = age.Days / 365;
+            if (ageAnnee < 60)
+            {
+                errProvider.SetError((DateTimePicker)sender, errMessage);
+                e.Cancel = true;
+            }
+            else
+            {
+                errProvider.SetError((DateTimePicker)sender, "");
+            }
+        }
+
         public static bool ValideTextSeulement(string text)
         {
             return Regex.IsMatch(text, @"^([a-zA-Z'àâéèêôùûçÀÂÉÈÔÙÛÇ\s-]{1,30})$");

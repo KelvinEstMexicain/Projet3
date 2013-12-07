@@ -142,6 +142,15 @@ namespace Projet3.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pour être de l&apos;âge d&apos;or, la personne doit être agée de 60 ans ou plus.
+        /// </summary>
+        internal static string PasAgeDor {
+            get {
+                return ResourceManager.GetString("PasAgeDor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Le prénom entré n&apos;est pas valide.
         /// </summary>
         internal static string PrenomNonValide {
@@ -237,6 +246,15 @@ namespace Projet3.Properties {
         internal static string TitreErreur {
             get {
                 return ResourceManager.GetString("TitreErreur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Veuillez selectionner un type d&apos;abonnement.
+        /// </summary>
+        internal static string TypeAbonnementNonValide {
+            get {
+                return ResourceManager.GetString("TypeAbonnementNonValide", resourceCulture);
             }
         }
         
