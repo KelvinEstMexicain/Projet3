@@ -42,12 +42,12 @@
             this.noTextBox = new System.Windows.Forms.TextBox();
             this.remarqueTextBox = new System.Windows.Forms.TextBox();
             this.cbAbonnement = new System.Windows.Forms.ComboBox();
+            this.noEtNomCompletAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.abonnementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.txtService = new System.Windows.Forms.TextBox();
             this.btnAjout = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
-            this.noEtNomCompletAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             dateDepenseLabel = new System.Windows.Forms.Label();
             idAbonnementLabel = new System.Windows.Forms.Label();
             montantLabel = new System.Windows.Forms.Label();
@@ -55,8 +55,8 @@
             noServiceLabel = new System.Windows.Forms.Label();
             remarqueLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.depensesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.noEtNomCompletAbonnementBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dateDepenseLabel
@@ -161,6 +161,10 @@
             this.cbAbonnement.TabIndex = 13;
             this.cbAbonnement.ValueMember = "noAbonnement";
             // 
+            // noEtNomCompletAbonnementBindingSource
+            // 
+            this.noEtNomCompletAbonnementBindingSource.DataSource = typeof(Projet3.noEtNomCompletAbonnement);
+            // 
             // abonnementsBindingSource
             // 
             this.abonnementsBindingSource.DataSource = typeof(Projet3.Abonnements);
@@ -193,6 +197,7 @@
             this.btnAjout.Size = new System.Drawing.Size(83, 80);
             this.btnAjout.TabIndex = 17;
             this.btnAjout.UseVisualStyleBackColor = true;
+            this.btnAjout.Click += new System.EventHandler(this.btnAjout_Click);
             // 
             // btnAnnuler
             // 
@@ -203,10 +208,7 @@
             this.btnAnnuler.Size = new System.Drawing.Size(78, 80);
             this.btnAnnuler.TabIndex = 58;
             this.btnAnnuler.UseVisualStyleBackColor = true;
-            // 
-            // noEtNomCompletAbonnementBindingSource
-            // 
-            this.noEtNomCompletAbonnementBindingSource.DataSource = typeof(Projet3.noEtNomCompletAbonnement);
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // frmInscriptionDepense
             // 
@@ -233,8 +235,8 @@
             this.Text = "Inscription d\'une dépense";
             this.Load += new System.EventHandler(this.frmInscriptionDepense_Load);
             ((System.ComponentModel.ISupportInitialize)(this.depensesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.noEtNomCompletAbonnementBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

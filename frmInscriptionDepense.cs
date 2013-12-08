@@ -26,5 +26,15 @@ namespace Projet3
                                                                    nomCompletAbonnement = unAbonnement.Prenom + " " + unAbonnement.Nom
                                                                };
         }
+
+        private void btnAjout_Click(object sender, EventArgs e)
+        {
+            /**/
+        }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
