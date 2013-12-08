@@ -14,6 +14,7 @@ namespace Projet3
         public frmInscriptionDepense()
         {
             InitializeComponent();
+            //Testy test
         }
         DataClasses1DataContext dataContexteProjet1 = new DataClasses1DataContext();
         private void frmInscriptionDepense_Load(object sender, EventArgs e)
