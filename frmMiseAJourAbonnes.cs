@@ -91,13 +91,21 @@ namespace Projet3
             {
                 //Text only
                 case 1:
+                    Validation.DataGridTextBoxValideTextSeulement(selectedCell, Resources.NomNonValide, e);
                     break;
                 case 2:
+                    Validation.DataGridTextBoxValideTextSeulement(selectedCell, Resources.PrenomNonValide, e);
                     break;
                     //Non vide
                 case 6:
+                    Validation.DataGridTextBoxValideNonVide(selectedCell, Resources.RemarquesNonValide, e);
                     break;
 
+            }
+            if (selectedCell.ErrorText.Length > 0)
+            {
+                e.Cancel = true;
+                MessageBox.Show(selectedCell.ErrorText, Resources.TitreErreur);
             }
         }
 
