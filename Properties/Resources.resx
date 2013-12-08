@@ -126,6 +126,9 @@
   <data name="CelNonValide" xml:space="preserve">
     <value>Le numéro de cellulaire entré n'est pas valide</value>
   </data>
+  <data name="ChangementsSauvegarde" xml:space="preserve">
+    <value>Les changements ont été sauvegardés</value>
+  </data>
   <data name="ClientDejaReabonne" xml:space="preserve">
     <value>Ce client s'est déjà réabonné cette année</value>
   </data>
@@ -218,6 +221,9 @@
   </data>
   <data name="TitreReussi" xml:space="preserve">
     <value>Réussi</value>
+  </data>
+  <data name="TitreSauvegarde" xml:space="preserve">
+    <value>Sauvegardé</value>
   </data>
   <data name="TypeAbonnementNonValide" xml:space="preserve">
     <value>Veuillez selectionner un type d'abonnement</value>

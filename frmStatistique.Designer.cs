@@ -35,8 +35,8 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.StatsAbonnementAnneeTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BDClubDeGolfBDataSet = new Projet3.BDClubDeGolfBDataSet();
             this.statsAbonnementMoisAnneeBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -45,6 +45,8 @@
             this.bDClubDeGolfBDataSet1 = new Projet3.BDClubDeGolfBDataSet();
             this.statsPartieJoueeAnneeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.statsPartieJoueeMoisAnneeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DepenseParMoisAnneeAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DepenseParAnneeAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -59,18 +61,16 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.reportViewer6 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.reportViewer7 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.reportViewer8 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.StatsAbonnementAnneeTypeTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.StatsAbonnementAnneeTypeTableAdapter();
             this.statsAbonnementMoisAnneeTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.statsAbonnementMoisAnneeTableAdapter();
             this.ReabonnementAnneeTypeTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.ReabonnementAnneeTypeTableAdapter();
             this.statsReabonnementMoisAnneeTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.statsReabonnementMoisAnneeTableAdapter();
             this.statsPartieJoueeAnneeTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.statsPartieJoueeAnneeTableAdapter();
             this.statsPartieJoueeMoisAnneeTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.statsPartieJoueeMoisAnneeTableAdapter();
-            this.reportViewer8 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DepenseParMoisAnneeAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DepenseParMoisAnneeAbonnementTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.DepenseParMoisAnneeAbonnementTableAdapter();
-            this.reportViewer7 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DepenseParAnneeAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DepenseParAnneeAbonnementTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.DepenseParAnneeAbonnementTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.StatsAbonnementAnneeTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BDClubDeGolfBDataSet)).BeginInit();
@@ -80,6 +80,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bDClubDeGolfBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statsPartieJoueeAnneeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statsPartieJoueeMoisAnneeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepenseParMoisAnneeAbonnementBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepenseParAnneeAbonnementBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -89,8 +91,6 @@
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DepenseParMoisAnneeAbonnementBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DepenseParAnneeAbonnementBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // StatsAbonnementAnneeTypeBindingSource
@@ -133,6 +133,16 @@
             this.statsPartieJoueeMoisAnneeBindingSource.DataMember = "statsPartieJoueeMoisAnnee";
             this.statsPartieJoueeMoisAnneeBindingSource.DataSource = this.BDClubDeGolfBDataSet;
             // 
+            // DepenseParMoisAnneeAbonnementBindingSource
+            // 
+            this.DepenseParMoisAnneeAbonnementBindingSource.DataMember = "DepenseParMoisAnneeAbonnement";
+            this.DepenseParMoisAnneeAbonnementBindingSource.DataSource = this.BDClubDeGolfBDataSet;
+            // 
+            // DepenseParAnneeAbonnementBindingSource
+            // 
+            this.DepenseParAnneeAbonnementBindingSource.DataMember = "DepenseParAnneeAbonnement";
+            this.DepenseParAnneeAbonnementBindingSource.DataSource = this.BDClubDeGolfBDataSet;
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -144,6 +154,7 @@
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Location = new System.Drawing.Point(12, 24);
+            this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(881, 456);
@@ -152,10 +163,10 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.reportViewer1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 58);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(873, 430);
+            this.tabPage1.Size = new System.Drawing.Size(873, 394);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Abonnement par année et par type d\'abonnement";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -196,10 +207,10 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.reportViewer3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 58);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(873, 430);
+            this.tabPage3.Size = new System.Drawing.Size(873, 394);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Réabonnement par année et par type d\'abonnement";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -219,10 +230,10 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.reportViewer4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 40);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(873, 430);
+            this.tabPage4.Size = new System.Drawing.Size(873, 412);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Réabonnement par mois de l\'année courante et par type d\'abonnement";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -241,10 +252,10 @@
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.reportViewer5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Location = new System.Drawing.Point(4, 40);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(873, 430);
+            this.tabPage5.Size = new System.Drawing.Size(873, 412);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Parties jouées par année et par terrain";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -263,10 +274,10 @@
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.reportViewer6);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Location = new System.Drawing.Point(4, 40);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(873, 430);
+            this.tabPage6.Size = new System.Drawing.Size(873, 412);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Partie jouées par mois de l\'année courant et par terrain";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -285,24 +296,46 @@
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.reportViewer7);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Location = new System.Drawing.Point(4, 58);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(873, 430);
+            this.tabPage7.Size = new System.Drawing.Size(873, 394);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Dépense par année et par abonnement";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // reportViewer7
+            // 
+            reportDataSource7.Name = "DataSet1";
+            reportDataSource7.Value = this.DepenseParAnneeAbonnementBindingSource;
+            this.reportViewer7.LocalReport.DataSources.Add(reportDataSource7);
+            this.reportViewer7.LocalReport.ReportEmbeddedResource = "Projet3.statsDepenseAnneeAbonnement.rdlc";
+            this.reportViewer7.Location = new System.Drawing.Point(7, 7);
+            this.reportViewer7.Name = "reportViewer7";
+            this.reportViewer7.Size = new System.Drawing.Size(863, 420);
+            this.reportViewer7.TabIndex = 0;
+            // 
             // tabPage8
             // 
             this.tabPage8.Controls.Add(this.reportViewer8);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Location = new System.Drawing.Point(4, 58);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(873, 430);
+            this.tabPage8.Size = new System.Drawing.Size(873, 394);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Dépense par mois de l\'année courant par abonnement";
             this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // reportViewer8
+            // 
+            reportDataSource8.Name = "DataSet1";
+            reportDataSource8.Value = this.DepenseParMoisAnneeAbonnementBindingSource;
+            this.reportViewer8.LocalReport.DataSources.Add(reportDataSource8);
+            this.reportViewer8.LocalReport.ReportEmbeddedResource = "Projet3.statsDepenseMoisAnneeAbonnement.rdlc";
+            this.reportViewer8.Location = new System.Drawing.Point(4, 7);
+            this.reportViewer8.Name = "reportViewer8";
+            this.reportViewer8.Size = new System.Drawing.Size(869, 423);
+            this.reportViewer8.TabIndex = 0;
             // 
             // StatsAbonnementAnneeTypeTableAdapter
             // 
@@ -328,41 +361,9 @@
             // 
             this.statsPartieJoueeMoisAnneeTableAdapter.ClearBeforeFill = true;
             // 
-            // reportViewer8
-            // 
-            reportDataSource8.Name = "DataSet1";
-            reportDataSource8.Value = this.DepenseParMoisAnneeAbonnementBindingSource;
-            this.reportViewer8.LocalReport.DataSources.Add(reportDataSource8);
-            this.reportViewer8.LocalReport.ReportEmbeddedResource = "Projet3.statsDepenseMoisAnneeAbonnement.rdlc";
-            this.reportViewer8.Location = new System.Drawing.Point(4, 7);
-            this.reportViewer8.Name = "reportViewer8";
-            this.reportViewer8.Size = new System.Drawing.Size(869, 423);
-            this.reportViewer8.TabIndex = 0;
-            // 
-            // DepenseParMoisAnneeAbonnementBindingSource
-            // 
-            this.DepenseParMoisAnneeAbonnementBindingSource.DataMember = "DepenseParMoisAnneeAbonnement";
-            this.DepenseParMoisAnneeAbonnementBindingSource.DataSource = this.BDClubDeGolfBDataSet;
-            // 
             // DepenseParMoisAnneeAbonnementTableAdapter
             // 
             this.DepenseParMoisAnneeAbonnementTableAdapter.ClearBeforeFill = true;
-            // 
-            // reportViewer7
-            // 
-            reportDataSource7.Name = "DataSet1";
-            reportDataSource7.Value = this.DepenseParAnneeAbonnementBindingSource;
-            this.reportViewer7.LocalReport.DataSources.Add(reportDataSource7);
-            this.reportViewer7.LocalReport.ReportEmbeddedResource = "Projet3.statsDepenseAnneeAbonnement.rdlc";
-            this.reportViewer7.Location = new System.Drawing.Point(7, 7);
-            this.reportViewer7.Name = "reportViewer7";
-            this.reportViewer7.Size = new System.Drawing.Size(863, 420);
-            this.reportViewer7.TabIndex = 0;
-            // 
-            // DepenseParAnneeAbonnementBindingSource
-            // 
-            this.DepenseParAnneeAbonnementBindingSource.DataMember = "DepenseParAnneeAbonnement";
-            this.DepenseParAnneeAbonnementBindingSource.DataSource = this.BDClubDeGolfBDataSet;
             // 
             // DepenseParAnneeAbonnementTableAdapter
             // 
@@ -386,6 +387,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bDClubDeGolfBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statsPartieJoueeAnneeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statsPartieJoueeMoisAnneeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepenseParMoisAnneeAbonnementBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepenseParAnneeAbonnementBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -395,8 +398,6 @@
             this.tabPage6.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DepenseParMoisAnneeAbonnementBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DepenseParAnneeAbonnementBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

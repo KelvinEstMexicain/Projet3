@@ -32,52 +32,47 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMiseAJourAbonnes));
             this.label1 = new System.Windows.Forms.Label();
             this.abonnementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.abonnementsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.abonnementsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.abonnementsDataGridView = new System.Windows.Forms.DataGridView();
+            this.provincesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bDClubDeGolfBDataSet = new Projet3.BDClubDeGolfBDataSet();
             this.dependantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dependantsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuitter = new System.Windows.Forms.Button();
+            this.errProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.provincesTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.ProvincesTableAdapter();
+            this.typesAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.typesAbonnementTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.TypesAbonnementTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingNavigator)).BeginInit();
-            this.abonnementsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDClubDeGolfBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dependantsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dependantsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typesAbonnementBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -94,130 +89,6 @@
             // 
             this.abonnementsBindingSource.DataSource = typeof(Projet3.Abonnements);
             this.abonnementsBindingSource.CurrentChanged += new System.EventHandler(this.abonnementsBindingSource_CurrentChanged);
-            // 
-            // abonnementsBindingNavigator
-            // 
-            this.abonnementsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.abonnementsBindingNavigator.BindingSource = this.abonnementsBindingSource;
-            this.abonnementsBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.abonnementsBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.abonnementsBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.abonnementsBindingNavigatorSaveItem});
-            this.abonnementsBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.abonnementsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.abonnementsBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.abonnementsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.abonnementsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.abonnementsBindingNavigator.Name = "abonnementsBindingNavigator";
-            this.abonnementsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.abonnementsBindingNavigator.Size = new System.Drawing.Size(1253, 25);
-            this.abonnementsBindingNavigator.TabIndex = 90;
-            this.abonnementsBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Ajouter nouveau";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Nombre total d\'éléments";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Supprimer";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Placer en premier";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Déplacer vers le haut";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Position actuelle";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Déplacer vers le bas";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Placer en dernier";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // abonnementsBindingNavigatorSaveItem
-            // 
-            this.abonnementsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.abonnementsBindingNavigatorSaveItem.Enabled = false;
-            this.abonnementsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("abonnementsBindingNavigatorSaveItem.Image")));
-            this.abonnementsBindingNavigatorSaveItem.Name = "abonnementsBindingNavigatorSaveItem";
-            this.abonnementsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.abonnementsBindingNavigatorSaveItem.Text = "Enregistrer les données";
             // 
             // abonnementsDataGridView
             // 
@@ -245,8 +116,20 @@
             this.abonnementsDataGridView.DataSource = this.abonnementsBindingSource;
             this.abonnementsDataGridView.Location = new System.Drawing.Point(12, 92);
             this.abonnementsDataGridView.Name = "abonnementsDataGridView";
+            this.abonnementsDataGridView.RowHeadersVisible = false;
             this.abonnementsDataGridView.Size = new System.Drawing.Size(1238, 255);
             this.abonnementsDataGridView.TabIndex = 90;
+            this.abonnementsDataGridView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.abonnementsDataGridView_CellValidating);
+            // 
+            // provincesBindingSource
+            // 
+            this.provincesBindingSource.DataMember = "Provinces";
+            this.provincesBindingSource.DataSource = this.bDClubDeGolfBDataSet;
+            // 
+            // bDClubDeGolfBDataSet
+            // 
+            this.bDClubDeGolfBDataSet.DataSetName = "BDClubDeGolfBDataSet";
+            this.bDClubDeGolfBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dependantsBindingSource
             // 
@@ -255,6 +138,8 @@
             // 
             // dependantsDataGridView
             // 
+            this.dependantsDataGridView.AllowUserToAddRows = false;
+            this.dependantsDataGridView.AllowUserToDeleteRows = false;
             this.dependantsDataGridView.AutoGenerateColumns = false;
             this.dependantsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dependantsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -268,8 +153,88 @@
             this.dependantsDataGridView.DataSource = this.dependantsBindingSource;
             this.dependantsDataGridView.Location = new System.Drawing.Point(12, 367);
             this.dependantsDataGridView.Name = "dependantsDataGridView";
+            this.dependantsDataGridView.RowHeadersVisible = false;
             this.dependantsDataGridView.Size = new System.Drawing.Size(746, 215);
             this.dependantsDataGridView.TabIndex = 90;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "Nom";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Nom";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "Prenom";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Prenom";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "Sexe";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Sexe";
+            this.dataGridViewTextBoxColumn22.Items.AddRange(new object[] {
+            "H",
+            "F"});
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "DateNaissance";
+            this.dataGridViewTextBoxColumn23.HeaderText = "DateNaissance";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "IdAbonnement";
+            this.dataGridViewTextBoxColumn24.HeaderText = "IdAbonnement";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "Remarque";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Remarque";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // btnQuitter
+            // 
+            this.btnQuitter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnQuitter.BackgroundImage")));
+            this.btnQuitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnQuitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitter.Location = new System.Drawing.Point(956, 433);
+            this.btnQuitter.Name = "btnQuitter";
+            this.btnQuitter.Size = new System.Drawing.Size(146, 132);
+            this.btnQuitter.TabIndex = 91;
+            this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
+            // 
+            // errProvider
+            // 
+            this.errProvider.ContainerControl = this;
+            // 
+            // provincesTableAdapter
+            // 
+            this.provincesTableAdapter.ClearBeforeFill = true;
+            // 
+            // typesAbonnementBindingSource
+            // 
+            this.typesAbonnementBindingSource.DataMember = "TypesAbonnement";
+            this.typesAbonnementBindingSource.DataSource = this.bDClubDeGolfBDataSet;
+            // 
+            // typesAbonnementTableAdapter
+            // 
+            this.typesAbonnementTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -302,7 +267,12 @@
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Sexe";
             this.dataGridViewTextBoxColumn5.HeaderText = "Sexe";
+            this.dataGridViewTextBoxColumn5.Items.AddRange(new object[] {
+            "H",
+            "F"});
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -332,8 +302,13 @@
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "IdProvince";
+            this.dataGridViewTextBoxColumn10.DataSource = this.provincesBindingSource;
+            this.dataGridViewTextBoxColumn10.DisplayMember = "Nom";
             this.dataGridViewTextBoxColumn10.HeaderText = "IdProvince";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn10.ValueMember = "Id";
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -362,71 +337,20 @@
             // dataGridViewTextBoxColumn15
             // 
             this.dataGridViewTextBoxColumn15.DataPropertyName = "NoTypeAbonnement";
+            this.dataGridViewTextBoxColumn15.DataSource = this.typesAbonnementBindingSource;
+            this.dataGridViewTextBoxColumn15.DisplayMember = "Description";
             this.dataGridViewTextBoxColumn15.HeaderText = "NoTypeAbonnement";
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.dataGridViewTextBoxColumn15.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn15.ValueMember = "No";
             // 
             // dataGridViewTextBoxColumn16
             // 
             this.dataGridViewTextBoxColumn16.DataPropertyName = "Remarque";
             this.dataGridViewTextBoxColumn16.HeaderText = "Remarque";
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "Nom";
-            this.dataGridViewTextBoxColumn20.HeaderText = "Nom";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "Prenom";
-            this.dataGridViewTextBoxColumn21.HeaderText = "Prenom";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "Sexe";
-            this.dataGridViewTextBoxColumn22.HeaderText = "Sexe";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "DateNaissance";
-            this.dataGridViewTextBoxColumn23.HeaderText = "DateNaissance";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "IdAbonnement";
-            this.dataGridViewTextBoxColumn24.HeaderText = "IdAbonnement";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "Remarque";
-            this.dataGridViewTextBoxColumn25.HeaderText = "Remarque";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            // 
-            // btnQuitter
-            // 
-            this.btnQuitter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnQuitter.BackgroundImage")));
-            this.btnQuitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnQuitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitter.Location = new System.Drawing.Point(956, 433);
-            this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(146, 132);
-            this.btnQuitter.TabIndex = 91;
-            this.btnQuitter.UseVisualStyleBackColor = true;
             // 
             // frmMiseAJourAbonnes
             // 
@@ -436,18 +360,18 @@
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.dependantsDataGridView);
             this.Controls.Add(this.abonnementsDataGridView);
-            this.Controls.Add(this.abonnementsBindingNavigator);
             this.Controls.Add(this.label1);
             this.Name = "frmMiseAJourAbonnes";
             this.Text = "Formulatire de mise à jour des abonnées";
             this.Load += new System.EventHandler(this.frmMiseAJourAbonnes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingNavigator)).EndInit();
-            this.abonnementsBindingNavigator.ResumeLayout(false);
-            this.abonnementsBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provincesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDClubDeGolfBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dependantsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dependantsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typesAbonnementBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -457,45 +381,38 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource abonnementsBindingSource;
-        private System.Windows.Forms.BindingNavigator abonnementsBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton abonnementsBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView abonnementsDataGridView;
         private System.Windows.Forms.BindingSource dependantsBindingSource;
         private System.Windows.Forms.DataGridView dependantsDataGridView;
+        private System.Windows.Forms.Button btnQuitter;
+        private System.Windows.Forms.ErrorProvider errProvider;
+        private BDClubDeGolfBDataSet bDClubDeGolfBDataSet;
+        private System.Windows.Forms.BindingSource provincesBindingSource;
+        private BDClubDeGolfBDataSetTableAdapters.ProvincesTableAdapter provincesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.BindingSource typesAbonnementBindingSource;
+        private BDClubDeGolfBDataSetTableAdapters.TypesAbonnementTableAdapter typesAbonnementTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.Button btnQuitter;
     }
 }

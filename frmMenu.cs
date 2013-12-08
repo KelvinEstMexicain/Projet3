@@ -21,6 +21,7 @@ namespace Projet3
                 case (int)enumTypeEmploye.administrateur:
                     break;
                 case (int)enumTypeEmploye.direction:
+                    btnModifierAbonnes.Enabled = false;
                     btnAjoutAbonnement.Enabled = false;
                     btnReabonnement.Enabled = false;
                     break;
@@ -31,16 +32,19 @@ namespace Projet3
                     btnGestionEmployes.Enabled = false;
                     break;
                 case (int)enumTypeEmploye.employeProShop:
+                    btnModifierAbonnes.Enabled = false;
                     btnAjoutAbonnement.Enabled = false;
                     btnGestionEmployes.Enabled = false;
                     btnReabonnement.Enabled = false;
                     break;
                 case (int)enumTypeEmploye.employeResto:
+                    btnModifierAbonnes.Enabled = false;
                     btnAjoutAbonnement.Enabled = false;
                     btnGestionEmployes.Enabled = false;
                     btnReabonnement.Enabled = false;
                     break;
                 case (int)enumTypeEmploye.profGolf:
+                    btnModifierAbonnes.Enabled = false;
                     btnAjoutAbonnement.Enabled = false;
                     btnGestionEmployes.Enabled = false;
                     btnReabonnement.Enabled = false;

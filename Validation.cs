@@ -151,6 +151,108 @@ namespace Projet3
             }
         }
 
+        public static void DataGridTextBoxValideTextSeulement(object sender, String errMessage, CancelEventArgs e)
+        {
+            var textbox = (DataGridViewTextBoxCell)sender;
+            if (!ValideTextSeulement(textbox.EditedFormattedValue.ToString()))
+            {
+                textbox.ErrorText = errMessage;
+            }
+            else
+            {
+                textbox.ErrorText = "";
+            }
+        }
+
+        public static void DataGridTextBoxValideNonVide(object sender, String errMessage, CancelEventArgs e)
+        {
+            var textbox = (DataGridViewTextBoxCell)sender;
+            if (textbox.EditedFormattedValue == "")
+            {
+                textbox.ErrorText = errMessage;
+            }
+            else
+            {
+                textbox.ErrorText = "";
+            }
+        }
+
+        public static void DataGridTextBoxValideCodePostal(object sender, String errMessage, CancelEventArgs e)
+        {
+            var textbox = (DataGridViewTextBoxCell)sender;
+            if (!ValideCodePostal(textbox.EditedFormattedValue.ToString()))
+            {
+                textbox.ErrorText = errMessage;
+            }
+            else
+            {
+                textbox.ErrorText = "";
+            }
+        }
+
+        public static void DataGridDateTimePickerValideAgeDor(object sender, String errMessage, CancelEventArgs e)
+        {
+            var textbox = (DataGridViewTextBoxCell)sender;
+            try
+            {
+                DateTime date = Convert.ToDateTime(textbox.EditedFormattedValue);
+                TimeSpan age = DateTime.Now - date;
+                int ageAnnee = age.Days / 365;
+                if (ageAnnee < 60)
+                {
+                    textbox.ErrorText = errMessage;
+                }
+                else
+                {
+                    textbox.ErrorText = "";
+                }
+            }
+            catch(FormatException error)
+            {
+                textbox.ErrorText = "Le format de date entré est incorrect";
+            }
+        }
+
+        public static void DataGridTextBoxValideTelOpt(object sender, String errMessage, CancelEventArgs e)
+        {
+            var textbox = (DataGridViewTextBoxCell)sender;
+            if (textbox.EditedFormattedValue != "")
+            {
+                DataGridTextBoxValideTel(sender, errMessage, e);
+            }
+            else
+            {
+                textbox.ErrorText = "";
+            }
+
+        }
+
+        public static void DataGridTextBoxValideTel(object sender, String errMessage, CancelEventArgs e)
+        {
+            var textbox = (DataGridViewTextBoxCell)sender;
+            if (!ValideTel(textbox.EditedFormattedValue.ToString()))
+            {
+                textbox.ErrorText = errMessage;
+            }
+            else
+            {
+                textbox.ErrorText = "";
+            }
+        }
+
+        public static void DataGridTextBoxValideEmail(object sender, String errMessage, CancelEventArgs e)
+        {
+            var textbox = (DataGridViewTextBoxCell)sender;
+            if (!ValideEmail(textbox.EditedFormattedValue.ToString()))
+            {
+                textbox.ErrorText = errMessage;
+            }
+            else
+            {
+                textbox.ErrorText = "";
+            }
+        }
+
         public static bool ValideTextSeulement(string text)
         {
             return Regex.IsMatch(text, @"^([a-zA-Z'àâéèêôùûçÀÂÉÈÔÙÛÇ\s-]{1,30})$");

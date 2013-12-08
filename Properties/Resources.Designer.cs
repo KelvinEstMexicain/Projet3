@@ -88,6 +88,15 @@ namespace Projet3.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Les changements ont été sauvegardés.
+        /// </summary>
+        internal static string ChangementsSauvegarde {
+            get {
+                return ResourceManager.GetString("ChangementsSauvegarde", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ce client s&apos;est déjà réabonné cette année.
         /// </summary>
         internal static string ClientDejaReabonne {
@@ -363,6 +372,15 @@ namespace Projet3.Properties {
         internal static string TitreReussi {
             get {
                 return ResourceManager.GetString("TitreReussi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sauvegardé.
+        /// </summary>
+        internal static string TitreSauvegarde {
+            get {
+                return ResourceManager.GetString("TitreSauvegarde", resourceCulture);
             }
         }
         
