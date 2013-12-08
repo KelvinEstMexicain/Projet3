@@ -79,10 +79,26 @@ namespace Projet3
                 case 13:
                     Validation.DataGridTextBoxValideEmail(selectedCell, Resources.CourrielNonValide, e);
                     break;
-
-
             }
             
+        }
+
+        private void dependantsDataGridView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            var datagridview = (DataGridView)sender;
+            var selectedCell = datagridview.SelectedCells[0];
+            switch (selectedCell.ColumnIndex)
+            {
+                //Text only
+                case 1:
+                    break;
+                case 2:
+                    break;
+                    //Non vide
+                case 6:
+                    break;
+
+            }
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)
