@@ -18,6 +18,10 @@ namespace Projet3
 
         private void frmStatistique_Load(object sender, EventArgs e)
         {
+            // TODO: cette ligne de code charge les données dans la table 'BDClubDeGolfBDataSet.statsPartieJoueeMoisAnnee'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+            this.statsPartieJoueeMoisAnneeTableAdapter.Fill(this.BDClubDeGolfBDataSet.statsPartieJoueeMoisAnnee);
+            // TODO: cette ligne de code charge les données dans la table 'BDClubDeGolfBDataSet.statsPartieJoueeAnnee'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+            this.statsPartieJoueeAnneeTableAdapter.Fill(this.BDClubDeGolfBDataSet.statsPartieJoueeAnnee);
             // TODO: cette ligne de code charge les données dans la table 'bDClubDeGolfBDataSet1.statsReabonnementMoisAnnee'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
             this.statsReabonnementMoisAnneeTableAdapter.Fill(this.bDClubDeGolfBDataSet1.statsReabonnementMoisAnnee);
             // TODO: cette ligne de code charge les données dans la table 'BDClubDeGolfBDataSet.ReabonnementAnneeType'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
@@ -30,6 +34,8 @@ namespace Projet3
             this.reportViewer2.RefreshReport();
             this.reportViewer3.RefreshReport();
             this.reportViewer4.RefreshReport();
+            this.reportViewer5.RefreshReport();
+            this.reportViewer6.RefreshReport();
         }
 
         private void frmStatistique_FormClosing(object sender, FormClosingEventArgs e)
@@ -38,6 +44,8 @@ namespace Projet3
             reportViewer2.LocalReport.ReleaseSandboxAppDomain();
             reportViewer3.LocalReport.ReleaseSandboxAppDomain();
             reportViewer4.LocalReport.ReleaseSandboxAppDomain();
+            reportViewer5.LocalReport.ReleaseSandboxAppDomain();
+            reportViewer6.LocalReport.ReleaseSandboxAppDomain();
         }
     }
 }

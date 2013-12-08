@@ -1051,6 +1051,47 @@ FROM            Abonnements INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="statsPartieJoueeAnneeTableAdapter" GeneratorDataComponentClassName="statsPartieJoueeAnneeTableAdapter" Name="statsPartieJoueeAnnee" UserDataComponentName="statsPartieJoueeAnneeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BDClubDeGolfBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Terrains.Nom, YEAR(PartiesJouees.DatePartie)  as Annee, PartiesJouees.IdAbonnement
+FROM            PartiesJouees INNER JOIN
+                         Terrains ON PartiesJouees.NoTerrain = Terrains.No</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nom" DataSetColumn="Nom" />
+              <Mapping SourceColumn="Annee" DataSetColumn="Annee" />
+              <Mapping SourceColumn="IdAbonnement" DataSetColumn="IdAbonnement" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="statsPartieJoueeMoisAnneeTableAdapter" GeneratorDataComponentClassName="statsPartieJoueeMoisAnneeTableAdapter" Name="statsPartieJoueeMoisAnnee" UserDataComponentName="statsPartieJoueeMoisAnneeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BDClubDeGolfBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PartiesJouees.IdAbonnement, DATENAME(month, PartiesJouees.DatePartie) AS Date, Terrains.Nom
+FROM            PartiesJouees INNER JOIN
+                         Terrains ON PartiesJouees.NoTerrain = Terrains.No
+WHERE        (YEAR(PartiesJouees.DatePartie) = YEAR(GETDATE()))</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdAbonnement" DataSetColumn="IdAbonnement" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="Nom" DataSetColumn="Nom" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1764,6 +1805,54 @@ FROM            Abonnements INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="statsPartieJoueeAnnee" msprop:Generator_TableClassName="statsPartieJoueeAnneeDataTable" msprop:Generator_TableVarName="tablestatsPartieJoueeAnnee" msprop:Generator_TablePropName="statsPartieJoueeAnnee" msprop:Generator_RowDeletingName="statsPartieJoueeAnneeRowDeleting" msprop:Generator_UserTableName="statsPartieJoueeAnnee" msprop:Generator_RowChangingName="statsPartieJoueeAnneeRowChanging" msprop:Generator_RowEvHandlerName="statsPartieJoueeAnneeRowChangeEventHandler" msprop:Generator_RowDeletedName="statsPartieJoueeAnneeRowDeleted" msprop:Generator_RowEvArgName="statsPartieJoueeAnneeRowChangeEvent" msprop:Generator_RowChangedName="statsPartieJoueeAnneeRowChanged" msprop:Generator_RowClassName="statsPartieJoueeAnneeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nom" msprop:Generator_ColumnVarNameInTable="columnNom" msprop:Generator_ColumnPropNameInRow="Nom" msprop:Generator_ColumnPropNameInTable="NomColumn" msprop:Generator_UserColumnName="Nom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Annee" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAnnee" msprop:Generator_ColumnPropNameInRow="Annee" msprop:Generator_ColumnPropNameInTable="AnneeColumn" msprop:Generator_UserColumnName="Annee" type="xs:int" minOccurs="0" />
+              <xs:element name="IdAbonnement" msprop:Generator_ColumnVarNameInTable="columnIdAbonnement" msprop:Generator_ColumnPropNameInRow="IdAbonnement" msprop:Generator_ColumnPropNameInTable="IdAbonnementColumn" msprop:Generator_UserColumnName="IdAbonnement">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="statsPartieJoueeMoisAnnee" msprop:Generator_TableClassName="statsPartieJoueeMoisAnneeDataTable" msprop:Generator_TableVarName="tablestatsPartieJoueeMoisAnnee" msprop:Generator_TablePropName="statsPartieJoueeMoisAnnee" msprop:Generator_RowDeletingName="statsPartieJoueeMoisAnneeRowDeleting" msprop:Generator_UserTableName="statsPartieJoueeMoisAnnee" msprop:Generator_RowChangingName="statsPartieJoueeMoisAnneeRowChanging" msprop:Generator_RowEvHandlerName="statsPartieJoueeMoisAnneeRowChangeEventHandler" msprop:Generator_RowDeletedName="statsPartieJoueeMoisAnneeRowDeleted" msprop:Generator_RowEvArgName="statsPartieJoueeMoisAnneeRowChangeEvent" msprop:Generator_RowChangedName="statsPartieJoueeMoisAnneeRowChanged" msprop:Generator_RowClassName="statsPartieJoueeMoisAnneeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdAbonnement" msprop:Generator_ColumnVarNameInTable="columnIdAbonnement" msprop:Generator_ColumnPropNameInRow="IdAbonnement" msprop:Generator_ColumnPropNameInTable="IdAbonnementColumn" msprop:Generator_UserColumnName="IdAbonnement">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="61" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nom" msprop:Generator_ColumnVarNameInTable="columnNom" msprop:Generator_ColumnPropNameInRow="Nom" msprop:Generator_ColumnPropNameInTable="NomColumn" msprop:Generator_UserColumnName="Nom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1851,6 +1940,8 @@ FROM            Abonnements INNER JOIN
       <msdata:Relationship name="FK_Reabonnements_Abonnements2" msdata:parent="statsAbonnementMoisAnnee" msdata:child="Reabonnements" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Reabonnements" msprop:Generator_ChildPropName="GetReabonnementsRows" msprop:Generator_ParentPropName="statsAbonnementMoisAnneeRow" msprop:Generator_UserRelationName="FK_Reabonnements_Abonnements2" msprop:Generator_RelationVarName="relationFK_Reabonnements_Abonnements2" msprop:Generator_UserParentTable="statsAbonnementMoisAnnee" />
       <msdata:Relationship name="FK_Reabonnements_Abonnements3" msdata:parent="Abonnements" msdata:child="ReabonnementAnneeType" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="ReabonnementAnneeType" msprop:Generator_ChildPropName="GetReabonnementAnneeTypeRows" msprop:Generator_ParentPropName="AbonnementsRow" msprop:Generator_UserRelationName="FK_Reabonnements_Abonnements3" msprop:Generator_RelationVarName="relationFK_Reabonnements_Abonnements3" msprop:Generator_UserParentTable="Abonnements" />
       <msdata:Relationship name="FK_Reabonnements_Abonnements4" msdata:parent="Abonnements" msdata:child="statsReabonnementMoisAnnee" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="statsReabonnementMoisAnnee" msprop:Generator_ChildPropName="GetstatsReabonnementMoisAnneeRows" msprop:Generator_ParentPropName="AbonnementsRow" msprop:Generator_UserRelationName="FK_Reabonnements_Abonnements4" msprop:Generator_RelationVarName="relationFK_Reabonnements_Abonnements4" msprop:Generator_UserParentTable="Abonnements" />
+      <msdata:Relationship name="FK_PartiesJouees_Abonnements3" msdata:parent="Abonnements" msdata:child="statsPartieJoueeAnnee" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="statsPartieJoueeAnnee" msprop:Generator_ChildPropName="GetstatsPartieJoueeAnneeRows" msprop:Generator_ParentPropName="AbonnementsRow" msprop:Generator_UserRelationName="FK_PartiesJouees_Abonnements3" msprop:Generator_RelationVarName="relationFK_PartiesJouees_Abonnements3" msprop:Generator_UserParentTable="Abonnements" />
+      <msdata:Relationship name="FK_PartiesJouees_Abonnements4" msdata:parent="Abonnements" msdata:child="statsPartieJoueeMoisAnnee" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="statsPartieJoueeMoisAnnee" msprop:Generator_ChildPropName="GetstatsPartieJoueeMoisAnneeRows" msprop:Generator_ParentPropName="AbonnementsRow" msprop:Generator_UserRelationName="FK_PartiesJouees_Abonnements4" msprop:Generator_RelationVarName="relationFK_PartiesJouees_Abonnements4" msprop:Generator_UserParentTable="Abonnements" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
