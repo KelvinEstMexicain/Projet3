@@ -122,6 +122,7 @@
             this.btnStatistiques.TabIndex = 9;
             this.btnStatistiques.Text = "Visualiser les statistiques";
             this.btnStatistiques.UseVisualStyleBackColor = true;
+            this.btnStatistiques.Click += new System.EventHandler(this.btnStatistiques_Click);
             // 
             // frmMenu
             // 

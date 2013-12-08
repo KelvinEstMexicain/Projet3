@@ -15,5 +15,13 @@ namespace Projet3
         {
             InitializeComponent();
         }
+
+        private void frmStatistique_Load(object sender, EventArgs e)
+        {
+            // TODO: cette ligne de code charge les données dans la table 'BDClubDeGolfBDataSet.StatsAbonnementAnneeType'. Vous pouvez la déplacer ou la supprimer selon vos besoins.
+            this.StatsAbonnementAnneeTypeTableAdapter.Fill(this.BDClubDeGolfBDataSet.StatsAbonnementAnneeType);
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }
