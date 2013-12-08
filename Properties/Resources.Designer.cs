@@ -88,6 +88,15 @@ namespace Projet3.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ce client s&apos;est déjà réabonné cette année.
+        /// </summary>
+        internal static string ClientDejaReabonne {
+            get {
+                return ResourceManager.GetString("ClientDejaReabonne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Le code postal entré n&apos;est pas valide.
         /// </summary>
         internal static string CodePostalNonValide {
@@ -160,7 +169,7 @@ namespace Projet3.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Le mot de passe doit composer au moins 1 caractère.
+        ///   Looks up a localized string similar to Le mot de passe doit être composé d&apos;au moins 1 caractère.
         /// </summary>
         internal static string MotDePasseNonValide {
             get {
@@ -268,6 +277,15 @@ namespace Projet3.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Voici les informations de votre réabonnement.
+        /// </summary>
+        internal static string SujetMailReabonnement {
+            get {
+                return ResourceManager.GetString("SujetMailReabonnement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Vous ne pouvez supprimer l&apos;administrateur.
         /// </summary>
         internal static string SupprimerAdmin {
@@ -331,6 +349,15 @@ namespace Projet3.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Réabonné.
+        /// </summary>
+        internal static string TitreReabonne {
+            get {
+                return ResourceManager.GetString("TitreReabonne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Réussi.
         /// </summary>
         internal static string TitreReussi {
@@ -354,6 +381,15 @@ namespace Projet3.Properties {
         internal static string UtilisateurOuMotDePasseNonValide {
             get {
                 return ResourceManager.GetString("UtilisateurOuMotDePasseNonValide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to L&apos;utilisateur a été réabonné et un courriel de confirmation lui a été envoyé.
+        /// </summary>
+        internal static string UtilisateurReabonne {
+            get {
+                return ResourceManager.GetString("UtilisateurReabonne", resourceCulture);
             }
         }
         

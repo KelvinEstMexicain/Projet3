@@ -126,6 +126,9 @@
   <data name="CelNonValide" xml:space="preserve">
     <value>Le numéro de cellulaire entré n'est pas valide</value>
   </data>
+  <data name="ClientDejaReabonne" xml:space="preserve">
+    <value>Ce client s'est déjà réabonné cette année</value>
+  </data>
   <data name="CodePostalNonValide" xml:space="preserve">
     <value>Le code postal entré n'est pas valide</value>
   </data>
@@ -151,7 +154,7 @@
     <value>DavidEstPasMexicain</value>
   </data>
   <data name="MotDePasseNonValide" xml:space="preserve">
-    <value>Le mot de passe doit composer au moins 1 caractère</value>
+    <value>Le mot de passe doit être composé d'au moins 1 caractère</value>
   </data>
   <data name="NoCiviqueNonValide" xml:space="preserve">
     <value>Le numéro civique entré n'est pas valide</value>
@@ -186,6 +189,9 @@
   <data name="SujetMailAbonnement" xml:space="preserve">
     <value>Voici les informations de votre abonnement</value>
   </data>
+  <data name="SujetMailReabonnement" xml:space="preserve">
+    <value>Voici les informations de votre réabonnement</value>
+  </data>
   <data name="SupprimerAdmin" xml:space="preserve">
     <value>Vous ne pouvez supprimer l'administrateur</value>
   </data>
@@ -207,6 +213,9 @@
   <data name="TitreErreur" xml:space="preserve">
     <value>Erreur</value>
   </data>
+  <data name="TitreReabonne" xml:space="preserve">
+    <value>Réabonné</value>
+  </data>
   <data name="TitreReussi" xml:space="preserve">
     <value>Réussi</value>
   </data>
@@ -215,6 +224,9 @@
   </data>
   <data name="UtilisateurOuMotDePasseNonValide" xml:space="preserve">
     <value>La combinaison nom d'utilisateur/mot de passe ne correspond à aucun utilisateur enregistré</value>
+  </data>
+  <data name="UtilisateurReabonne" xml:space="preserve">
+    <value>L'utilisateur a été réabonné et un courriel de confirmation lui a été envoyé</value>
   </data>
   <data name="VilleNonValide" xml:space="preserve">
     <value>Veuillez entrer le nom de la ville de résidence de la personne</value>

@@ -22,6 +22,7 @@ namespace Projet3
                     break;
                 case (int)enumTypeEmploye.direction:
                     btnAjoutAbonnement.Enabled = false;
+                    btnReabonnement.Enabled = false;
                     break;
                 case (int)enumTypeEmploye.proprioClub:
                     btnGestionEmployes.Enabled = false;
@@ -32,14 +33,17 @@ namespace Projet3
                 case (int)enumTypeEmploye.employeProShop:
                     btnAjoutAbonnement.Enabled = false;
                     btnGestionEmployes.Enabled = false;
+                    btnReabonnement.Enabled = false;
                     break;
                 case (int)enumTypeEmploye.employeResto:
                     btnAjoutAbonnement.Enabled = false;
                     btnGestionEmployes.Enabled = false;
+                    btnReabonnement.Enabled = false;
                     break;
                 case (int)enumTypeEmploye.profGolf:
                     btnAjoutAbonnement.Enabled = false;
                     btnGestionEmployes.Enabled = false;
+                    btnReabonnement.Enabled = false;
                     break;
                 default:
                     throw new NotImplementedException();
@@ -57,7 +61,7 @@ namespace Projet3
         private void btnReabonnement_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var abonnement = new frmReabonnement();
+            var abonnement = new frmReabonnement(employe);
             abonnement.ShowDialog();
             this.Show();
         }
