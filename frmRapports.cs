@@ -80,5 +80,15 @@ namespace Projet3
                     break;
             }
         }
+
+        private void frmRapports_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            reportViewer1.LocalReport.ReleaseSandboxAppDomain();
+            reportViewer2.LocalReport.ReleaseSandboxAppDomain();
+            reportViewer3.LocalReport.ReleaseSandboxAppDomain();
+            reportViewer4.LocalReport.ReleaseSandboxAppDomain();
+            reportViewer5.LocalReport.ReleaseSandboxAppDomain();
+            reportViewer6.LocalReport.ReleaseSandboxAppDomain();
+        }
     }
 }
