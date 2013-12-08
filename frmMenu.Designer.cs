@@ -36,6 +36,7 @@
             this.btnInscrireDepense = new System.Windows.Forms.Button();
             this.btnRapport = new System.Windows.Forms.Button();
             this.btnStatistiques = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAjoutAbonnement
@@ -124,11 +125,23 @@
             this.btnStatistiques.UseVisualStyleBackColor = true;
             this.btnStatistiques.Click += new System.EventHandler(this.btnStatistiques_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(307, 50);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 60);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Modifier les abonnés";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 387);
+            this.ClientSize = new System.Drawing.Size(441, 397);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnStatistiques);
             this.Controls.Add(this.btnRapport);
             this.Controls.Add(this.btnInscrireDepense);
@@ -153,5 +166,6 @@
         private System.Windows.Forms.Button btnInscrireDepense;
         private System.Windows.Forms.Button btnRapport;
         private System.Windows.Forms.Button btnStatistiques;
+        private System.Windows.Forms.Button button1;
     }
 }

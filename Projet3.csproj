@@ -162,7 +162,10 @@
     <EmbeddedResource Include="rapportPartieJoueeAbonnement.rdlc" />
     <EmbeddedResource Include="rapportPartieJoueeAnnee.rdlc" />
     <EmbeddedResource Include="rapportPartieJoueeTerrain1.rdlc" />
+    <EmbeddedResource Include="rapportStatsReabonnementMoisAnnee.rdlc" />
     <EmbeddedResource Include="statsAbonnementAnneesType.rdlc" />
+    <EmbeddedResource Include="statsAbonnementMoiAnnee.rdlc" />
+    <EmbeddedResource Include="statsReabonnementAnneeType.rdlc" />
     <None Include="app.config" />
     <None Include="BDClubDeGolfBDataSet.xsc">
       <DependentUpon>BDClubDeGolfBDataSet.xsd</DependentUpon>

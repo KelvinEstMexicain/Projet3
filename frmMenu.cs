@@ -104,5 +104,13 @@ namespace Projet3
             stats.ShowDialog();
             this.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var abonne = new frmMiseAJourAbonnes();
+            abonne.ShowDialog();
+            this.Show();
+        }
     }
 }

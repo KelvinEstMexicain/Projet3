@@ -987,6 +987,70 @@ FROM            Abonnements INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="statsAbonnementMoisAnneeTableAdapter" GeneratorDataComponentClassName="statsAbonnementMoisAnneeTableAdapter" Name="statsAbonnementMoisAnnee" UserDataComponentName="statsAbonnementMoisAnneeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BDClubDeGolfBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TypesAbonnement.Description, DATENAME(month, Abonnements.DateAbonnement) + ' ' + CONVERT(nvarchar, YEAR(Abonnements.DateAbonnement)) AS date, 
+                         Abonnements.Id
+FROM            Abonnements INNER JOIN
+                         TypesAbonnement ON Abonnements.NoTypeAbonnement = TypesAbonnement.No</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="date" DataSetColumn="date" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReabonnementAnneeTypeTableAdapter" GeneratorDataComponentClassName="ReabonnementAnneeTypeTableAdapter" Name="ReabonnementAnneeType" UserDataComponentName="ReabonnementAnneeTypeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BDClubDeGolfBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Reabonnements.IdAbonnement, TypesAbonnement.Description, YEAR(Reabonnements.DateRenouvellement) AS annee
+FROM            Reabonnements INNER JOIN
+                         Abonnements ON Reabonnements.IdAbonnement = Abonnements.Id INNER JOIN
+                         TypesAbonnement ON Abonnements.NoTypeAbonnement = TypesAbonnement.No</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdAbonnement" DataSetColumn="IdAbonnement" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="annee" DataSetColumn="annee" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="statsReabonnementMoisAnneeTableAdapter" GeneratorDataComponentClassName="statsReabonnementMoisAnneeTableAdapter" Name="statsReabonnementMoisAnnee" UserDataComponentName="statsReabonnementMoisAnneeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BDClubDeGolfBConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        DATENAME(month, Reabonnements.DateRenouvellement) + ' ' + CONVERT(nvarchar, YEAR(Reabonnements.DateRenouvellement)) AS Date, 
+                         Reabonnements.IdAbonnement, TypesAbonnement.Description
+FROM            Abonnements INNER JOIN
+                         Reabonnements ON Abonnements.Id = Reabonnements.IdAbonnement INNER JOIN
+                         TypesAbonnement ON Abonnements.NoTypeAbonnement = TypesAbonnement.No</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="IdAbonnement" DataSetColumn="IdAbonnement" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1625,6 +1689,81 @@ FROM            Abonnements INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="statsAbonnementMoisAnnee" msprop:Generator_TableClassName="statsAbonnementMoisAnneeDataTable" msprop:Generator_TableVarName="tablestatsAbonnementMoisAnnee" msprop:Generator_TablePropName="statsAbonnementMoisAnnee" msprop:Generator_RowDeletingName="statsAbonnementMoisAnneeRowDeleting" msprop:Generator_UserTableName="statsAbonnementMoisAnnee" msprop:Generator_RowChangingName="statsAbonnementMoisAnneeRowChanging" msprop:Generator_RowEvHandlerName="statsAbonnementMoisAnneeRowChangeEventHandler" msprop:Generator_RowDeletedName="statsAbonnementMoisAnneeRowDeleted" msprop:Generator_RowEvArgName="statsAbonnementMoisAnneeRowChangeEvent" msprop:Generator_RowChangedName="statsAbonnementMoisAnneeRowChanged" msprop:Generator_RowClassName="statsAbonnementMoisAnneeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnPropNameInTable="dateColumn" msprop:Generator_UserColumnName="date" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="61" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ReabonnementAnneeType" msprop:Generator_TableClassName="ReabonnementAnneeTypeDataTable" msprop:Generator_TableVarName="tableReabonnementAnneeType" msprop:Generator_TablePropName="ReabonnementAnneeType" msprop:Generator_RowDeletingName="ReabonnementAnneeTypeRowDeleting" msprop:Generator_UserTableName="ReabonnementAnneeType" msprop:Generator_RowChangingName="ReabonnementAnneeTypeRowChanging" msprop:Generator_RowEvHandlerName="ReabonnementAnneeTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="ReabonnementAnneeTypeRowDeleted" msprop:Generator_RowEvArgName="ReabonnementAnneeTypeRowChangeEvent" msprop:Generator_RowChangedName="ReabonnementAnneeTypeRowChanged" msprop:Generator_RowClassName="ReabonnementAnneeTypeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdAbonnement" msprop:Generator_ColumnVarNameInTable="columnIdAbonnement" msprop:Generator_ColumnPropNameInRow="IdAbonnement" msprop:Generator_ColumnPropNameInTable="IdAbonnementColumn" msprop:Generator_UserColumnName="IdAbonnement">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="annee" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnannee" msprop:Generator_ColumnPropNameInRow="annee" msprop:Generator_ColumnPropNameInTable="anneeColumn" msprop:Generator_UserColumnName="annee" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="statsReabonnementMoisAnnee" msprop:Generator_TableClassName="statsReabonnementMoisAnneeDataTable" msprop:Generator_TableVarName="tablestatsReabonnementMoisAnnee" msprop:Generator_TablePropName="statsReabonnementMoisAnnee" msprop:Generator_RowDeletingName="statsReabonnementMoisAnneeRowDeleting" msprop:Generator_UserTableName="statsReabonnementMoisAnnee" msprop:Generator_RowChangingName="statsReabonnementMoisAnneeRowChanging" msprop:Generator_RowEvHandlerName="statsReabonnementMoisAnneeRowChangeEventHandler" msprop:Generator_RowDeletedName="statsReabonnementMoisAnneeRowDeleted" msprop:Generator_RowEvArgName="statsReabonnementMoisAnneeRowChangeEvent" msprop:Generator_RowChangedName="statsReabonnementMoisAnneeRowChanged" msprop:Generator_RowClassName="statsReabonnementMoisAnneeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Date" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="61" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdAbonnement" msprop:Generator_ColumnVarNameInTable="columnIdAbonnement" msprop:Generator_ColumnPropNameInRow="IdAbonnement" msprop:Generator_ColumnPropNameInTable="IdAbonnementColumn" msprop:Generator_UserColumnName="IdAbonnement">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1683,25 +1822,35 @@ FROM            Abonnements INNER JOIN
       <xs:selector xpath=".//mstns:StatsAbonnementAnneeType" />
       <xs:field xpath="mstns:Id" />
     </xs:unique>
+    <xs:unique name="statsAbonnementMoisAnnee_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:statsAbonnementMoisAnnee" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Abonnements_Provinces" msdata:parent="Provinces" msdata:child="Abonnements" msdata:parentkey="Id" msdata:childkey="IdProvince" msprop:Generator_UserChildTable="Abonnements" msprop:Generator_ChildPropName="GetAbonnementsRows" msprop:Generator_ParentPropName="ProvincesRow" msprop:Generator_UserRelationName="FK_Abonnements_Provinces" msprop:Generator_RelationVarName="relationFK_Abonnements_Provinces" msprop:Generator_UserParentTable="Provinces" />
-      <msdata:Relationship name="FK_Abonnements_TypesAbonnement" msdata:parent="TypesAbonnement" msdata:child="Abonnements" msdata:parentkey="No" msdata:childkey="NoTypeAbonnement" msprop:Generator_UserChildTable="Abonnements" msprop:Generator_ChildPropName="GetAbonnementsRows" msprop:Generator_ParentPropName="TypesAbonnementRow" msprop:Generator_UserRelationName="FK_Abonnements_TypesAbonnement" msprop:Generator_RelationVarName="relationFK_Abonnements_TypesAbonnement" msprop:Generator_UserParentTable="TypesAbonnement" />
-      <msdata:Relationship name="FK_Dependants_Abonnements" msdata:parent="Abonnements" msdata:child="Dependants" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Dependants" msprop:Generator_ChildPropName="GetDependantsRows" msprop:Generator_ParentPropName="AbonnementsRow" msprop:Generator_UserRelationName="FK_Dependants_Abonnements" msprop:Generator_RelationVarName="relationFK_Dependants_Abonnements" msprop:Generator_UserParentTable="Abonnements" />
-      <msdata:Relationship name="FK_Depenses_Abonnements" msdata:parent="Abonnements" msdata:child="Depenses" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Depenses" msprop:Generator_ChildPropName="GetDepensesRows" msprop:Generator_ParentPropName="AbonnementsRow" msprop:Generator_UserRelationName="FK_Depenses_Abonnements" msprop:Generator_RelationVarName="relationFK_Depenses_Abonnements" msprop:Generator_UserParentTable="Abonnements" />
-      <msdata:Relationship name="FK_Depenses_Services" msdata:parent="Services" msdata:child="Depenses" msdata:parentkey="No" msdata:childkey="NoService" msprop:Generator_UserChildTable="Depenses" msprop:Generator_ChildPropName="GetDepensesRows" msprop:Generator_ParentPropName="ServicesRow" msprop:Generator_UserRelationName="FK_Depenses_Services" msprop:Generator_RelationVarName="relationFK_Depenses_Services" msprop:Generator_UserParentTable="Services" />
-      <msdata:Relationship name="FK_Employes_Provinces" msdata:parent="Provinces" msdata:child="Employes" msdata:parentkey="Id" msdata:childkey="IdProvince" msprop:Generator_UserChildTable="Employes" msprop:Generator_ChildPropName="GetEmployesRows" msprop:Generator_ParentPropName="ProvincesRow" msprop:Generator_UserRelationName="FK_Employes_Provinces" msprop:Generator_RelationVarName="relationFK_Employes_Provinces" msprop:Generator_UserParentTable="Provinces" />
-      <msdata:Relationship name="FK_Employes_TypesEmploye" msdata:parent="TypesEmploye" msdata:child="Employes" msdata:parentkey="No" msdata:childkey="NoTypeEmploye" msprop:Generator_UserChildTable="Employes" msprop:Generator_ChildPropName="GetEmployesRows" msprop:Generator_ParentPropName="TypesEmployeRow" msprop:Generator_UserRelationName="FK_Employes_TypesEmploye" msprop:Generator_RelationVarName="relationFK_Employes_TypesEmploye" msprop:Generator_UserParentTable="TypesEmploye" />
-      <msdata:Relationship name="FK_PartiesJouees_Abonnements" msdata:parent="Abonnements" msdata:child="PartiesJouees" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="PartiesJouees" msprop:Generator_ChildPropName="GetPartiesJoueesRows" msprop:Generator_ParentPropName="AbonnementsRow" msprop:Generator_UserRelationName="FK_PartiesJouees_Abonnements" msprop:Generator_RelationVarName="relationFK_PartiesJouees_Abonnements" msprop:Generator_UserParentTable="Abonnements" />
-      <msdata:Relationship name="FK_PartiesJouees_Terrains" msdata:parent="Terrains" msdata:child="PartiesJouees" msdata:parentkey="No" msdata:childkey="NoTerrain" msprop:Generator_UserChildTable="PartiesJouees" msprop:Generator_ChildPropName="GetPartiesJoueesRows" msprop:Generator_ParentPropName="TerrainsRow" msprop:Generator_UserRelationName="FK_PartiesJouees_Terrains" msprop:Generator_RelationVarName="relationFK_PartiesJouees_Terrains" msprop:Generator_UserParentTable="Terrains" />
-      <msdata:Relationship name="FK_PrixDepensesAbonnements_TypesAbonnement" msdata:parent="TypesAbonnement" msdata:child="PrixDepensesAbonnements" msdata:parentkey="No" msdata:childkey="NoTypeAbonnement" msprop:Generator_UserChildTable="PrixDepensesAbonnements" msprop:Generator_ChildPropName="GetPrixDepensesAbonnementsRows" msprop:Generator_ParentPropName="TypesAbonnementRow" msprop:Generator_UserRelationName="FK_PrixDepensesAbonnements_TypesAbonnement" msprop:Generator_RelationVarName="relationFK_PrixDepensesAbonnements_TypesAbonnement" msprop:Generator_UserParentTable="TypesAbonnement" />
-      <msdata:Relationship name="FK_Reabonnements_Abonnements" msdata:parent="Abonnements" msdata:child="Reabonnements" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Reabonnements" msprop:Generator_ChildPropName="GetReabonnementsRows" msprop:Generator_ParentPropName="AbonnementsRow" msprop:Generator_UserRelationName="FK_Reabonnements_Abonnements" msprop:Generator_RelationVarName="relationFK_Reabonnements_Abonnements" msprop:Generator_UserParentTable="Abonnements" />
-      <msdata:Relationship name="FK_Services_Employes" msdata:parent="Employes" msdata:child="Services" msdata:parentkey="No" msdata:childkey="NoEmploye" msprop:Generator_UserChildTable="Services" msprop:Generator_ChildPropName="GetServicesRows" msprop:Generator_ParentPropName="EmployesRow" msprop:Generator_UserRelationName="FK_Services_Employes" msprop:Generator_RelationVarName="relationFK_Services_Employes" msprop:Generator_UserParentTable="Employes" />
-      <msdata:Relationship name="FK_Dependants_Abonnements1" msdata:parent="StatsAbonnementAnneeType" msdata:child="Dependants" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Dependants" msprop:Generator_ChildPropName="GetDependantsRows" msprop:Generator_ParentPropName="StatsAbonnementAnneeTypeRow" msprop:Generator_UserRelationName="FK_Dependants_Abonnements1" msprop:Generator_RelationVarName="relationFK_Dependants_Abonnements1" msprop:Generator_UserParentTable="StatsAbonnementAnneeType" />
-      <msdata:Relationship name="FK_Depenses_Abonnements1" msdata:parent="StatsAbonnementAnneeType" msdata:child="Depenses" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Depenses" msprop:Generator_ChildPropName="GetDepensesRows" msprop:Generator_ParentPropName="StatsAbonnementAnneeTypeRow" msprop:Generator_UserRelationName="FK_Depenses_Abonnements1" msprop:Generator_RelationVarName="relationFK_Depenses_Abonnements1" msprop:Generator_UserParentTable="StatsAbonnementAnneeType" />
-      <msdata:Relationship name="FK_PartiesJouees_Abonnements1" msdata:parent="StatsAbonnementAnneeType" msdata:child="PartiesJouees" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="PartiesJouees" msprop:Generator_ChildPropName="GetPartiesJoueesRows" msprop:Generator_ParentPropName="StatsAbonnementAnneeTypeRow" msprop:Generator_UserRelationName="FK_PartiesJouees_Abonnements1" msprop:Generator_RelationVarName="relationFK_PartiesJouees_Abonnements1" msprop:Generator_UserParentTable="StatsAbonnementAnneeType" />
-      <msdata:Relationship name="FK_Reabonnements_Abonnements1" msdata:parent="StatsAbonnementAnneeType" msdata:child="Reabonnements" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Reabonnements" msprop:Generator_ChildPropName="GetReabonnementsRows" msprop:Generator_ParentPropName="StatsAbonnementAnneeTypeRow" msprop:Generator_UserRelationName="FK_Reabonnements_Abonnements1" msprop:Generator_RelationVarName="relationFK_Reabonnements_Abonnements1" msprop:Generator_UserParentTable="StatsAbonnementAnneeType" />
+      <msdata:Relationship name="FK_Abonnements_Provinces" msdata:parent="Provinces" msdata:child="Abonnements" msdata:parentkey="Id" msdata:childkey="IdProvince" msprop:Generator_UserChildTable="Abonnements" msprop:Generator_ChildPropName="GetAbonnementsRows" msprop:Generator_UserParentTable="Provinces" msprop:Generator_UserRelationName="FK_Abonnements_Provinces" msprop:Generator_RelationVarName="relationFK_Abonnements_Provinces" msprop:Generator_ParentPropName="ProvincesRow" />
+      <msdata:Relationship name="FK_Abonnements_TypesAbonnement" msdata:parent="TypesAbonnement" msdata:child="Abonnements" msdata:parentkey="No" msdata:childkey="NoTypeAbonnement" msprop:Generator_UserChildTable="Abonnements" msprop:Generator_ChildPropName="GetAbonnementsRows" msprop:Generator_UserParentTable="TypesAbonnement" msprop:Generator_UserRelationName="FK_Abonnements_TypesAbonnement" msprop:Generator_RelationVarName="relationFK_Abonnements_TypesAbonnement" msprop:Generator_ParentPropName="TypesAbonnementRow" />
+      <msdata:Relationship name="FK_Dependants_Abonnements" msdata:parent="Abonnements" msdata:child="Dependants" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Dependants" msprop:Generator_ChildPropName="GetDependantsRows" msprop:Generator_UserParentTable="Abonnements" msprop:Generator_UserRelationName="FK_Dependants_Abonnements" msprop:Generator_RelationVarName="relationFK_Dependants_Abonnements" msprop:Generator_ParentPropName="AbonnementsRow" />
+      <msdata:Relationship name="FK_Depenses_Abonnements" msdata:parent="Abonnements" msdata:child="Depenses" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Depenses" msprop:Generator_ChildPropName="GetDepensesRows" msprop:Generator_UserParentTable="Abonnements" msprop:Generator_UserRelationName="FK_Depenses_Abonnements" msprop:Generator_RelationVarName="relationFK_Depenses_Abonnements" msprop:Generator_ParentPropName="AbonnementsRow" />
+      <msdata:Relationship name="FK_Depenses_Services" msdata:parent="Services" msdata:child="Depenses" msdata:parentkey="No" msdata:childkey="NoService" msprop:Generator_UserChildTable="Depenses" msprop:Generator_ChildPropName="GetDepensesRows" msprop:Generator_UserParentTable="Services" msprop:Generator_UserRelationName="FK_Depenses_Services" msprop:Generator_RelationVarName="relationFK_Depenses_Services" msprop:Generator_ParentPropName="ServicesRow" />
+      <msdata:Relationship name="FK_Employes_Provinces" msdata:parent="Provinces" msdata:child="Employes" msdata:parentkey="Id" msdata:childkey="IdProvince" msprop:Generator_UserChildTable="Employes" msprop:Generator_ChildPropName="GetEmployesRows" msprop:Generator_UserParentTable="Provinces" msprop:Generator_UserRelationName="FK_Employes_Provinces" msprop:Generator_RelationVarName="relationFK_Employes_Provinces" msprop:Generator_ParentPropName="ProvincesRow" />
+      <msdata:Relationship name="FK_Employes_TypesEmploye" msdata:parent="TypesEmploye" msdata:child="Employes" msdata:parentkey="No" msdata:childkey="NoTypeEmploye" msprop:Generator_UserChildTable="Employes" msprop:Generator_ChildPropName="GetEmployesRows" msprop:Generator_UserParentTable="TypesEmploye" msprop:Generator_UserRelationName="FK_Employes_TypesEmploye" msprop:Generator_RelationVarName="relationFK_Employes_TypesEmploye" msprop:Generator_ParentPropName="TypesEmployeRow" />
+      <msdata:Relationship name="FK_PartiesJouees_Abonnements" msdata:parent="Abonnements" msdata:child="PartiesJouees" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="PartiesJouees" msprop:Generator_ChildPropName="GetPartiesJoueesRows" msprop:Generator_UserParentTable="Abonnements" msprop:Generator_UserRelationName="FK_PartiesJouees_Abonnements" msprop:Generator_RelationVarName="relationFK_PartiesJouees_Abonnements" msprop:Generator_ParentPropName="AbonnementsRow" />
+      <msdata:Relationship name="FK_PartiesJouees_Terrains" msdata:parent="Terrains" msdata:child="PartiesJouees" msdata:parentkey="No" msdata:childkey="NoTerrain" msprop:Generator_UserChildTable="PartiesJouees" msprop:Generator_ChildPropName="GetPartiesJoueesRows" msprop:Generator_UserParentTable="Terrains" msprop:Generator_UserRelationName="FK_PartiesJouees_Terrains" msprop:Generator_RelationVarName="relationFK_PartiesJouees_Terrains" msprop:Generator_ParentPropName="TerrainsRow" />
+      <msdata:Relationship name="FK_PrixDepensesAbonnements_TypesAbonnement" msdata:parent="TypesAbonnement" msdata:child="PrixDepensesAbonnements" msdata:parentkey="No" msdata:childkey="NoTypeAbonnement" msprop:Generator_UserChildTable="PrixDepensesAbonnements" msprop:Generator_ChildPropName="GetPrixDepensesAbonnementsRows" msprop:Generator_UserParentTable="TypesAbonnement" msprop:Generator_UserRelationName="FK_PrixDepensesAbonnements_TypesAbonnement" msprop:Generator_RelationVarName="relationFK_PrixDepensesAbonnements_TypesAbonnement" msprop:Generator_ParentPropName="TypesAbonnementRow" />
+      <msdata:Relationship name="FK_Reabonnements_Abonnements" msdata:parent="Abonnements" msdata:child="Reabonnements" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Reabonnements" msprop:Generator_ChildPropName="GetReabonnementsRows" msprop:Generator_UserParentTable="Abonnements" msprop:Generator_UserRelationName="FK_Reabonnements_Abonnements" msprop:Generator_RelationVarName="relationFK_Reabonnements_Abonnements" msprop:Generator_ParentPropName="AbonnementsRow" />
+      <msdata:Relationship name="FK_Services_Employes" msdata:parent="Employes" msdata:child="Services" msdata:parentkey="No" msdata:childkey="NoEmploye" msprop:Generator_UserChildTable="Services" msprop:Generator_ChildPropName="GetServicesRows" msprop:Generator_UserParentTable="Employes" msprop:Generator_UserRelationName="FK_Services_Employes" msprop:Generator_RelationVarName="relationFK_Services_Employes" msprop:Generator_ParentPropName="EmployesRow" />
+      <msdata:Relationship name="FK_Dependants_Abonnements1" msdata:parent="StatsAbonnementAnneeType" msdata:child="Dependants" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Dependants" msprop:Generator_ChildPropName="GetDependantsRows" msprop:Generator_UserParentTable="StatsAbonnementAnneeType" msprop:Generator_UserRelationName="FK_Dependants_Abonnements1" msprop:Generator_RelationVarName="relationFK_Dependants_Abonnements1" msprop:Generator_ParentPropName="StatsAbonnementAnneeTypeRow" />
+      <msdata:Relationship name="FK_Depenses_Abonnements1" msdata:parent="StatsAbonnementAnneeType" msdata:child="Depenses" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Depenses" msprop:Generator_ChildPropName="GetDepensesRows" msprop:Generator_UserParentTable="StatsAbonnementAnneeType" msprop:Generator_UserRelationName="FK_Depenses_Abonnements1" msprop:Generator_RelationVarName="relationFK_Depenses_Abonnements1" msprop:Generator_ParentPropName="StatsAbonnementAnneeTypeRow" />
+      <msdata:Relationship name="FK_PartiesJouees_Abonnements1" msdata:parent="StatsAbonnementAnneeType" msdata:child="PartiesJouees" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="PartiesJouees" msprop:Generator_ChildPropName="GetPartiesJoueesRows" msprop:Generator_UserParentTable="StatsAbonnementAnneeType" msprop:Generator_UserRelationName="FK_PartiesJouees_Abonnements1" msprop:Generator_RelationVarName="relationFK_PartiesJouees_Abonnements1" msprop:Generator_ParentPropName="StatsAbonnementAnneeTypeRow" />
+      <msdata:Relationship name="FK_Reabonnements_Abonnements1" msdata:parent="StatsAbonnementAnneeType" msdata:child="Reabonnements" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Reabonnements" msprop:Generator_ChildPropName="GetReabonnementsRows" msprop:Generator_UserParentTable="StatsAbonnementAnneeType" msprop:Generator_UserRelationName="FK_Reabonnements_Abonnements1" msprop:Generator_RelationVarName="relationFK_Reabonnements_Abonnements1" msprop:Generator_ParentPropName="StatsAbonnementAnneeTypeRow" />
+      <msdata:Relationship name="FK_Dependants_Abonnements2" msdata:parent="statsAbonnementMoisAnnee" msdata:child="Dependants" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Dependants" msprop:Generator_ChildPropName="GetDependantsRows" msprop:Generator_ParentPropName="statsAbonnementMoisAnneeRow" msprop:Generator_UserRelationName="FK_Dependants_Abonnements2" msprop:Generator_RelationVarName="relationFK_Dependants_Abonnements2" msprop:Generator_UserParentTable="statsAbonnementMoisAnnee" />
+      <msdata:Relationship name="FK_Depenses_Abonnements2" msdata:parent="statsAbonnementMoisAnnee" msdata:child="Depenses" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Depenses" msprop:Generator_ChildPropName="GetDepensesRows" msprop:Generator_ParentPropName="statsAbonnementMoisAnneeRow" msprop:Generator_UserRelationName="FK_Depenses_Abonnements2" msprop:Generator_RelationVarName="relationFK_Depenses_Abonnements2" msprop:Generator_UserParentTable="statsAbonnementMoisAnnee" />
+      <msdata:Relationship name="FK_PartiesJouees_Abonnements2" msdata:parent="statsAbonnementMoisAnnee" msdata:child="PartiesJouees" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="PartiesJouees" msprop:Generator_ChildPropName="GetPartiesJoueesRows" msprop:Generator_ParentPropName="statsAbonnementMoisAnneeRow" msprop:Generator_UserRelationName="FK_PartiesJouees_Abonnements2" msprop:Generator_RelationVarName="relationFK_PartiesJouees_Abonnements2" msprop:Generator_UserParentTable="statsAbonnementMoisAnnee" />
+      <msdata:Relationship name="FK_Reabonnements_Abonnements2" msdata:parent="statsAbonnementMoisAnnee" msdata:child="Reabonnements" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="Reabonnements" msprop:Generator_ChildPropName="GetReabonnementsRows" msprop:Generator_ParentPropName="statsAbonnementMoisAnneeRow" msprop:Generator_UserRelationName="FK_Reabonnements_Abonnements2" msprop:Generator_RelationVarName="relationFK_Reabonnements_Abonnements2" msprop:Generator_UserParentTable="statsAbonnementMoisAnnee" />
+      <msdata:Relationship name="FK_Reabonnements_Abonnements3" msdata:parent="Abonnements" msdata:child="ReabonnementAnneeType" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="ReabonnementAnneeType" msprop:Generator_ChildPropName="GetReabonnementAnneeTypeRows" msprop:Generator_ParentPropName="AbonnementsRow" msprop:Generator_UserRelationName="FK_Reabonnements_Abonnements3" msprop:Generator_RelationVarName="relationFK_Reabonnements_Abonnements3" msprop:Generator_UserParentTable="Abonnements" />
+      <msdata:Relationship name="FK_Reabonnements_Abonnements4" msdata:parent="Abonnements" msdata:child="statsReabonnementMoisAnnee" msdata:parentkey="Id" msdata:childkey="IdAbonnement" msprop:Generator_UserChildTable="statsReabonnementMoisAnnee" msprop:Generator_ChildPropName="GetstatsReabonnementMoisAnneeRows" msprop:Generator_ParentPropName="AbonnementsRow" msprop:Generator_UserRelationName="FK_Reabonnements_Abonnements4" msprop:Generator_RelationVarName="relationFK_Reabonnements_Abonnements4" msprop:Generator_UserParentTable="Abonnements" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

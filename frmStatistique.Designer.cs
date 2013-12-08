@@ -29,24 +29,57 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource25 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource26 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource27 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.StatsAbonnementAnneeTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BDClubDeGolfBDataSet = new Projet3.BDClubDeGolfBDataSet();
+            this.statsAbonnementMoisAnneeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.BDClubDeGolfBDataSet = new Projet3.BDClubDeGolfBDataSet();
-            this.StatsAbonnementAnneeTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.StatsAbonnementAnneeTypeTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.StatsAbonnementAnneeTypeTableAdapter();
+            this.statsAbonnementMoisAnneeTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.statsAbonnementMoisAnneeTableAdapter();
+            this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ReabonnementAnneeTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ReabonnementAnneeTypeTableAdapter = new Projet3.BDClubDeGolfBDataSetTableAdapters.ReabonnementAnneeTypeTableAdapter();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.reportViewer4 = new Microsoft.Reporting.WinForms.ReportViewer();
+            ((System.ComponentModel.ISupportInitialize)(this.StatsAbonnementAnneeTypeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BDClubDeGolfBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statsAbonnementMoisAnneeBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BDClubDeGolfBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StatsAbonnementAnneeTypeBindingSource)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReabonnementAnneeTypeBindingSource)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // StatsAbonnementAnneeTypeBindingSource
+            // 
+            this.StatsAbonnementAnneeTypeBindingSource.DataMember = "StatsAbonnementAnneeType";
+            this.StatsAbonnementAnneeTypeBindingSource.DataSource = this.BDClubDeGolfBDataSet;
+            // 
+            // BDClubDeGolfBDataSet
+            // 
+            this.BDClubDeGolfBDataSet.DataSetName = "BDClubDeGolfBDataSet";
+            this.BDClubDeGolfBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // statsAbonnementMoisAnneeBindingSource
+            // 
+            this.statsAbonnementMoisAnneeBindingSource.DataMember = "statsAbonnementMoisAnnee";
+            this.statsAbonnementMoisAnneeBindingSource.DataSource = this.BDClubDeGolfBDataSet;
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(12, 24);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -64,40 +97,97 @@
             this.tabPage1.Text = "Abonnement par année et par type d\'abonnement";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.StatsAbonnementAnneeTypeBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource25.Name = "DataSet1";
+            reportDataSource25.Value = this.StatsAbonnementAnneeTypeBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource25);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projet3.statsAbonnementAnneesType.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(-4, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(877, 434);
             this.reportViewer1.TabIndex = 0;
             // 
-            // BDClubDeGolfBDataSet
+            // tabPage2
             // 
-            this.BDClubDeGolfBDataSet.DataSetName = "BDClubDeGolfBDataSet";
-            this.BDClubDeGolfBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tabPage2.Controls.Add(this.reportViewer2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(873, 430);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Abonnement par mois de l\'année et par type d\'abonnement";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // StatsAbonnementAnneeTypeBindingSource
+            // reportViewer2
             // 
-            this.StatsAbonnementAnneeTypeBindingSource.DataMember = "StatsAbonnementAnneeType";
-            this.StatsAbonnementAnneeTypeBindingSource.DataSource = this.BDClubDeGolfBDataSet;
+            reportDataSource26.Name = "DataSet1";
+            reportDataSource26.Value = this.statsAbonnementMoisAnneeBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource26);
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "Projet3.statsAbonnementMoiAnnee.rdlc";
+            this.reportViewer2.Location = new System.Drawing.Point(0, 7);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.Size = new System.Drawing.Size(873, 423);
+            this.reportViewer2.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.reportViewer3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(873, 430);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Réabonnement par année et par type d\'abonnement";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // StatsAbonnementAnneeTypeTableAdapter
             // 
             this.StatsAbonnementAnneeTypeTableAdapter.ClearBeforeFill = true;
+            // 
+            // statsAbonnementMoisAnneeTableAdapter
+            // 
+            this.statsAbonnementMoisAnneeTableAdapter.ClearBeforeFill = true;
+            // 
+            // reportViewer3
+            // 
+            this.reportViewer3.BackColor = System.Drawing.SystemColors.Window;
+            reportDataSource27.Name = "DataSet1";
+            reportDataSource27.Value = this.ReabonnementAnneeTypeBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource27);
+            this.reportViewer3.LocalReport.ReportEmbeddedResource = "Projet3.statsReabonnementAnneeType.rdlc";
+            this.reportViewer3.Location = new System.Drawing.Point(4, 4);
+            this.reportViewer3.Name = "reportViewer3";
+            this.reportViewer3.Size = new System.Drawing.Size(866, 426);
+            this.reportViewer3.TabIndex = 0;
+            // 
+            // ReabonnementAnneeTypeBindingSource
+            // 
+            this.ReabonnementAnneeTypeBindingSource.DataMember = "ReabonnementAnneeType";
+            this.ReabonnementAnneeTypeBindingSource.DataSource = this.BDClubDeGolfBDataSet;
+            // 
+            // ReabonnementAnneeTypeTableAdapter
+            // 
+            this.ReabonnementAnneeTypeTableAdapter.ClearBeforeFill = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.reportViewer4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(873, 430);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Réabonnement par mois de l\'année courante et par type d\'abonnement";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // reportViewer4
+            // 
+            this.reportViewer4.LocalReport.ReportEmbeddedResource = "Projet3.rapportStatsReabonnementMoisAnnee.rdlc";
+            this.reportViewer4.Location = new System.Drawing.Point(7, 7);
+            this.reportViewer4.Name = "reportViewer4";
+            this.reportViewer4.Size = new System.Drawing.Size(866, 420);
+            this.reportViewer4.TabIndex = 0;
             // 
             // frmStatistique
             // 
@@ -108,10 +198,15 @@
             this.Name = "frmStatistique";
             this.Text = "Statistique";
             this.Load += new System.EventHandler(this.frmStatistique_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.StatsAbonnementAnneeTypeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BDClubDeGolfBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statsAbonnementMoisAnneeBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BDClubDeGolfBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StatsAbonnementAnneeTypeBindingSource)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ReabonnementAnneeTypeBindingSource)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -125,5 +220,14 @@
         private System.Windows.Forms.BindingSource StatsAbonnementAnneeTypeBindingSource;
         private BDClubDeGolfBDataSet BDClubDeGolfBDataSet;
         private BDClubDeGolfBDataSetTableAdapters.StatsAbonnementAnneeTypeTableAdapter StatsAbonnementAnneeTypeTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
+        private System.Windows.Forms.BindingSource statsAbonnementMoisAnneeBindingSource;
+        private BDClubDeGolfBDataSetTableAdapters.statsAbonnementMoisAnneeTableAdapter statsAbonnementMoisAnneeTableAdapter;
+        private System.Windows.Forms.TabPage tabPage3;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
+        private System.Windows.Forms.BindingSource ReabonnementAnneeTypeBindingSource;
+        private BDClubDeGolfBDataSetTableAdapters.ReabonnementAnneeTypeTableAdapter ReabonnementAnneeTypeTableAdapter;
+        private System.Windows.Forms.TabPage tabPage4;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer4;
     }
 }
