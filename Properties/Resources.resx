@@ -174,6 +174,9 @@
   <data name="PasAgeDor" xml:space="preserve">
     <value>Pour être de l'âge d'or, la personne doit être agée de 60 ans ou plus</value>
   </data>
+  <data name="PointageNonValide" xml:space="preserve">
+    <value>Veuillez entrer un pointage</value>
+  </data>
   <data name="PrenomNonValide" xml:space="preserve">
     <value>Le prénom entré n'est pas valide</value>
   </data>
@@ -231,7 +234,7 @@
   <data name="TypeAbonnementNonValide" xml:space="preserve">
     <value>Veuillez selectionner un type d'abonnement</value>
   </data>
-  <data name="TypeService Invalide" xml:space="preserve">
+  <data name="TypeService_Invalide" xml:space="preserve">
     <value>Le type de service ne peut être vide.</value>
   </data>
   <data name="UtilisateurOuMotDePasseNonValide" xml:space="preserve">

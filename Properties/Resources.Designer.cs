@@ -232,6 +232,15 @@ namespace Projet3.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Veuillez entrer un pointage.
+        /// </summary>
+        internal static string PointageNonValide {
+            get {
+                return ResourceManager.GetString("PointageNonValide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Le prénom entré n&apos;est pas valide.
         /// </summary>
         internal static string PrenomNonValide {
@@ -407,7 +416,7 @@ namespace Projet3.Properties {
         /// </summary>
         internal static string TypeService_Invalide {
             get {
-                return ResourceManager.GetString("TypeService Invalide", resourceCulture);
+                return ResourceManager.GetString("TypeService_Invalide", resourceCulture);
             }
         }
         

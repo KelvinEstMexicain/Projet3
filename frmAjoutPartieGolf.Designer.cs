@@ -47,6 +47,7 @@
             this.btnAjout = new System.Windows.Forms.Button();
             this.cbAbonnement = new System.Windows.Forms.ComboBox();
             this.noEtNomCompletAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.errMessage = new System.Windows.Forms.ErrorProvider(this.components);
             datePartieLabel = new System.Windows.Forms.Label();
             idAbonnementLabel = new System.Windows.Forms.Label();
             noTerrainLabel = new System.Windows.Forms.Label();
@@ -56,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrainsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.noEtNomCompletAbonnementBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errMessage)).BeginInit();
             this.SuspendLayout();
             // 
             // datePartieLabel
@@ -122,6 +124,7 @@
             this.pointageTextBox.Name = "pointageTextBox";
             this.pointageTextBox.Size = new System.Drawing.Size(200, 20);
             this.pointageTextBox.TabIndex = 8;
+            this.pointageTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.pointageTextBox_Validating);
             // 
             // remarqueTextBox
             // 
@@ -170,6 +173,7 @@
             this.btnAnnuler.Size = new System.Drawing.Size(81, 75);
             this.btnAnnuler.TabIndex = 80;
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // btnAjout
             // 
@@ -180,6 +184,7 @@
             this.btnAjout.Size = new System.Drawing.Size(81, 75);
             this.btnAjout.TabIndex = 79;
             this.btnAjout.UseVisualStyleBackColor = true;
+            this.btnAjout.Click += new System.EventHandler(this.btnAjout_Click);
             // 
             // cbAbonnement
             // 
@@ -196,6 +201,10 @@
             // noEtNomCompletAbonnementBindingSource
             // 
             this.noEtNomCompletAbonnementBindingSource.DataSource = typeof(Projet3.noEtNomCompletAbonnement);
+            // 
+            // errMessage
+            // 
+            this.errMessage.ContainerControl = this;
             // 
             // frmAjoutPartieGolf
             // 
@@ -222,6 +231,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrainsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.noEtNomCompletAbonnementBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errMessage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +251,6 @@
         private System.Windows.Forms.Button btnAjout;
         private System.Windows.Forms.ComboBox cbAbonnement;
         private System.Windows.Forms.BindingSource noEtNomCompletAbonnementBindingSource;
+        private System.Windows.Forms.ErrorProvider errMessage;
     }
 }

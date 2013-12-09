@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Projet3.Properties;
 
 namespace Projet3
 {
@@ -26,6 +27,23 @@ namespace Projet3
                                                                    noAbonnement = unAbonnement.Id,
                                                                    nomCompletAbonnement = unAbonnement.Prenom + " " + unAbonnement.Nom
                                                                };
+            terrainsBindingSource.DataSource = from unTerrain in dataContexteProjet1.Terrains
+                                               select unTerrain;
+        }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAjout_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pointageTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            Validation.TextBoxMonnaieValide(sender, errMessage, Resources.PointageNonValide, e);
         }
     }
 }
