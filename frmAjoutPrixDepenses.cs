@@ -38,5 +38,10 @@ namespace Projet3
                 prixDepensesAbonnementsBindingSource.RemoveAt(e.RowIndex);
             }
         }
+
+        private void btnAjout_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

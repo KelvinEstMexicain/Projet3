@@ -183,6 +183,7 @@
             this.btnAjout.Name = "btnAjout";
             this.btnAjout.Size = new System.Drawing.Size(81, 75);
             this.btnAjout.TabIndex = 79;
+            this.btnAjout.Text = "n";
             this.btnAjout.UseVisualStyleBackColor = true;
             this.btnAjout.Click += new System.EventHandler(this.btnAjout_Click);
             // 

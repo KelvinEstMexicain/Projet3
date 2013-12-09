@@ -120,7 +120,7 @@ namespace Projet3
                 }
 
                 int anneeAbonnementReabonnement = 100;
-                if((anneeAbonnement==DateTime.Now.Year)==false){
+                if(anneeAbonnement!=DateTime.Now.Year){
                     var reabonnementAnnee = from unReabonnement in dataContexteProjet1.Reabonnements
                                             where unReabonnement.IdAbonnement == cbAbonnement.SelectedValue
                                             select new { unReabonnement.DateRenouvellement };
@@ -209,6 +209,7 @@ namespace Projet3
                             Email.SendGMail(Resources.SujetMailAbonnement, mail, employe.Prenom + " " + employe.Nom, courriel, prenom + " " +nom);
                         }
                         MessageBox.Show("Ajout faite et l'Envoi du courriel faite");
+                        this.Close();
                         
                     }
                     catch (DBConcurrencyException erreur)

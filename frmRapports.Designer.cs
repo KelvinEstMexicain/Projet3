@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource9 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource10 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource11 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource12 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.RapportDEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BDClubDeGolfBDataSet = new Projet3.BDClubDeGolfBDataSet();
             this.RapportDepenseAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -84,6 +84,7 @@
             // 
             // BDClubDeGolfBDataSet
             // 
+            this.BDClubDeGolfBDataSet.DataSetName = "BDClubDeGolfBDataSet";
             this.BDClubDeGolfBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // RapportDepenseAbonnementBindingSource
@@ -140,13 +141,13 @@
             // 
             // reportViewer1
             // 
-            reportDataSource7.Name = "DataSet1";
-            reportDataSource7.Value = this.RapportDEBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource7);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.RapportDEBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projet3.rapportDepensesEmploye.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(7, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(792, 387);
+            this.reportViewer1.Size = new System.Drawing.Size(782, 363);
             this.reportViewer1.TabIndex = 0;
             // 
             // tabPage2
@@ -162,13 +163,13 @@
             // 
             // reportViewer2
             // 
-            reportDataSource8.Name = "DataSet1";
-            reportDataSource8.Value = this.RapportDepenseAbonnementBindingSource;
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource8);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.RapportDepenseAbonnementBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "Projet3.raportDepenseAbonnement.rdlc";
             this.reportViewer2.Location = new System.Drawing.Point(0, 4);
             this.reportViewer2.Name = "reportViewer2";
-            this.reportViewer2.Size = new System.Drawing.Size(795, 383);
+            this.reportViewer2.Size = new System.Drawing.Size(789, 359);
             this.reportViewer2.TabIndex = 0;
             // 
             // tabPage1
@@ -184,13 +185,13 @@
             // 
             // reportViewer3
             // 
-            reportDataSource9.Name = "DataSet1";
-            reportDataSource9.Value = this.RapportAnneeBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource9);
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.RapportAnneeBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "Projet3.rapportDepenseAnnee.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(0, 4);
             this.reportViewer3.Name = "reportViewer3";
-            this.reportViewer3.Size = new System.Drawing.Size(795, 387);
+            this.reportViewer3.Size = new System.Drawing.Size(789, 362);
             this.reportViewer3.TabIndex = 0;
             // 
             // tabPage3
@@ -206,13 +207,13 @@
             // 
             // reportViewer4
             // 
-            reportDataSource10.Name = "DataSet1";
-            reportDataSource10.Value = this.RapportPartieJoueeTerrainBindingSource;
-            this.reportViewer4.LocalReport.DataSources.Add(reportDataSource10);
+            reportDataSource4.Name = "DataSet1";
+            reportDataSource4.Value = this.RapportPartieJoueeTerrainBindingSource;
+            this.reportViewer4.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer4.LocalReport.ReportEmbeddedResource = "Projet3.rapportPartieJoueeTerrain1.rdlc";
             this.reportViewer4.Location = new System.Drawing.Point(0, 4);
             this.reportViewer4.Name = "reportViewer4";
-            this.reportViewer4.Size = new System.Drawing.Size(795, 387);
+            this.reportViewer4.Size = new System.Drawing.Size(789, 359);
             this.reportViewer4.TabIndex = 0;
             // 
             // tabPage4
@@ -228,13 +229,13 @@
             // 
             // reportViewer5
             // 
-            reportDataSource11.Name = "DataSet1";
-            reportDataSource11.Value = this.RapportPartieJoueesAbonnementBindingSource;
-            this.reportViewer5.LocalReport.DataSources.Add(reportDataSource11);
+            reportDataSource5.Name = "DataSet1";
+            reportDataSource5.Value = this.RapportPartieJoueesAbonnementBindingSource;
+            this.reportViewer5.LocalReport.DataSources.Add(reportDataSource5);
             this.reportViewer5.LocalReport.ReportEmbeddedResource = "Projet3.rapportPartieJoueeAbonnement.rdlc";
             this.reportViewer5.Location = new System.Drawing.Point(0, 4);
             this.reportViewer5.Name = "reportViewer5";
-            this.reportViewer5.Size = new System.Drawing.Size(795, 391);
+            this.reportViewer5.Size = new System.Drawing.Size(789, 359);
             this.reportViewer5.TabIndex = 0;
             // 
             // tabPage5
@@ -250,13 +251,13 @@
             // 
             // reportViewer6
             // 
-            reportDataSource12.Name = "DataSet1";
-            reportDataSource12.Value = this.PartieJoueeParAnneeBindingSource;
-            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource12);
+            reportDataSource6.Name = "DataSet1";
+            reportDataSource6.Value = this.PartieJoueeParAnneeBindingSource;
+            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource6);
             this.reportViewer6.LocalReport.ReportEmbeddedResource = "Projet3.rapportPartieJoueeAnnee.rdlc";
             this.reportViewer6.Location = new System.Drawing.Point(0, 4);
             this.reportViewer6.Name = "reportViewer6";
-            this.reportViewer6.Size = new System.Drawing.Size(795, 387);
+            this.reportViewer6.Size = new System.Drawing.Size(792, 359);
             this.reportViewer6.TabIndex = 0;
             // 
             // RapportDETableAdapter

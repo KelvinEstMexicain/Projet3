@@ -45,8 +45,8 @@
             this.bDClubDeGolfBDataSet1 = new Projet3.BDClubDeGolfBDataSet();
             this.statsPartieJoueeAnneeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.statsPartieJoueeMoisAnneeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DepenseParMoisAnneeAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DepenseParAnneeAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DepenseParMoisAnneeAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -80,8 +80,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bDClubDeGolfBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statsPartieJoueeAnneeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statsPartieJoueeMoisAnneeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DepenseParMoisAnneeAbonnementBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepenseParAnneeAbonnementBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepenseParMoisAnneeAbonnementBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -133,15 +133,15 @@
             this.statsPartieJoueeMoisAnneeBindingSource.DataMember = "statsPartieJoueeMoisAnnee";
             this.statsPartieJoueeMoisAnneeBindingSource.DataSource = this.BDClubDeGolfBDataSet;
             // 
-            // DepenseParMoisAnneeAbonnementBindingSource
-            // 
-            this.DepenseParMoisAnneeAbonnementBindingSource.DataMember = "DepenseParMoisAnneeAbonnement";
-            this.DepenseParMoisAnneeAbonnementBindingSource.DataSource = this.BDClubDeGolfBDataSet;
-            // 
             // DepenseParAnneeAbonnementBindingSource
             // 
             this.DepenseParAnneeAbonnementBindingSource.DataMember = "DepenseParAnneeAbonnement";
             this.DepenseParAnneeAbonnementBindingSource.DataSource = this.BDClubDeGolfBDataSet;
+            // 
+            // DepenseParMoisAnneeAbonnementBindingSource
+            // 
+            this.DepenseParMoisAnneeAbonnementBindingSource.DataMember = "DepenseParMoisAnneeAbonnement";
+            this.DepenseParMoisAnneeAbonnementBindingSource.DataSource = this.BDClubDeGolfBDataSet;
             // 
             // tabControl1
             // 
@@ -179,16 +179,16 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Projet3.statsAbonnementAnneesType.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(-4, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(877, 434);
+            this.reportViewer1.Size = new System.Drawing.Size(871, 388);
             this.reportViewer1.TabIndex = 0;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.reportViewer2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 58);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(873, 430);
+            this.tabPage2.Size = new System.Drawing.Size(873, 394);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Abonnement par mois de l\'année et par type d\'abonnement";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -201,7 +201,7 @@
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "Projet3.statsAbonnementMoiAnnee.rdlc";
             this.reportViewer2.Location = new System.Drawing.Point(0, 7);
             this.reportViewer2.Name = "reportViewer2";
-            this.reportViewer2.Size = new System.Drawing.Size(873, 423);
+            this.reportViewer2.Size = new System.Drawing.Size(867, 381);
             this.reportViewer2.TabIndex = 0;
             // 
             // tabPage3
@@ -224,16 +224,16 @@
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "Projet3.statsReabonnementAnneeType.rdlc";
             this.reportViewer3.Location = new System.Drawing.Point(4, 4);
             this.reportViewer3.Name = "reportViewer3";
-            this.reportViewer3.Size = new System.Drawing.Size(866, 426);
+            this.reportViewer3.Size = new System.Drawing.Size(863, 384);
             this.reportViewer3.TabIndex = 0;
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.reportViewer4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 40);
+            this.tabPage4.Location = new System.Drawing.Point(4, 58);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(873, 412);
+            this.tabPage4.Size = new System.Drawing.Size(873, 394);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Réabonnement par mois de l\'année courante et par type d\'abonnement";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -246,16 +246,16 @@
             this.reportViewer4.LocalReport.ReportEmbeddedResource = "Projet3.rapportStatsReabonnementMoisAnnee.rdlc";
             this.reportViewer4.Location = new System.Drawing.Point(7, 7);
             this.reportViewer4.Name = "reportViewer4";
-            this.reportViewer4.Size = new System.Drawing.Size(866, 420);
+            this.reportViewer4.Size = new System.Drawing.Size(860, 381);
             this.reportViewer4.TabIndex = 0;
             // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.reportViewer5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 40);
+            this.tabPage5.Location = new System.Drawing.Point(4, 58);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(873, 412);
+            this.tabPage5.Size = new System.Drawing.Size(873, 394);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Parties jouées par année et par terrain";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -268,16 +268,16 @@
             this.reportViewer5.LocalReport.ReportEmbeddedResource = "Projet3.statsPartieJoueeAnneeTerrain.rdlc";
             this.reportViewer5.Location = new System.Drawing.Point(7, 7);
             this.reportViewer5.Name = "reportViewer5";
-            this.reportViewer5.Size = new System.Drawing.Size(863, 417);
+            this.reportViewer5.Size = new System.Drawing.Size(860, 381);
             this.reportViewer5.TabIndex = 0;
             // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.reportViewer6);
-            this.tabPage6.Location = new System.Drawing.Point(4, 40);
+            this.tabPage6.Location = new System.Drawing.Point(4, 58);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(873, 412);
+            this.tabPage6.Size = new System.Drawing.Size(873, 394);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Partie jouées par mois de l\'année courant et par terrain";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -290,7 +290,7 @@
             this.reportViewer6.LocalReport.ReportEmbeddedResource = "Projet3.statsPartieJoueeMoisAnnee.rdlc";
             this.reportViewer6.Location = new System.Drawing.Point(7, 7);
             this.reportViewer6.Name = "reportViewer6";
-            this.reportViewer6.Size = new System.Drawing.Size(860, 417);
+            this.reportViewer6.Size = new System.Drawing.Size(860, 381);
             this.reportViewer6.TabIndex = 0;
             // 
             // tabPage7
@@ -334,7 +334,7 @@
             this.reportViewer8.LocalReport.ReportEmbeddedResource = "Projet3.statsDepenseMoisAnneeAbonnement.rdlc";
             this.reportViewer8.Location = new System.Drawing.Point(4, 7);
             this.reportViewer8.Name = "reportViewer8";
-            this.reportViewer8.Size = new System.Drawing.Size(869, 423);
+            this.reportViewer8.Size = new System.Drawing.Size(863, 381);
             this.reportViewer8.TabIndex = 0;
             // 
             // StatsAbonnementAnneeTypeTableAdapter
@@ -387,8 +387,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bDClubDeGolfBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statsPartieJoueeAnneeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statsPartieJoueeMoisAnneeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DepenseParMoisAnneeAbonnementBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepenseParAnneeAbonnementBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepenseParMoisAnneeAbonnementBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
