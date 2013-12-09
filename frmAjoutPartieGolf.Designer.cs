@@ -40,12 +40,13 @@
             this.pointageTextBox = new System.Windows.Forms.TextBox();
             this.remarqueTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbAbonnement = new System.Windows.Forms.ComboBox();
             this.abonnementsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbTerrain = new System.Windows.Forms.ComboBox();
             this.terrainsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.btnAjout = new System.Windows.Forms.Button();
+            this.cbAbonnement = new System.Windows.Forms.ComboBox();
+            this.noEtNomCompletAbonnementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             datePartieLabel = new System.Windows.Forms.Label();
             idAbonnementLabel = new System.Windows.Forms.Label();
             noTerrainLabel = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.partiesJoueesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrainsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noEtNomCompletAbonnementBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // datePartieLabel
@@ -139,17 +141,6 @@
             this.label1.TabIndex = 51;
             this.label1.Text = "Inscription d\'une partie de golf jouée";
             // 
-            // cbAbonnement
-            // 
-            this.cbAbonnement.DataSource = this.abonnementsBindingSource;
-            this.cbAbonnement.DisplayMember = "Id";
-            this.cbAbonnement.FormattingEnabled = true;
-            this.cbAbonnement.Location = new System.Drawing.Point(183, 122);
-            this.cbAbonnement.Name = "cbAbonnement";
-            this.cbAbonnement.Size = new System.Drawing.Size(200, 21);
-            this.cbAbonnement.TabIndex = 52;
-            this.cbAbonnement.ValueMember = "Id";
-            // 
             // abonnementsBindingSource
             // 
             this.abonnementsBindingSource.DataSource = typeof(Projet3.Abonnements);
@@ -190,15 +181,31 @@
             this.btnAjout.TabIndex = 79;
             this.btnAjout.UseVisualStyleBackColor = true;
             // 
+            // cbAbonnement
+            // 
+            this.cbAbonnement.DataSource = this.noEtNomCompletAbonnementBindingSource;
+            this.cbAbonnement.DisplayMember = "nomCompletAbonnement";
+            this.cbAbonnement.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAbonnement.FormattingEnabled = true;
+            this.cbAbonnement.Location = new System.Drawing.Point(183, 122);
+            this.cbAbonnement.Name = "cbAbonnement";
+            this.cbAbonnement.Size = new System.Drawing.Size(200, 21);
+            this.cbAbonnement.TabIndex = 81;
+            this.cbAbonnement.ValueMember = "noAbonnement";
+            // 
+            // noEtNomCompletAbonnementBindingSource
+            // 
+            this.noEtNomCompletAbonnementBindingSource.DataSource = typeof(Projet3.noEtNomCompletAbonnement);
+            // 
             // frmAjoutPartieGolf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 351);
+            this.Controls.Add(this.cbAbonnement);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.btnAjout);
             this.Controls.Add(this.cbTerrain);
-            this.Controls.Add(this.cbAbonnement);
             this.Controls.Add(this.label1);
             this.Controls.Add(datePartieLabel);
             this.Controls.Add(this.datePartieDateTimePicker);
@@ -210,9 +217,11 @@
             this.Controls.Add(this.remarqueTextBox);
             this.Name = "frmAjoutPartieGolf";
             this.Text = "Inscription d\'une nouvelle partie de golf";
+            this.Load += new System.EventHandler(this.frmAjoutPartieGolf_Load);
             ((System.ComponentModel.ISupportInitialize)(this.partiesJoueesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.terrainsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noEtNomCompletAbonnementBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,11 +234,12 @@
         private System.Windows.Forms.TextBox pointageTextBox;
         private System.Windows.Forms.TextBox remarqueTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbAbonnement;
         private System.Windows.Forms.BindingSource abonnementsBindingSource;
         private System.Windows.Forms.ComboBox cbTerrain;
         private System.Windows.Forms.BindingSource terrainsBindingSource;
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.Button btnAjout;
+        private System.Windows.Forms.ComboBox cbAbonnement;
+        private System.Windows.Forms.BindingSource noEtNomCompletAbonnementBindingSource;
     }
 }

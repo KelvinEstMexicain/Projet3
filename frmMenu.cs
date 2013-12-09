@@ -138,5 +138,13 @@ namespace Projet3
         {
             Application.Exit();
         }
+
+        private void btnIncrirePartie_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var golf = new frmAjoutPartieGolf(employe);
+            golf.ShowDialog();
+            this.Show();
+        }
     }
 }

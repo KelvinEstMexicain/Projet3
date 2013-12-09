@@ -94,6 +94,7 @@
             this.btnIncrirePartie.TabIndex = 6;
             this.btnIncrirePartie.Text = "Inscrire une partie de golf jouée";
             this.btnIncrirePartie.UseVisualStyleBackColor = true;
+            this.btnIncrirePartie.Click += new System.EventHandler(this.btnIncrirePartie_Click);
             // 
             // btnInscrireDepense
             // 
