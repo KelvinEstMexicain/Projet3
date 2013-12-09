@@ -158,6 +158,7 @@
             // 
             this.cbTerrain.DataSource = this.terrainsBindingSource;
             this.cbTerrain.DisplayMember = "Nom";
+            this.cbTerrain.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTerrain.FormattingEnabled = true;
             this.cbTerrain.Location = new System.Drawing.Point(183, 159);
             this.cbTerrain.Name = "cbTerrain";

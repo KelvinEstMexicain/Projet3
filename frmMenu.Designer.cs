@@ -148,6 +148,7 @@
             this.btnDeco.TabIndex = 11;
             this.btnDeco.Text = "Se déconnecter";
             this.btnDeco.UseVisualStyleBackColor = true;
+            this.btnDeco.Click += new System.EventHandler(this.btnDeco_Click);
             // 
             // btnQuitter
             // 
@@ -158,6 +159,7 @@
             this.btnQuitter.TabIndex = 12;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
             // frmMenu
             // 

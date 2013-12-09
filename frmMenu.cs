@@ -128,5 +128,15 @@ namespace Projet3
             depense.ShowDialog();
             this.Show();
         }
+
+        private void btnDeco_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
