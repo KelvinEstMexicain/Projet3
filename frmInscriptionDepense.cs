@@ -119,18 +119,20 @@ namespace Projet3
                     anneeAbonnement = d.Year;
                 }
 
+                int anneeAbonnementReabonnement = 100;
                 if((anneeAbonnement==DateTime.Now.Year)==false){
                     var reabonnementAnnee = from unReabonnement in dataContexteProjet1.Reabonnements
                                             where unReabonnement.IdAbonnement == cbAbonnement.SelectedValue
                                             select new { unReabonnement.DateRenouvellement };
-                    int tempo=100;
                     foreach(var annee in reabonnementAnnee){
                         DateTime d = annee.DateRenouvellement;
-                        if(tempo<d.Year){
-                            tempo = d.Year;
+                        if (anneeAbonnementReabonnement < d.Year)
+                        {
+                            anneeAbonnementReabonnement = d.Year;
                         }
                     }
-                    if (tempo < DateTime.Now.Year) {
+                    if (anneeAbonnementReabonnement < DateTime.Now.Year)
+                    {
                         ajouterReabonnement = false;
                     }
                 }
@@ -150,16 +152,75 @@ namespace Projet3
                     try
                     {
                         dataContexteProjet1.SubmitChanges();
-                        MessageBox.Show("ajout faite");
+
+                        if (anneeAbonnement != DateTime.Now.Year) {
+                            decimal montant = 0;
+                        var depenseFaite= from uneDepense in dataContexteProjet1.Depenses
+                                          where uneDepense.IdAbonnement==cbAbonnement.SelectedValue && uneDepense.DateDepense.Year==anneeAbonnementReabonnement
+                                          group uneDepense by uneDepense.No
+                                          into lesDepenses
+                                          let depenseTotal = lesDepenses.Sum(x=>x.Montant)
+                                          select new{depenseTotal};
+
+                            foreach(var maDepenseTotal in depenseFaite){
+                                montant += maDepenseTotal.depenseTotal;
+                            }
+
+                        int monTypeAbonnement = 0;
+                        var typeAbonnement = from unAbonnement in dataContexteProjet1.Abonnements
+                                             where unAbonnement.Id == cbAbonnement.SelectedValue
+                                             select new { unAbonnement.NoTypeAbonnement };
+
+                            foreach(var unAbonnement in typeAbonnement){
+                                monTypeAbonnement = unAbonnement.NoTypeAbonnement;
+                            }
+
+                            var prixAbonnement = from depenseAbonnement in dataContexteProjet1.PrixDepensesAbonnements
+                                                 where depenseAbonnement.NoTypeAbonnement == monTypeAbonnement
+                                                 orderby depenseAbonnement.Annee descending
+                                                 select new { depenseAbonnement.DepensesObligatoires };
+                            decimal prixDepensesObligatoire = prixAbonnement.First().DepensesObligatoires;
+
+                            decimal montantDepenseRestantAFaire = 0;
+                            if(prixDepensesObligatoire>montant){
+                                montantDepenseRestantAFaire = prixDepensesObligatoire - montant;
+                            }
+                            string courriel="";
+                            string nom = "";
+                            string prenom = "";
+                            var courrielAbonnement = from unAbonnement in dataContexteProjet1.Abonnements
+                                                     where unAbonnement.Id == cbAbonnement.SelectedValue
+                                                     select new { unAbonnement.Courriel,unAbonnement.Nom,unAbonnement.Prenom};
+
+                            foreach (var unCourriel in courrielAbonnement)
+                            {
+                                courriel = unCourriel.Courriel;
+                                nom = unCourriel.Nom;
+                                prenom = unCourriel.Prenom;
+                            }
+                            String mail = "";
+                            mail += "------------Depense Effectué---------------\r\n";
+                            mail += "La date de la dépense effectué: "+dateDepenseDateTimePicker.Value.ToString()+"\r\n";
+                            mail += "Montant total des dépenses déjà effectué: "+montant.ToString("0.00")+"$\r\n";
+                            mail += "Montant qu'il reste à faire des dépenses qu'il reste à faire cette année: " + montantDepenseRestantAFaire.ToString("0.00") + "$\r\n\r\n";
+                            mail += "Vous avez été servi par : "+employe.Prenom+" "+employe.Nom+"\r\n";
+                            mail += "Le service rendu : "+txtService.Text+"\r\n";
+                            mail += "Pour tout autres problèmes veillez contactez au : 514 888-8275\r\n";
+                            Email.SendGMail(Resources.SujetMailAbonnement, mail, employe.Prenom + " " + employe.Nom, courriel, prenom + " " +nom);
+                        }
+                        MessageBox.Show("Ajout faite et l'Envoi du courriel faite");
                         
                     }
                     catch (DBConcurrencyException erreur)
                     {
                         MessageBox.Show(Resources.ConflitAccesConcurrentiel, Resources.TitreErreur);
                     }
+                    catch(Exception errrr){
+                        MessageBox.Show("un probleme!");
+                    };
                 }
                 else {
-                    MessageBox.Show("n'a pas été rajouter");
+                    MessageBox.Show("N'a pas été rajouté, car l'abonné ne s'est pas réabonné");
                 }
             }
         }
