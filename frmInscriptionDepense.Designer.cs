@@ -48,6 +48,7 @@
             this.txtService = new System.Windows.Forms.TextBox();
             this.btnAjout = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
+            this.errMessage = new System.Windows.Forms.ErrorProvider(this.components);
             dateDepenseLabel = new System.Windows.Forms.Label();
             idAbonnementLabel = new System.Windows.Forms.Label();
             montantLabel = new System.Windows.Forms.Label();
@@ -57,6 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.depensesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.noEtNomCompletAbonnementBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errMessage)).BeginInit();
             this.SuspendLayout();
             // 
             // dateDepenseLabel
@@ -132,6 +134,7 @@
             this.montantTextBox.Name = "montantTextBox";
             this.montantTextBox.Size = new System.Drawing.Size(200, 20);
             this.montantTextBox.TabIndex = 6;
+            this.montantTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.montantTextBox_Validating);
             // 
             // noTextBox
             // 
@@ -186,6 +189,7 @@
             this.txtService.Name = "txtService";
             this.txtService.Size = new System.Drawing.Size(200, 20);
             this.txtService.TabIndex = 16;
+            this.txtService.Validating += new System.ComponentModel.CancelEventHandler(this.txtService_Validating);
             // 
             // btnAjout
             // 
@@ -209,6 +213,10 @@
             this.btnAnnuler.TabIndex = 58;
             this.btnAnnuler.UseVisualStyleBackColor = true;
             this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
+            // 
+            // errMessage
+            // 
+            this.errMessage.ContainerControl = this;
             // 
             // frmInscriptionDepense
             // 
@@ -237,6 +245,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.depensesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.noEtNomCompletAbonnementBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abonnementsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errMessage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,6 +265,7 @@
         private System.Windows.Forms.Button btnAnnuler;
         private System.Windows.Forms.BindingSource abonnementsBindingSource;
         private System.Windows.Forms.BindingSource noEtNomCompletAbonnementBindingSource;
+        private System.Windows.Forms.ErrorProvider errMessage;
 
     }
 }

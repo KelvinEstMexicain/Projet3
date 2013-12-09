@@ -120,5 +120,13 @@ namespace Projet3
             abonne.ShowDialog();
             this.Show();
         }
+
+        private void btnInscrireDepense_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var depense = new frmInscriptionDepense(employe);
+            depense.ShowDialog();
+            this.Show();
+        }
     }
 }

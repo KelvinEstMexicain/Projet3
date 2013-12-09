@@ -102,6 +102,7 @@
             this.btnInscrireDepense.TabIndex = 7;
             this.btnInscrireDepense.Text = "Inscrire des dépenses";
             this.btnInscrireDepense.UseVisualStyleBackColor = true;
+            this.btnInscrireDepense.Click += new System.EventHandler(this.btnInscrireDepense_Click);
             // 
             // btnRapport
             // 

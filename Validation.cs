@@ -135,7 +135,18 @@ namespace Projet3
                 errProvider.SetError(textbox, "");
             }
         }
-
+        public static void TextBoxMonnaieValide(object sender, ErrorProvider errProvider, String errMessage, CancelEventArgs e)
+        {
+            var textbox = (TextBoxBase)sender;
+            try {
+            int nombre= int.Parse(textbox.Text);
+                 errProvider.SetError(textbox, "");
+            }
+            catch (Exception b) {
+                errProvider.SetError(textbox, errMessage);
+                e.Cancel = true;
+            };
+        }
         public static void DateTimePickerValideAgeDor(object sender, ErrorProvider errProvider, String errMessage, CancelEventArgs e)
         {
             TimeSpan age = DateTime.Now - ((DateTimePicker)sender).Value;
