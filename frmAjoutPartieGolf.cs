@@ -54,7 +54,7 @@ namespace Projet3
             }
             if (dateTrouveDuJour)
             {
-                MessageBox.Show("L'abonnée a dejà faite une partie de golf cette journée la.");
+                MessageBox.Show(Resources.AbonneDejaJouee, Resources.TitreErreur);
             }
             else
             {
@@ -124,7 +124,7 @@ namespace Projet3
                         mail += "Vous avez été au terrain: " + cbTerrain.Text + "\r\n\r\n";
                         mail += "Pour tout autres problèmes veillez contactez au : 514 888-8275\r\n";
                         Email.SendGMail(Resources.SujetMailAbonnement, mail, employe.Prenom + " " + employe.Nom, courriel, prenom + " " + nom);
-                        MessageBox.Show("Un message à l'abonné a été envoyé.");
+                        MessageBox.Show(Resources.EnvoiCourrielMessage, Resources.EnvoieCourrielReussi);
                         this.Close();
                     }
                     catch (DBConcurrencyException erreur)
@@ -137,7 +137,7 @@ namespace Projet3
                     };
                 }
                 else {
-                    MessageBox.Show("L'abonnée ne s'est pas réabonné.");
+                    MessageBox.Show(Resources.AbonneReabonnementErreur, Resources.TitreErreur);
                 }
             }
 

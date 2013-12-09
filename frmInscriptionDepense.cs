@@ -208,7 +208,7 @@ namespace Projet3
                             mail += "Pour tout autres problèmes veillez contactez au : 514 888-8275\r\n";
                             Email.SendGMail(Resources.SujetMailAbonnement, mail, employe.Prenom + " " + employe.Nom, courriel, prenom + " " +nom);
                         }
-                        MessageBox.Show("Ajout faite et l'Envoi du courriel faite");
+                        MessageBox.Show(Resources.EnvoiCourrielMessage, Resources.EnvoieCourrielReussi);
                         this.Close();
                         
                     }
@@ -221,7 +221,7 @@ namespace Projet3
                     };
                 }
                 else {
-                    MessageBox.Show("N'a pas été rajouté, car l'abonné ne s'est pas réabonné");
+                    MessageBox.Show(Resources.AbonneReabonnementErreur, Resources.TitreErreur);
                 }
             }
         }

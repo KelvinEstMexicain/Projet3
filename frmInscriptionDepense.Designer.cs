@@ -196,7 +196,7 @@
             this.btnAjout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAjout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAjout.BackgroundImage")));
             this.btnAjout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAjout.Location = new System.Drawing.Point(83, 238);
+            this.btnAjout.Location = new System.Drawing.Point(73, 238);
             this.btnAjout.Name = "btnAjout";
             this.btnAjout.Size = new System.Drawing.Size(83, 80);
             this.btnAjout.TabIndex = 17;
@@ -223,7 +223,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(451, 330);
+            this.ClientSize = new System.Drawing.Size(441, 327);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.btnAjout);
             this.Controls.Add(this.txtService);

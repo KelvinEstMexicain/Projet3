@@ -61,6 +61,24 @@ namespace Projet3.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à L&apos;abonnée a déjà faite une partie cette même journée.
+        /// </summary>
+        internal static string AbonneDejaJouee {
+            get {
+                return ResourceManager.GetString("AbonneDejaJouee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à L&apos;abonnée a besoin d&apos;être réabonné.
+        /// </summary>
+        internal static string AbonneReabonnementErreur {
+            get {
+                return ResourceManager.GetString("AbonneReabonnementErreur", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à KelvinEstMexicain@gmail.com.
         /// </summary>
         internal static string AdresseGMail {
@@ -147,6 +165,24 @@ namespace Projet3.Properties {
         internal static string EnregistrementReussi {
             get {
                 return ResourceManager.GetString("EnregistrementReussi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Le couriel a été envoyé a l&apos;abonné.
+        /// </summary>
+        internal static string EnvoiCourrielMessage {
+            get {
+                return ResourceManager.GetString("EnvoiCourrielMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à L&apos;envoi du courriel a été un succès.
+        /// </summary>
+        internal static string EnvoieCourrielReussi {
+            get {
+                return ResourceManager.GetString("EnvoieCourrielReussi", resourceCulture);
             }
         }
         

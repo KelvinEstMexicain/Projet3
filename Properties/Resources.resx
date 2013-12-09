@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AbonneDejaJouee" xml:space="preserve">
+    <value>L'abonnée a déjà faite une partie cette même journée</value>
+  </data>
+  <data name="AbonneReabonnementErreur" xml:space="preserve">
+    <value>L'abonnée a besoin d'être réabonné</value>
+  </data>
   <data name="AdresseGMail" xml:space="preserve">
     <value>KelvinEstMexicain@gmail.com</value>
   </data>
@@ -146,6 +152,12 @@
   </data>
   <data name="EnregistrementReussi" xml:space="preserve">
     <value>L'enregistrement a réussi. Un courriel a été envoyé à l'abonné.</value>
+  </data>
+  <data name="EnvoiCourrielMessage" xml:space="preserve">
+    <value>Le couriel a été envoyé a l'abonné</value>
+  </data>
+  <data name="EnvoieCourrielReussi" xml:space="preserve">
+    <value>L'envoi du courriel a été un succès</value>
   </data>
   <data name="ErreurBD" xml:space="preserve">
     <value>Il y a eu une erreur lors de la connexion à la base de donnée</value>
