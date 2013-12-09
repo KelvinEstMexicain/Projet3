@@ -37,6 +37,8 @@
             this.btnRapport = new System.Windows.Forms.Button();
             this.btnStatistiques = new System.Windows.Forms.Button();
             this.btnModifierAbonnes = new System.Windows.Forms.Button();
+            this.btnDeco = new System.Windows.Forms.Button();
+            this.btnQuitter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAjoutAbonnement
@@ -107,7 +109,7 @@
             // btnRapport
             // 
             this.btnRapport.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRapport.Location = new System.Drawing.Point(12, 315);
+            this.btnRapport.Location = new System.Drawing.Point(301, 125);
             this.btnRapport.Name = "btnRapport";
             this.btnRapport.Size = new System.Drawing.Size(122, 60);
             this.btnRapport.TabIndex = 8;
@@ -118,7 +120,7 @@
             // btnStatistiques
             // 
             this.btnStatistiques.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStatistiques.Location = new System.Drawing.Point(159, 315);
+            this.btnStatistiques.Location = new System.Drawing.Point(301, 219);
             this.btnStatistiques.Name = "btnStatistiques";
             this.btnStatistiques.Size = new System.Drawing.Size(122, 60);
             this.btnStatistiques.TabIndex = 9;
@@ -129,7 +131,7 @@
             // btnModifierAbonnes
             // 
             this.btnModifierAbonnes.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModifierAbonnes.Location = new System.Drawing.Point(307, 50);
+            this.btnModifierAbonnes.Location = new System.Drawing.Point(301, 50);
             this.btnModifierAbonnes.Name = "btnModifierAbonnes";
             this.btnModifierAbonnes.Size = new System.Drawing.Size(122, 60);
             this.btnModifierAbonnes.TabIndex = 10;
@@ -137,11 +139,33 @@
             this.btnModifierAbonnes.UseVisualStyleBackColor = true;
             this.btnModifierAbonnes.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnDeco
+            // 
+            this.btnDeco.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeco.Location = new System.Drawing.Point(159, 349);
+            this.btnDeco.Name = "btnDeco";
+            this.btnDeco.Size = new System.Drawing.Size(122, 60);
+            this.btnDeco.TabIndex = 11;
+            this.btnDeco.Text = "Se déconnecter";
+            this.btnDeco.UseVisualStyleBackColor = true;
+            // 
+            // btnQuitter
+            // 
+            this.btnQuitter.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitter.Location = new System.Drawing.Point(301, 349);
+            this.btnQuitter.Name = "btnQuitter";
+            this.btnQuitter.Size = new System.Drawing.Size(122, 60);
+            this.btnQuitter.TabIndex = 12;
+            this.btnQuitter.Text = "Quitter";
+            this.btnQuitter.UseVisualStyleBackColor = true;
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 397);
+            this.ClientSize = new System.Drawing.Size(442, 425);
+            this.Controls.Add(this.btnQuitter);
+            this.Controls.Add(this.btnDeco);
             this.Controls.Add(this.btnModifierAbonnes);
             this.Controls.Add(this.btnStatistiques);
             this.Controls.Add(this.btnRapport);
@@ -168,5 +192,7 @@
         private System.Windows.Forms.Button btnRapport;
         private System.Windows.Forms.Button btnStatistiques;
         private System.Windows.Forms.Button btnModifierAbonnes;
+        private System.Windows.Forms.Button btnDeco;
+        private System.Windows.Forms.Button btnQuitter;
     }
 }
